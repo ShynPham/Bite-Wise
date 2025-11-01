@@ -1,0 +1,46 @@
+.str {
+    /* opacity */
+    -fx-opacity: 0.79;
+}
+
+.str .text {
+    -fx-fill: #bde070;
+    -fx-opacity: 100%;
+    -fx-stroke: #53382E;
+    -fx-stroke-width: 3px;
+    -fx-stroke-opacity: 100%;
+}
+.slogan .text {
+    -fx-fill: #53382E;
+}
+
+.textbox{
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+
+    -fx-border-color: #FFF0EA;
+    -fx-border-width: 1px;
+    -fx-prompt-text-fill: #a9a08d;
+}
+
+.textbox:focused {
+    -fx-border-color: #039ED3;
+    -fx-border-width: 2px;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.circle-button{
+    -fx-background-color: #c6eaaf; /* Light green background */
+    -fx-background-radius: 50%;   /* Makes it perfectly circular */
+    -fx-border-radius: 50%;       /* Ensures the border is also circular */
+    -fx-border-color: #8c7e6c;     /* Brown border color */
+    -fx-border-width: 2px;        /* Border thickness */
+    -fx-padding: 0;
+}
+
+.circle-button .svg-path{
+    -fx-fill: white;              /* White color for the arrow */
+    -fx-scale-x: 2;             /* Adjust arrow size horizontally */
+    -fx-scale-y: 2;             /* Adjust arrow size vertically */
+}

@@ -22,18 +22,12 @@ Before you begin, ensure you have the following installed on your system:
 ---
 ## 🚀 How to Install and Run
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/your-username/BiteWise.git](https://github.com/your-username/BiteWise.git)
-    cd BiteWise
+1.  **Clone the repository into your IDE:**
+    ```
+    git clone [https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers.git)
     ```
 
 2.  **Run the application using Maven:**
-    The project is configured to run with the JavaFX Maven plugin.
-    ```bash
-    mvn clean javafx:run
-    ```
-    The application window should launch automatically.
     
     # Setup (IMPORTANT for IntelliJ or other IDE)
 
@@ -45,6 +39,8 @@ Before you begin, ensure you have the following installed on your system:
     2. Right-click on the `pom.xml` file in your project sidebar.
     3.  Find and click on **"Add as Maven Project"**.
     4.  Wait for the dependencies to download.
+  
+    Then you can run the program
 
 ---
 

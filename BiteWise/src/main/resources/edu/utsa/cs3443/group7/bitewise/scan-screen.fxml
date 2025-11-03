@@ -9,7 +9,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="798.0" prefWidth="1121.0" style="-fx-background-color: #eeffea;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.ScanController">
+<BorderPane prefHeight="798.0" prefWidth="1121.0" style="-fx-background-color: #eeffea;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.group7.bitewise.InterferenceController">
 
     <top>
         <HBox alignment="CENTER_LEFT" prefHeight="113.0" prefWidth="1121.0" style="-fx-background-color: #a8c474; -fx-padding: 0 20 0 20;" BorderPane.alignment="CENTER">
@@ -26,7 +26,7 @@
                         <Font name="KG Red Hands " size="44.0" />
                     </font>
                 </Label>
-                <Region HBox.hgrow="ALWAYS" /> <Button fx:id="settingsButton" onAction="#OpenSettings" prefHeight="57.0" prefWidth="208.0" style="-fx-background-color: #f3ac92; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 10;" text="Settings" />
+                <Region HBox.hgrow="ALWAYS" /> <Button  prefHeight="57.0" prefWidth="208.0" style="-fx-background-color: #f3ac92; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 10;" text="Settings" />
             </children>
         </HBox>
     </top>
@@ -59,13 +59,13 @@
 
                 <Separator prefWidth="200.0" />
 
-                <Button fx:id="scanButton" onAction="#scanBite" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #f3ac92; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 20;" text="Scan Image">
+                <Button  prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #f3ac92; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 20;" text="Scan Image">
                     <font>
                         <Font name="KG Red Hands" size="16.0" />
                     </font>
                 </Button>
 
-                <Button fx:id="uploadButton" onAction="#uploadBite" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #a8c474; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 20;" text="Upload Image">
+                <Button fx:id="chooseImageButton" onAction="#onChooseImage" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #a8c474; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 20;" text="Upload Food Image">
                     <font>
                         <Font name="KG Red Hands" size="16.0" />
                     </font>

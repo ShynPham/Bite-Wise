@@ -1,6 +1,9 @@
 module edu.utsa.cs3443.group7.bitewise {
     requires javafx.controls;
     requires javafx.fxml;
+    requires com.microsoft.onnxruntime;
+    requires java.desktop;
+    requires javafx.graphics;
 
 
     opens edu.utsa.cs3443.group7.bitewise to javafx.fxml;

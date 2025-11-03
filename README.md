@@ -50,5 +50,6 @@ Before you begin, ensure you have the following installed on your system:
 ## 👨‍💻 Authors
 
 * Phu Pham
+* Angel Nguyen
 * (Teammate name here )
 * ...

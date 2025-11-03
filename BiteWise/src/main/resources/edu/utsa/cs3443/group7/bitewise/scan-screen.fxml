@@ -12,7 +12,7 @@
 <BorderPane prefHeight="798.0" prefWidth="1121.0" style="-fx-background-color: #eeffea;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.group7.bitewise.InterferenceController">
 
     <top>
-        <HBox alignment="CENTER_LEFT" prefHeight="113.0" prefWidth="1121.0" style="-fx-background-color: #a8c474; -fx-padding: 0 20 0 20;" BorderPane.alignment="CENTER">
+        <HBox alignment="CENTER_LEFT" prefHeight="99.0" prefWidth="1128.0" style="-fx-background-color: #a8c474; -fx-padding: 0 20 0 20;" BorderPane.alignment="CENTER">
             <effect>
                 <DropShadow height="10.0" radius="4.5" width="10.0">
                     <color>
@@ -26,21 +26,18 @@
                         <Font name="KG Red Hands " size="44.0" />
                     </font>
                 </Label>
-                <Region HBox.hgrow="ALWAYS" /> <Button  prefHeight="57.0" prefWidth="208.0" style="-fx-background-color: #f3ac92; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 10;" text="Settings" />
+                <Region HBox.hgrow="ALWAYS" /> <Button prefHeight="57.0" prefWidth="208.0" style="-fx-background-color: #f3ac92; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 10;" text="Settings" />
             </children>
         </HBox>
     </top>
 
     <center>
-        <StackPane fx:id="imageContainer" style="-fx-background-color: green;" BorderPane.alignment="CENTER">
+        <StackPane fx:id="imageContainer" prefWidth="367.0" style="-fx-background-color: green;" BorderPane.alignment="CENTER">
             <BorderPane.margin>
                 <Insets bottom="20.0" left="20.0" top="20.0" />
             </BorderPane.margin>
-
             <ImageView fx:id="imageView" preserveRatio="true" />
-
             <Canvas fx:id="overlayCanvas" />
-
             <ProgressIndicator fx:id="progressIndicator" maxHeight="100" maxWidth="100" visible="false" />
         </StackPane>
     </center>
@@ -56,29 +53,35 @@
                         <Font name="KG Red Hands " size="22.0" />
                     </font>
                 </Label>
-
                 <Separator prefWidth="200.0" />
-
-                <Button  prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #f3ac92; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 20;" text="Scan Image">
+                <Button prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #f3ac92; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 20;" text="Scan Image">
                     <font>
                         <Font name="KG Red Hands" size="16.0" />
                     </font>
                 </Button>
-
                 <Button fx:id="chooseImageButton" onAction="#onChooseImage" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #a8c474; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 20;" text="Upload Food Image">
                     <font>
                         <Font name="KG Red Hands" size="16.0" />
                     </font>
                 </Button>
 
-                <Region VBox.vgrow="ALWAYS" />
-            <ImageView fitHeight="183.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@ui_icons/logo.png" />
-            </ImageView> <Label fx:id="statusLabel" alignment="CENTER" style="-fx-text-fill: #53382e; -fx-font-style: italic;" text="Status: Ready" wrapText="true">
-                <font>
-                    <Font size="14.0" />
-                </font>
-            </Label>
+                <Label styleClass="text" text="Detections:" textFill="#53382e">
+                    <font>
+                        <Font name="KG Red Hands " size="22.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin>
+                </Label>
+                <TextArea fx:id="detectionResults" editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-font-family: 'Arial';" wrapText="true" VBox.vgrow="ALWAYS" />
+                <ImageView fitHeight="183.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@ui_icons/logo.png" />
+                </ImageView>
+                <Label fx:id="statusLabel" alignment="CENTER" style="-fx-text-fill: #53382e; -fx-font-style: italic;" text="Status: Ready" wrapText="true">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
             </children>
         </VBox>
     </right>

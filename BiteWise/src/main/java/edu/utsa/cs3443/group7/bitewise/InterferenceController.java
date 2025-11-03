@@ -9,6 +9,7 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.image.ImageView;
@@ -58,7 +59,8 @@ public class InterferenceController {
     @FXML private StackPane imageContainer;
     /** FXML link to the loading spinner. */
     @FXML private ProgressIndicator progressIndicator;
-
+    /** FXML link to the TextArea results */
+    @FXML private TextArea detectionResults;
     // --- ONNX Runtime Resources ---
 
     /** The ONNX runtime environment. */
@@ -94,7 +96,6 @@ public class InterferenceController {
     private static final float NMS_THRESH = 0.45f;
 
     /**
-     * The list of all class names. This MUST match the order used to train the model.
      * The model output (e.g., index 0) will be mapped to this list (e.g., "Apple").
      */
     private static final String[] CLASS_NAMES = {
@@ -254,6 +255,30 @@ public class InterferenceController {
 
                     // 5. Post-process (NMS, coordinate conversion)
                     List<Detection> dets = postprocess(transposedOutput, prep.scale, prep.dx, prep.dy, bimg.getWidth(), bimg.getHeight());
+
+                    // --- THIS IS THE NEW LOGIC ---
+                    // Logic that process the output into a textfield
+                    Platform.runLater(() -> {
+                        statusLabel.setText("Found " + dets.size() + " detections.");
+                        DetectionDrawer.draw(imageView, overlayCanvas, imageContainer, bimg, dets, CLASS_NAMES);
+
+                        // Build the results string and set it to the text area
+                        if (dets.isEmpty()) {
+                            detectionResults.setText("No food items detected.");
+                        } else {
+                            StringBuilder sb = new StringBuilder();
+                            sb.append("Found ").append(dets.size()).append(" item(s):\n\n");
+                            for (Detection d : dets) {
+                                String foodName = "Unknown";
+                                if (d.classID() >= 0 && d.classID() < CLASS_NAMES.length) {
+                                    foodName = CLASS_NAMES[d.classID()];
+                                }
+                                sb.append(String.format("- %s (%.2f%%)\n", foodName, d.score() * 100));
+                            }
+                            detectionResults.setText(sb.toString());
+                        }
+                    });
+                    // --- END OF NEW LOGIC ---
 
                     // 6. Update UI on the JavaFX Application Thread
                     Platform.runLater(() -> {
@@ -483,19 +508,10 @@ public class InterferenceController {
     }
 
     /**
-     * A private inner class to hold the results of the pre-processing step.
-     * This allows returning multiple values (the float data, scale, and padding)
-     * from the `letterboxAndPreprocess` method.
-     */
-    private static class PreprocessResult {
-        final float[] data;
-        final float scale;
-        final int dx, dy;
-        PreprocessResult(float[] data, float scale, int dx, int dy) {
-            this.data = data;
-            this.scale = scale;
-            this.dx = dx;
-            this.dy = dy;
-        }
+         * A private inner class to hold the results of the pre-processing step.
+         * This allows returning multiple values (the float data, scale, and padding)
+         * from the `letterboxAndPreprocess` method.
+         */
+        private record PreprocessResult(float[] data, float scale, int dx, int dy) {
     }
 }

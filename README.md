@@ -1,7 +1,10 @@
+<p align ="center">
+    <img src="https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers/blob/main/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/ui_icons/logo.png" alt="logo.png" />
+</p>
+
+# 🍏 BiteWise: Food Detection App 
 
 
-
-# 🍏 BiteWise: Food Detection App
 A JavaFX desktop application that uses a YOLO ONNX model to detect and identify food items from an image. This project was built for the CS 3443 (Applicaion Programming) course at UTSA.
 
 ## Features
@@ -24,12 +27,12 @@ Before you begin, ensure you have the following installed on your system:
 
 1.  **Clone the repository into your IDE:**
     ```
-    git clone [https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers.git)
+    git clone https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers.git
     ```
 
 2.  **Run the application using Maven:**
     
-    # Setup (IMPORTANT for IntelliJ or other IDE)
+    # Setup (⚠IMPORTANT for IntelliJ or other IDE⚠ )
 
     This is a Maven project. To run it, you **must** import it as a Maven project in IntelliJ so it can download the JavaFX dependencies.
 

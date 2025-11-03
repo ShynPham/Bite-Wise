@@ -1,4 +1,4 @@
-# Setup
+# Setup (IMPORTANT)
 
 This is a Maven project. To run it, you **must** import it as a Maven project in IntelliJ so it can download the JavaFX dependencies.
 

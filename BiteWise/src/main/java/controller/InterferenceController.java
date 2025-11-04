@@ -2,9 +2,12 @@
  * Package for the BiteWise application, integrating JavaFX controllers
  * with the ONNX runtime for machine learning inference.
  */
-package edu.utsa.cs3443.group7.bitewise;
+package controller;
 
 import ai.onnxruntime.*;
+import detectionApp.AppLauncher;
+import model.Detection;
+import utility.DetectionDrawer;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
@@ -35,7 +38,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Main JavaFX Controller for the BiteWise application.
+ * detectionApp.Main JavaFX Controller for the BiteWise application.
  * This class handles:
  * - Automatically loading the ONNX YOLO model on startup.
  * - Processing user-selected images for inference.
@@ -84,9 +87,8 @@ public class InterferenceController {
     /**
      * The name of the ONNX model file.
      * This file MUST be placed in the project's resources folder
-     * (e.g., src/main/resources/edu/utsa/cs3443/group7/bitewise/best.onnx)
      */
-    private static final String MODEL_RESOURCE_NAME = "best.onnx";
+    private static final String MODEL_RESOURCE_NAME = "/edu/utsa/cs3443/group7/bitewise/best.onnx";
 
     // --- Inference Settings ---
 

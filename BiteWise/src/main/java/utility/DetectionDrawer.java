@@ -1,4 +1,4 @@
-package edu.utsa.cs3443.group7.bitewise;
+package utility;
 
 import javafx.application.Platform;
 import javafx.scene.canvas.Canvas;
@@ -9,6 +9,7 @@ import javafx.scene.image.WritableImage;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import model.Detection;
 
 import java.awt.image.BufferedImage;
 import java.nio.IntBuffer;

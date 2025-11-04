@@ -1,5 +1,6 @@
-package edu.utsa.cs3443.group7.bitewise;
+package detectionApp;
 
+import controller.InterferenceController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

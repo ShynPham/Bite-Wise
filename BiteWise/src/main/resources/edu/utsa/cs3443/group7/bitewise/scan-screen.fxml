@@ -11,7 +11,7 @@
 <?import javafx.scene.text.*?>
 <BorderPane prefHeight="798.0" prefWidth="1121.0" style="-fx-background-color: #eeffea;" stylesheets="@style.css"
             xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="edu.utsa.cs3443.group7.bitewise.InterferenceController">
+            fx:controller="controller.InterferenceController">
 
     <top>
         <HBox alignment="CENTER_LEFT" prefHeight="99.0" prefWidth="1128.0"

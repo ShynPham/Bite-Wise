@@ -1,4 +1,4 @@
-package edu.utsa.cs3443.group7.bitewise;
+package utility;
 
 import ai.onnxruntime.OrtEnvironment;
 import ai.onnxruntime.OrtException;

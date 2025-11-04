@@ -1,30 +1,32 @@
 package detectionApp;
 
 import controller.InterferenceController;
+import controller.entryScreen;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import utility.viewSwitcher;
 
 public class AppLauncher extends Application {
 
-    private InterferenceController controller; // Store the controller instance
+    private entryScreen controller; // Store the controller instance
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/utsa/cs3443/group7/bitewise/scan-screen.fxml"));
+        viewSwitcher.setStage(stage);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/utsa/cs3443/group7/bitewise/sign-in.fxml"));
         Parent root = loader.load();
 
         // Get the controller instance from the loader
         controller = loader.getController();
 
         Scene scene = new Scene(root);
-        stage.setTitle("YOLO ONNX - JavaFX");
+        stage.setTitle("BiteWise");
         stage.setScene(scene);
-        stage.setWidth(920);
-        stage.setHeight(760);
+        stage.setWidth(462);
+        stage.setHeight(680);
         stage.show();
     }
 

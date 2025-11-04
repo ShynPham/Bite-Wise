@@ -25,10 +25,10 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.InputStream; // Added
-import java.nio.file.Files; // Added
-import java.nio.file.Path; // Added
-import java.nio.file.StandardCopyOption; // Added
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -67,11 +67,11 @@ public class InterferenceController {
     // --- ONNX Runtime Resources ---
 
     /** The ONNX runtime environment. */
-    private OrtEnvironment env;
+    private static OrtEnvironment env;
     /** The ONNX model inference session. */
-    private OrtSession session;
+    private static OrtSession session;
     /** A single-thread executor to run inference tasks in the background, keeping the UI responsive. */
-    private final ExecutorService executor = Executors.newSingleThreadExecutor();
+    private static final ExecutorService executor = Executors.newSingleThreadExecutor();
 
     // --- Model Properties ---
 
@@ -176,7 +176,6 @@ public class InterferenceController {
                     chooseImageButton.setDisable(false); // Enable image button
                 });
             } catch (Exception e) {
-                e.printStackTrace();
                 Platform.runLater(() -> statusLabel.setText("Model load error: " + e.getMessage()));
             } finally {
                 Platform.runLater(() -> updateUIForTask(false, ""));
@@ -195,7 +194,7 @@ public class InterferenceController {
         inputName = session.getInputNames().iterator().next();
         TensorInfo inputTensorInfo = (TensorInfo) inputInfoMap.get(inputName).getInfo();
         long[] shape = inputTensorInfo.getShape();
-        modelHeight = (int) shape[2]; // Assumes shape [batch, channels, height, width]
+        modelHeight = (int) shape[2];
         modelWidth = (int) shape[3];
 
         // Get output node info
@@ -503,7 +502,7 @@ public class InterferenceController {
      * Shuts down the ExecutorService and closes ONNX resources.
      * This method is called by {@link AppLauncher#stop()}.
      */
-    public void shutdown() {
+    public static void shutdown() {
         executor.shutdownNow();
         try { if (session != null) session.close(); } catch (Exception ignored) {}
         try { if (env != null) env.close(); } catch (Exception ignored) {}

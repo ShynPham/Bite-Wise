@@ -6,12 +6,17 @@ module edu.utsa.cs.group.bitewise {
     requires javafx.graphics;
 
 
-    opens detectionApp to javafx.fxml;
+    opens detectionApp to javafx.fxml, javafx.graphics;
     exports detectionApp;
+
     exports controller;
     opens controller to javafx.fxml;
+
     exports model;
-    opens model to javafx.fxml;
+    opens model to javafx.fxml, javafx.base;
+
     exports utility;
     opens utility to javafx.fxml;
+
+    opens edu.utsa.cs3443.group7.bitewise to javafx.fxml;
 }

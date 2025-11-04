@@ -88,6 +88,19 @@ Before you begin, ensure you have the following installed on your system:
 ## ScreenShot
 
 <img src="https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers/blob/main/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/images/test1.png" />
+
+## Reference
+<p1> Special thank to these sources that help me through out the project: </p1>
+<ul>
+    <li><a href="https://gist.github.com/jesuino/de73d34c0c3b8a90eb56528641009839">How to create YOLO app with JavaFX </a></li>
+    <li><a href="https://pyimagesearch.com/2016/11/07/intersection-over-union-iou-for-object-detection">A Complete Guide to IoU and NMS (PyImageSearch)</a></li>
+    <li><a href="https://jenkov.com/tutorials/javafx/canvas.html">JavaFX canvas example</a></li>
+    <li>ChatGPT</li>
+    <li><a href="https://fxapps.blogspot.com/2018/05/detecting-objects-in-javafx-application.html#google_vignette"> Detecting object using JavaFX</a></li>
+    <li><a href="https://bennycheung.github.io/yolo-for-real-time-food-detection"> Guide for training food object detection using YOLO</a>a/li>
+    <li>And many more...</li>
+</ul>
+    
 ## 👨‍💻 Authors
 
 * Phu Pham

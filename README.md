@@ -47,6 +47,42 @@ Before you begin, ensure you have the following installed on your system:
 
 ---
 
+## Project code structure ( so far)
+├───src
+│   └───main
+│       ├───java
+│       │   │   module-info.java
+│       │   │   
+│       │   ├───controller
+│       │   │       InterferenceController.java
+│       │   │       
+│       │   ├───detectionApp
+│       │   │       AppLauncher.java
+│       │   │       Main.java
+│       │   │       
+│       │   ├───model
+│       │   │       Detection.java
+│       │   │       
+│       │   └───utility
+│       │   |       DetectionDrawer.java
+|       |   |       ModelLoader.java
+│       │           
+│       └───resources
+│           └───edu
+│               └───utsa
+│                   └───cs3443
+│                       └───group7
+│                           └───bitewise
+│                               │   best.onnx
+│                               │   scan-screen.fxml
+│                               │   sign-in.fxml
+│                               │   style.css
+│                               │   
+│                               └───ui_icons
+│                                     │  logo.png
+│                                     │   ....
+
+
 ## 👨‍💻 Authors
 
 * Phu Pham

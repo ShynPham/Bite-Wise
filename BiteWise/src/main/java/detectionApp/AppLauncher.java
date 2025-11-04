@@ -1,6 +1,6 @@
 package detectionApp;
 
-import controller.InterferenceController;
+
 import controller.entryScreen;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -41,7 +41,4 @@ public class AppLauncher extends Application {
         super.stop();
     }
 
-    public static void main(String[] args) {
-        launch(args);
-    }
 }

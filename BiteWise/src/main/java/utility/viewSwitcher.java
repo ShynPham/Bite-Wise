@@ -45,6 +45,7 @@ public class viewSwitcher {
      *
      * @param fxmlFileName The simple name of the FXML file to load (e.g., "scan-screen.fxml").
      */
+    @SuppressWarnings("CallToPrintStackTrace")
     public static void switchScene(String fxmlFileName) {
         try {
             // --- FADE OUT THE OLD SCENE ---

@@ -2,9 +2,6 @@ package controller;
 
 import javafx.fxml.FXML;
 import utility.viewSwitcher;
-import controller.InterferenceController;
-
-import java.io.IOException;
 
 
 public class entryScreen {

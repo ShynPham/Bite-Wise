@@ -291,6 +291,7 @@ public class InterferenceController {
                     input.close(); // Ensure tensor is closed
                 }
             } catch (Exception e) {
+                //noinspection CallToPrintStackTrace
                 e.printStackTrace();
                 Platform.runLater(() -> statusLabel.setText("Inference error: " + e.getMessage()));
             } finally {
@@ -509,10 +510,10 @@ public class InterferenceController {
     }
 
     /**
-         * A private inner class to hold the results of the pre-processing step.
-         * This allows returning multiple values (the float data, scale, and padding)
-         * from the `letterboxAndPreprocess` method.
-         */
-        private record PreprocessResult(float[] data, float scale, int dx, int dy) {
+     * A private inner class to hold the results of the pre-processing step.
+     * This allows returning multiple values (the float data, scale, and padding)
+     * from the `letterboxAndPreprocess` method.
+     */
+    private record PreprocessResult(float[] data, float scale, int dx, int dy) {
     }
 }

@@ -48,6 +48,7 @@ Before you begin, ensure you have the following installed on your system:
 ---
 
 ## Project code structure ( so far)
+```
 ├───src
 │   └───main
 │       ├───java
@@ -81,7 +82,7 @@ Before you begin, ensure you have the following installed on your system:
 │                               └───ui_icons
 │                                     │  logo.png
 │                                     │   ....
-
+```
 
 ## 👨‍💻 Authors
 

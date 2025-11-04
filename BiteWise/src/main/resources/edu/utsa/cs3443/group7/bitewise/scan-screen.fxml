@@ -35,7 +35,7 @@
             <BorderPane.margin>
                 <Insets bottom="20.0" left="20.0" top="20.0" />
             </BorderPane.margin>
-            <ImageView fx:id="imageView" preserveRatio="true" />
+            <ImageView fx:id="imageView" preserveRatio="true" fitHeight="367" fitWidth="${imageContainer.height}"/>
             <Canvas fx:id="overlayCanvas" />
             <ProgressIndicator fx:id="progressIndicator" maxHeight="100" maxWidth="100" visible="false" />
         </StackPane>

@@ -8,6 +8,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import utility.viewSwitcher;
+import javafx.scene.image.Image;
+
+import java.io.InputStream;
 
 public class AppLauncher extends Application {
 
@@ -16,6 +19,13 @@ public class AppLauncher extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         viewSwitcher.setStage(stage);
+        InputStream appIconStream = getClass().getResourceAsStream("/edu/utsa/cs3443/group7/bitewise/ui_icons/logo.png");
+        if (appIconStream != null){
+            Image appIcon = new Image(appIconStream);
+            stage.getIcons().add(appIcon);
+        } else {
+            System.err.println("Error: Cannot find Application icon.");
+        }
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/utsa/cs3443/group7/bitewise/sign-in.fxml"));
         Parent root = loader.load();
 
@@ -25,8 +35,6 @@ public class AppLauncher extends Application {
         Scene scene = new Scene(root);
         stage.setTitle("BiteWise");
         stage.setScene(scene);
-        stage.setWidth(462);
-        stage.setHeight(680);
         stage.show();
     }
 

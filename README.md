@@ -55,6 +55,7 @@ Before you begin, ensure you have the following installed on your system:
 │       │   │   module-info.java
 │       │   │   
 │       │   ├───controller
+│       │   │       entryScreen.java
 │       │   │       InterferenceController.java
 │       │   │       
 │       │   ├───detectionApp
@@ -65,8 +66,9 @@ Before you begin, ensure you have the following installed on your system:
 │       │   │       Detection.java
 │       │   │       
 │       │   └───utility
-│       │   |       DetectionDrawer.java
-|       |   |       ModelLoader.java
+│       │           DetectionDrawer.java
+│       │           ModelLoader.java
+│       │           viewSwitcher.java
 │       │           
 │       └───resources
 │           └───edu
@@ -79,9 +81,12 @@ Before you begin, ensure you have the following installed on your system:
 │                               │   sign-in.fxml
 │                               │   style.css
 │                               │   
+│                               ├───images
+│                               │       test1.png
+│                               │       
 │                               └───ui_icons
-│                                     │  logo.png
-│                                     │   ....
+│                                       arrow-button.png
+│                                       ....
 ```
 ---
 

@@ -39,7 +39,7 @@ Before you begin, ensure you have the following installed on your system:
     ## How to import dependencies 
 
     1. Open IntelliJ and clone the repository from GitHub
-    2. Right-click on the `pom.xml` file in your project sidebar.
+    2. Right-click on the `pom.xml` file in your Project Files sidebar.
     3.  Find and click on **"Add as Maven Project"**.
     4.  Wait for the dependencies to download.
   
@@ -95,7 +95,7 @@ Before you begin, ensure you have the following installed on your system:
 <img src="https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers/blob/main/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/images/test1.png" />
 
 ## Reference
-<p1> Special thank to these sources that help me through out the project: </p1>
+<p1> Special thanks to these sources that helped me throughout the project: </p1>
 <ul>
     <li><a href="https://gist.github.com/jesuino/de73d34c0c3b8a90eb56528641009839">How to create YOLO app with JavaFX </a></li>
     <li><a href="https://pyimagesearch.com/2016/11/07/intersection-over-union-iou-for-object-detection">A Complete Guide to IoU and NMS (PyImageSearch)</a></li>
@@ -110,5 +110,6 @@ Before you begin, ensure you have the following installed on your system:
 
 * Phu Pham
 * Angel Nguyen
+* Yuki Richardson
 * (Teammate name here )
 * ...

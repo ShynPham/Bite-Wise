@@ -112,4 +112,4 @@ Before you begin, ensure you have the following installed on your system:
 * Angel Nguyen
 * Yuki Richardson
 * Soleil Nunez
-* ...
+* Max Howard

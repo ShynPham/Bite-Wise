@@ -102,7 +102,7 @@ Before you begin, ensure you have the following installed on your system:
     <li><a href="https://jenkov.com/tutorials/javafx/canvas.html">JavaFX canvas example</a></li>
     <li>ChatGPT</li>
     <li><a href="https://fxapps.blogspot.com/2018/05/detecting-objects-in-javafx-application.html#google_vignette"> Detecting object using JavaFX</a></li>
-    <li><a href="https://bennycheung.github.io/yolo-for-real-time-food-detection"> Guide for training food object detection using YOLO</a>a/li>
+    <li><a href="https://bennycheung.github.io/yolo-for-real-time-food-detection"> Guide for training food object detection using YOLO</a></li>
     <li>And many more...</li>
 </ul>
     

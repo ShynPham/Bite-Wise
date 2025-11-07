@@ -4,6 +4,7 @@ module edu.utsa.cs.group.bitewise {
     requires com.microsoft.onnxruntime;
     requires java.desktop;
     requires javafx.graphics;
+    requires java.prefs;
 
 
     opens detectionApp to javafx.fxml, javafx.graphics;

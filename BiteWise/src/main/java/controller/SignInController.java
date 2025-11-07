@@ -38,7 +38,7 @@ package controller;
          viewSwitcher.switchScene("forgot-password.fxml");
      }
 
-     private void showAlert(string msg) {
+     private void showAlert(String msg) {
          Alert alert = new Alert(Alert.AlertType.ERROR);
          alert.setTitle("Login failed.");
          alert.setHeaderText(null);

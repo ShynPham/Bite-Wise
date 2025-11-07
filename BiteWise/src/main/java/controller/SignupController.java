@@ -6,6 +6,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert;
 import utility.viewSwitcher;
 
+import java.awt.event.ActionEvent;
 import java.util.prefs.Preferences;
 
 public class SignupController {
@@ -18,22 +19,24 @@ public class SignupController {
         String email = emailField.getText();
         String password = passwordField.getText();
 
-        if (email.isEmpty() || password.isEmpty) {
+        if (email.isEmpty() || password.isEmpty()) {
             showAlert("Please fill in all fields.");
             return;
         }
 
         Preferences prefs = Preferences.userRoot().node("BiteWiseUser");
         prefs.put("email", email);
-        prefs.put("password". password);
+        prefs.put("password", password);
 
         showAlert("Account created successfully!");
         // navigate to log in screen
-        viewSwitch.switchScene("sign-in.fxml");
+        viewSwitcher viewSwitch;
+        viewSwitcher.switchScene("sign-in.fxml");
     }
 
     private void showAlert(String msg) {
-        Alert alert = new Alert(AlertType.INFORMATION);
+        Alert alert;
+        alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("BiteWise");
         alert.setHeaderText(null);
         alert.setContentText(msg);

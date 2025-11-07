@@ -6,7 +6,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="462.0" style="-fx-background-color: #FAF0E6; -fx-padding: 20;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.entryScreen">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="462.0" style="-fx-background-color: #FAF0E6; -fx-padding: 20;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignupController">
     <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="131.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
         <Image url="@ui_icons/logo.png" />
     </ImageView>
@@ -25,7 +25,7 @@
             <Font name="KG Red Hands " size="48.0" />
         </font>
     </Label>
-    <TextField layoutX="106.0" layoutY="344.0" prefHeight="41.0" prefWidth="253.0" promptText="Your Email" styleClass="textbox">
+    <TextField fx:id="emailField" layoutX="106.0" layoutY="344.0" prefHeight="41.0" prefWidth="253.0" promptText="Your Email" styleClass="textbox">
         <font>
             <Font name="KG Red Hands " size="15.0" />
         </font>
@@ -35,7 +35,7 @@
             <Font name="KG Red Hands " size="15.0" />
         </font>
     </PasswordField>
-    <Button fx:id="continueButton" layoutX="183.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleSignInClick" prefHeight="100.0" prefWidth="100.0" styleClass="circle-button" stylesheets="@style.css">
+    <Button fx:id="continueButton" layoutX="183.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleSignUpClickEvent" prefHeight="100.0" prefWidth="100.0" styleClass="circle-button" stylesheets="@style.css">
         <graphic>
             <SVGPath content="M 0 0 L 10 5 L 0 10 L 0 6 L -10 6 L -10 4 L 0 4 Z" styleClass="svg-path" />
         </graphic>
@@ -53,7 +53,7 @@
                 <Font name="KG Red Hands" size="14.0" />
             </font>
         </Label>
-        <Hyperlink fx:id="onSignInClick" onAction="#handleSignInClick" text="SIGN IN" textFill="#53382e" underline="true">
+        <Hyperlink fx:id="onSignInClick" onAction="#handleSignInClickEvent" text="SIGN IN" textFill="#53382e" underline="true">
             <font>
                 <Font name="KG Red Hands " size="14.0" />
             </font>

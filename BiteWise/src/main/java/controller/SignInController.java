@@ -13,7 +13,7 @@ package controller;
      @FXML private PasswordField passwordField;
 
      @FXML
-     private void handleSignInClick() {
+     private void handleSignInButtonClick() {
          Preferences prefs = Preferences.userRoot().node("BiteWiseUser");
          String savedEmail = prefs.get("email", "");
          String savedPassword = prefs.get("password", "");
@@ -22,21 +22,19 @@ package controller;
          String inputPassword = passwordField.getText();
 
          if (inputEmail.equals(savedEmail) && inputPassword.equals(savedPassword)) {
-             viewSwitcher.switchScene("menu-screen.fxml");
+             viewSwitcher.switchScene("scan-screen.fxml");
          } else {
              showAlert("Incorrect email or password.");
          }
      }
 
      @FXML
-     private void handleSignUpLinkClick() {
-         viewSwitcher.switchScene("sign-up.fxml");
-     }
+     private void handleSignUpLinkClick(){viewSwitcher.switchScene("sign-up.fxml");}
 
      @FXML
-     private void handleForgotPasswordClick() {
-         viewSwitcher.switchScene("forgot-password.fxml");
-     }
+//     private void handleForgotPasswordClick() {
+//         viewSwitcher.switchScene("forgot-password.fxml");
+//     }
 
      private void showAlert(String msg) {
          Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -44,5 +42,10 @@ package controller;
          alert.setHeaderText(null);
          alert.setContentText(msg);
          alert.showAndWait();
+     }
+
+
+     public void shutdown() {
+         InterferenceController.shutdown();
      }
  }

@@ -57,6 +57,8 @@ Before you begin, ensure you have the following installed on your system:
 │       │   ├───controller
 │       │   │       entryScreen.java
 │       │   │       InterferenceController.java
+|       |   |       SignInController.java
+|       |   |       SignupController.java
 │       │   │       
 │       │   ├───detectionApp
 │       │   │       AppLauncher.java
@@ -79,6 +81,8 @@ Before you begin, ensure you have the following installed on your system:
 │                               │   best.onnx
 │                               │   scan-screen.fxml
 │                               │   sign-in.fxml
+│                               │   sign-up.fxml
+│                               │   settings-screen.fxml
 │                               │   style.css
 │                               │   
 │                               ├───images

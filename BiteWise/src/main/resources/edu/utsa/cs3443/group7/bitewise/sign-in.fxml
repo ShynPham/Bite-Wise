@@ -41,7 +41,7 @@
         </graphic>
     </Button>
 
-    <Hyperlink layoutX="278.0" layoutY="444.0" text="Forgot Password?" textFill="#53382e">
+    <Hyperlink layoutX="278.0" layoutY="444.0" text="Forgot Password?" onAction="#handleForgotPasswordClick" textFill="#53382e">
         <font>
             <Font name="KG Red Hands " size="12.0" />
         </font>

@@ -32,9 +32,9 @@ package controller;
      private void handleSignUpLinkClick(){viewSwitcher.switchScene("sign-up.fxml");}
 
      @FXML
-//     private void handleForgotPasswordClick() {
-//         viewSwitcher.switchScene("forgot-password.fxml");
-//     }
+     private void handleForgotPasswordClick() {
+         viewSwitcher.switchScene("forgot-password.fxml");
+     }
 
      private void showAlert(String msg) {
          Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -47,9 +47,5 @@ package controller;
 
      public void shutdown() {
          InterferenceController.shutdown();
-     }
-
-     public void handleForgotPasswordClick() {
-         viewSwitcher.switchScene("forgot-password.fxml");
      }
  }

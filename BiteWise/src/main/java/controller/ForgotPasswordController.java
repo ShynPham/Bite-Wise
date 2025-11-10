@@ -44,7 +44,11 @@ public class ForgotPasswordController {
             showAlert(Alert.AlertType.WARNING, "Please fill in all fields.");
             return;
         }
-
+        if (!isValidEmail(email)) {
+            showAlert(Alert.AlertType.ERROR,
+                    "Invalid email format.\nPlease enter a valid email like:\nuser@gmail.com or user@yahoo.com");
+            return;
+        }
         File csvFile = new File(System.getProperty("user.dir"), CSV_FILE);
         if (!csvFile.exists()) {
             showAlert(Alert.AlertType.ERROR, "No user data found. Please sign up first.");
@@ -100,6 +104,10 @@ public class ForgotPasswordController {
 
         showAlert(Alert.AlertType.INFORMATION, "Password reset successful!");
         viewSwitcher.switchScene("sign-in.fxml");
+    }
+
+    private boolean isValidEmail(String email) {
+        return email.matches("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$");
     }
 
     /** Navigate to Sign Up screen when link clicked */

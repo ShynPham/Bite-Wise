@@ -25,6 +25,11 @@ package controller;
              return;
          }
 
+         if (!isValidEmail(inputEmail)) {
+             showAlert("Invalid email format.\nPlease use your registered address (e.g. user@gmail.com)");
+             return;
+         }
+
          // --- NEW CSV-READING LOGIC ---
 
          // 1. Get the file path used in SignupController to bitewise_user.csv
@@ -75,6 +80,10 @@ package controller;
          } else {
              showAlert("Incorrect email or password.");
          }
+     }
+
+     private boolean isValidEmail(String email) {
+         return email.matches("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$");
      }
 
      @FXML

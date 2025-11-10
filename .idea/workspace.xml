@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="updated settings-screen.fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/forgot-password.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/forgot-password.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/InterferenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/InterferenceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/scan-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/scan-screen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

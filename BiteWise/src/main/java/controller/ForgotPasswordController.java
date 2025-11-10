@@ -34,7 +34,7 @@ public class ForgotPasswordController {
 
     /**
      * Handles the reset password logic.
-     * Updates the user password in bitewise-users.csv and Preferences.
+     * Updates the user password in bitewise_users.csv and Preferences.
      */
     private void handleResetPasswordClick() {
         String email = emailField.getText().trim();

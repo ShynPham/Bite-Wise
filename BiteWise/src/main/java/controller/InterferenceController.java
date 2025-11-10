@@ -6,6 +6,10 @@ package controller;
 
 import ai.onnxruntime.*;
 import detectionApp.AppLauncher;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import model.Detection;
 import utility.DetectionDrawer;
 import javafx.application.Platform;
@@ -23,8 +27,10 @@ import javafx.stage.Stage;
 import javax.imageio.ImageIO;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -50,38 +56,73 @@ public class InterferenceController {
 
     // --- FXML Bindings (UI Elements) ---
 
-    /** FXML link to the "Choose Image" button. */
-    @FXML private Button chooseImageButton;
-    /** FXML link to the status label at the bottom. */
-    @FXML private Label statusLabel;
-    /** FXML link to the main ImageView for displaying the user's image. */
-    @FXML private ImageView imageView;
-    /** FXML link to the Canvas used to draw bounding boxes over the ImageView. */
-    @FXML private Canvas overlayCanvas;
-    /** FXML link to the StackPane that holds the ImageView and Canvas. */
-    @FXML private StackPane imageContainer;
-    /** FXML link to the loading spinner. */
-    @FXML private ProgressIndicator progressIndicator;
-    /** FXML link to the TextArea results */
-    @FXML private TextArea detectionResults;
+    /**
+     * FXML link to the "Choose Image" button.
+     */
+    @FXML
+    private Button chooseImageButton;
+    /**
+     * FXML link to the status label at the bottom.
+     */
+    @FXML
+    private Label statusLabel;
+    /**
+     * FXML link to the main ImageView for displaying the user's image.
+     */
+    @FXML
+    private ImageView imageView;
+    /**
+     * FXML link to the Canvas used to draw bounding boxes over the ImageView.
+     */
+    @FXML
+    private Canvas overlayCanvas;
+    /**
+     * FXML link to the StackPane that holds the ImageView and Canvas.
+     */
+    @FXML
+    private StackPane imageContainer;
+    /**
+     * FXML link to the loading spinner.
+     */
+    @FXML
+    private ProgressIndicator progressIndicator;
+    /**
+     * FXML link to the TextArea results
+     */
+    @FXML
+    private TextArea detectionResults;
     // --- ONNX Runtime Resources ---
 
-    /** The ONNX runtime environment. */
+    /**
+     * The ONNX runtime environment.
+     */
     private static OrtEnvironment env;
-    /** The ONNX model inference session. */
+    /**
+     * The ONNX model inference session.
+     */
     private static OrtSession session;
-    /** A single-thread executor to run inference tasks in the background, keeping the UI responsive. */
+    /**
+     * A single-thread executor to run inference tasks in the background, keeping the UI responsive.
+     */
     private static final ExecutorService executor = Executors.newSingleThreadExecutor();
 
     // --- Model Properties ---
 
-    /** The expected input width for the model. Read from the model properties. */
+    /**
+     * The expected input width for the model. Read from the model properties.
+     */
     private int modelWidth;
-    /** The expected input height for the model. Read from the model properties. */
+    /**
+     * The expected input height for the model. Read from the model properties.
+     */
     private int modelHeight;
-    /** The number of classes the model can detect. Read from the model properties. */
+    /**
+     * The number of classes the model can detect. Read from the model properties.
+     */
     private int numClasses;
-    /** The name of the model's input node (e.g., "images"). Read from the model properties. */
+    /**
+     * The name of the model's input node (e.g., "images"). Read from the model properties.
+     */
     private String inputName;
 
     /**
@@ -92,9 +133,13 @@ public class InterferenceController {
 
     // --- Inference Settings ---
 
-    /** Confidence threshold: Detections below this score will be ignored. */
+    /**
+     * Confidence threshold: Detections below this score will be ignored.
+     */
     private static final float CONF_THRESH = 0.1f;
-    /** Non-Max Suppression (NMS) threshold: Boxes with IoU above this value will be merged. */
+    /**
+     * Non-Max Suppression (NMS) threshold: Boxes with IoU above this value will be merged.
+     */
     private static final float NMS_THRESH = 0.45f;
 
     /**
@@ -186,6 +231,7 @@ public class InterferenceController {
     /**
      * Reads the model's input and output metadata (like image size and class count)
      * from the loaded ONNX session.
+     *
      * @throws OrtException If there is an error reading the model properties.
      */
     private void readModelProperties() throws OrtException {
@@ -215,6 +261,9 @@ public class InterferenceController {
             });
         }
     }
+
+
+
 
     /**
      * Called when the "Choose Image" button is clicked.
@@ -451,6 +500,10 @@ public class InterferenceController {
         return nonMaxSuppression(boxes, NMS_THRESH);
     }
 
+
+
+
+
     /**
      * Performs Non-Max Suppression (NMS) to filter overlapping bounding boxes.
      * @param dets A list of all detections above the confidence threshold.
@@ -507,6 +560,25 @@ public class InterferenceController {
         executor.shutdownNow();
         try { if (session != null) session.close(); } catch (Exception ignored) {}
         try { if (env != null) env.close(); } catch (Exception ignored) {}
+    }
+    @FXML
+    public void SettingsSelected(javafx.event.ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(
+                    "/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml"
+            ));
+            Parent settingsRoot = loader.load();
+
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+
+            Scene scene = new Scene(settingsRoot);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Failed to load settings-screen.fxml");
+        }
     }
 
     /**

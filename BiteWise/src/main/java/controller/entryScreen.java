@@ -7,6 +7,7 @@ import utility.viewSwitcher;
 public class entryScreen {
 
 
+
     @FXML
     // Handle button click after either signing up
     private void handleContinueButtonClickAfterSignup(){viewSwitcher.switchScene("sign-in.fxml");}

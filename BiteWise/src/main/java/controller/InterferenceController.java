@@ -36,7 +36,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import utility.viewSwitcher;
 
 /**
  * detectionApp.Main JavaFX Controller for the BiteWise application.
@@ -48,7 +47,6 @@ import utility.viewSwitcher;
  * - Calling utility classes to draw detections on the screen.
  */
 public class InterferenceController {
-    @FXML public Button settingsButton;
 
     // --- FXML Bindings (UI Elements) ---
 
@@ -517,10 +515,5 @@ public class InterferenceController {
      * from the `letterboxAndPreprocess` method.
      */
     private record PreprocessResult(float[] data, float scale, int dx, int dy) {
-    }
-
-    @FXML
-    private void handleSettingsButtonsClick(){
-        viewSwitcher.switchScene("settings-screen.fxml");
     }
 }

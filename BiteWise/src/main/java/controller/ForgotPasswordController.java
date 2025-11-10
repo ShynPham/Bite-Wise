@@ -34,7 +34,6 @@ public class ForgotPasswordController {
 
     /**
      * Handles the reset password logic.
-     * Updates the user password in bitewise_users.csv and Preferences.
      */
     private void handleResetPasswordClick() {
         String email = emailField.getText().trim();
@@ -66,8 +65,7 @@ public class ForgotPasswordController {
                 if (parts.length == 2) {
                     String savedEmail = parts[0].trim().toLowerCase();
                     String typed = email.trim().toLowerCase();
-                    String usernamePart = savedEmail.contains("@") ? savedEmail.substring(0, savedEmail.indexOf("@")) : savedEmail;
-                    if (savedEmail.equals(typed) || usernamePart.equals(typed)) {
+                    if (savedEmail.equalsIgnoreCase(email)) {
                         parts[1] = newPassword; // update password
                         emailFound = true;
                     }

@@ -40,7 +40,6 @@ public class SignupController {
         showAlert("Account created successfully!");
         exportToCSV(email, password);
         // navigate to log in screen
-        viewSwitcher viewSwitch;
         viewSwitcher.switchScene("sign-in.fxml");
     }
 

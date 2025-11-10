@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="fixing ForgotPasswordController.java">
+    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/ForgotPasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/ForgotPasswordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/SignInController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bitewise_users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bitewise_users.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,6 +78,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\shyna\OneDrive\Desktop\7.IdeaForgers\BiteWise\src\main\resources\edu\utsa\cs3443\group7\bitewise" />
       <recent name="C:\Users\shyna\IdeaProjects\7.IdeaForgers\BiteWise\src\main\resources\utsa\cs3443\group7\bitewise" />
       <recent name="C:\Users\shyna\IdeaProjects\7.IdeaForgers\BiteWise\src\main\java\utsa\cs3443\group7\bitewise" />
     </key>
@@ -117,7 +118,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="24" />
+      <option name="ALTERNATIVE_JRE_PATH" value="25" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="detectionApp.Main" />
       <module name="BiteWise" />
@@ -186,47 +187,23 @@
       <option name="project" value="LOCAL" />
       <updated>1761898617010</updated>
     </task>
-    <task id="LOCAL-00005" summary="fresh start">
+    <task id="LOCAL-00005" summary="add a new method to display nutrution value for each food detection">
       <option name="closed" value="true" />
-      <created>1762810413517</created>
+      <created>1762809645372</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1762810413517</updated>
+      <updated>1762809645372</updated>
     </task>
-    <task id="LOCAL-00006" summary="fixing ForgotPasswordController.java">
+    <task id="LOCAL-00006" summary="commit">
       <option name="closed" value="true" />
-      <created>1762811321761</created>
+      <created>1762809657627</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1762811321761</updated>
+      <updated>1762809657627</updated>
     </task>
-    <task id="LOCAL-00007" summary="added the handleForgotPassword on sign-in.fxml and SignInController.java">
-      <option name="closed" value="true" />
-      <created>1762811704662</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1762811704662</updated>
-    </task>
-    <task id="LOCAL-00008" summary="fixing ForgotPasswordController.java">
-      <option name="closed" value="true" />
-      <created>1762812174981</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1762812174981</updated>
-    </task>
-    <task id="LOCAL-00009" summary="fixing ForgotPasswordController.java">
-      <option name="closed" value="true" />
-      <created>1762812186328</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1762812186328</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -254,9 +231,9 @@
     <MESSAGE value="deleted everything" />
     <MESSAGE value="delete" />
     <MESSAGE value="fresh start" />
-    <MESSAGE value="added the handleForgotPassword on sign-in.fxml and SignInController.java" />
-    <MESSAGE value="fixing ForgotPasswordController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing ForgotPasswordController.java" />
+    <MESSAGE value="add a new method to display nutrution value for each food detection" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -265,6 +242,11 @@
           <properties class="java.lang.IllegalStateException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BiteWise/src/main/java/controller/SignInController.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

@@ -9,7 +9,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="798.0" prefWidth="1121.0" style="-fx-background-color: #eeffea;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InterferenceController">
+<BorderPane prefHeight="798.0" prefWidth="1143.0" style="-fx-background-color: #eeffea;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InterferenceController">
 
     <top>
         <HBox alignment="CENTER_LEFT" prefHeight="99.0" prefWidth="1128.0" style="-fx-background-color: #a8c474; -fx-padding: 0 20 0 20;" BorderPane.alignment="CENTER">
@@ -22,8 +22,11 @@
             </effect>
             <Label prefHeight="62.0" prefWidth="681.0" styleClass="str" text="BiteWise Food Scanner" textFill="#53382e">
                 <font>
-                    <Font name="KG Red Hands " size="44.0" />
+                    <Font name="KG Red Hands" size="44.0" />
                 </font>
+            <effect>
+               <ColorAdjust />
+            </effect>
             </Label>
             <Region HBox.hgrow="ALWAYS" />
             <Button prefHeight="57.0" prefWidth="200.0" style="-fx-background-color: #f3ac92; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 10;" text="Settings" />
@@ -35,7 +38,7 @@
             <BorderPane.margin>
                 <Insets bottom="20.0" left="20.0" top="20.0" />
             </BorderPane.margin>
-            <ImageView fx:id="imageView" preserveRatio="true" fitHeight="367" fitWidth="${imageContainer.height}"/>
+            <ImageView fx:id="imageView" fitHeight="367" fitWidth="${imageContainer.height}" preserveRatio="true" />
             <Canvas fx:id="overlayCanvas" />
             <ProgressIndicator fx:id="progressIndicator" maxHeight="100" maxWidth="100" visible="false" />
         </StackPane>

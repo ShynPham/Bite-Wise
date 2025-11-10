@@ -60,7 +60,10 @@ public class ForgotPasswordController {
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 if (parts.length == 2) {
-                    if (parts[0].equalsIgnoreCase(email)) {
+                    String savedEmail = parts[0].trim().toLowerCase();
+                    String typed = email.trim().toLowerCase();
+                    String usernamePart = savedEmail.contains("@") ? savedEmail.substring(0, savedEmail.indexOf("@")) : savedEmail;
+                    if (savedEmail.equals(typed) || usernamePart.equals(typed)) {
                         parts[1] = newPassword; // update password
                         emailFound = true;
                     }

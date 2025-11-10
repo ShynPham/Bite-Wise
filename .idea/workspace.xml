@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="added the handleForgotPassword on sign-in.fxml and SignInController.java">
+    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="fixing ForgotPasswordController.java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/ForgotPasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/ForgotPasswordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitewise_users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bitewise_users.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +210,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762811704662</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fixing ForgotPasswordController.java">
+      <option name="closed" value="true" />
+      <created>1762812174981</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1762812174981</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fixing ForgotPasswordController.java">
+      <option name="closed" value="true" />
+      <created>1762812186328</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1762812186328</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -236,9 +254,9 @@
     <MESSAGE value="deleted everything" />
     <MESSAGE value="delete" />
     <MESSAGE value="fresh start" />
-    <MESSAGE value="fixing ForgotPasswordController.java" />
     <MESSAGE value="added the handleForgotPassword on sign-in.fxml and SignInController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the handleForgotPassword on sign-in.fxml and SignInController.java" />
+    <MESSAGE value="fixing ForgotPasswordController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing ForgotPasswordController.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

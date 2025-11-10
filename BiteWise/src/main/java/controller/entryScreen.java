@@ -6,21 +6,14 @@ import utility.viewSwitcher;
 
 public class entryScreen {
 
+
     @FXML
-    // Handle button when the SignIn button is click
-    private void handleSignInClick(){
-        viewSwitcher.switchScene("sign-in.fxml");
-    }
+    // Handle button click after either signing up
+    private void handleContinueButtonClickAfterSignup(){viewSwitcher.switchScene("sign-in.fxml");}
     @FXML
-    // Handle button when the SignUp button is click
-    private void handleSignUpClick(){
-        viewSwitcher.switchScene("sign-up.fxml");
-    }
-    @FXML
-    // Handle button click after either signing in or up
-    private void handleContinueButtonClick(){
-        viewSwitcher.switchScene("scan-screen.fxml");
-    }
+    // Handle button after succesfully signing in
+    private void scanScreenEntry(){viewSwitcher.switchScene("scan-screen.fxml");}
+
 
     public void shutdown() {
         InterferenceController.shutdown();

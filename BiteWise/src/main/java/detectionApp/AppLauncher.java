@@ -1,7 +1,7 @@
 package detectionApp;
 
 
-import controller.entryScreen;
+import controller.SignInController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,7 +14,7 @@ import java.io.InputStream;
 
 public class AppLauncher extends Application {
 
-    private entryScreen controller; // Store the controller instance
+    private SignInController controller; // Store the controller instance
 
     @Override
     public void start(Stage stage) throws Exception {

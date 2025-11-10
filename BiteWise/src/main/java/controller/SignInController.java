@@ -8,7 +8,7 @@ package controller;
  import java.util.prefs.Preferences;
 
  public class SignInController {
-
+        
      @FXML private TextField emailField;
      @FXML private PasswordField passwordField;
 

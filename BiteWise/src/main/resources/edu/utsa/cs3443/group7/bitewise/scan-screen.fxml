@@ -26,7 +26,7 @@
                 </font>
             </Label>
             <Region HBox.hgrow="ALWAYS" />
-            <Button prefHeight="57.0" prefWidth="200.0" style="-fx-background-color: #f3ac92; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 10;" text="Settings" />
+            <Button fx:id="settingsButton" onAction="#SettingsSelected" prefHeight="57.0" prefWidth="200.0" style="-fx-background-color: #f3ac92; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 10;" text="Settings" />
         </HBox>
     </top>
 
@@ -35,7 +35,7 @@
             <BorderPane.margin>
                 <Insets bottom="20.0" left="20.0" top="20.0" />
             </BorderPane.margin>
-            <ImageView fx:id="imageView" preserveRatio="true" fitHeight="367" fitWidth="${imageContainer.height}"/>
+            <ImageView fx:id="imageView" fitHeight="367" fitWidth="${imageContainer.height}" preserveRatio="true" />
             <Canvas fx:id="overlayCanvas" />
             <ProgressIndicator fx:id="progressIndicator" maxHeight="100" maxWidth="100" visible="false" />
         </StackPane>

@@ -6,6 +6,10 @@ package controller;
 
 import ai.onnxruntime.*;
 import detectionApp.AppLauncher;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import model.Detection;
 import utility.DetectionDrawer;
 import javafx.application.Platform;
@@ -23,8 +27,10 @@ import javafx.stage.Stage;
 import javax.imageio.ImageIO;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -215,6 +221,25 @@ public class InterferenceController {
             });
         }
     }
+    /**
+     * Called when settings button is selected by user.
+     * */
+    @FXML
+    private void settingsSelected(ActionEvent event) {
+        try{
+            Parent homeRoot;
+            homeRoot = FXMLLoader.load(getClass().getResource("/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(homeRoot));
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        }
+
+
 
     /**
      * Called when the "Choose Image" button is clicked.
@@ -517,3 +542,4 @@ public class InterferenceController {
     private record PreprocessResult(float[] data, float scale, int dx, int dy) {
     }
 }
+

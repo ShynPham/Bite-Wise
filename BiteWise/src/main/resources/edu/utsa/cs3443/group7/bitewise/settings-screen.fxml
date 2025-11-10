@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D4EAD0; -fx-border-color: #6DAB60;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D4EAD0; -fx-border-color: #6DAB60;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingsController">
    <children>
       <ImageView fitHeight="97.0" fitWidth="143.0" layoutX="204.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -14,12 +13,13 @@
          </image>
       </ImageView>
       <Button layoutX="191.0" layoutY="219.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="168.0" style="-fx-background-color: #8BC081; -fx-border-color: #3F6B36;" text="Change Password " />
-      <Button layoutX="192.0" layoutY="274.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="168.0" style="-fx-background-color: #8BC081; -fx-border-color: #3F6B36;" text="Log Out" />
+      <Button fx:id="logOutButton" layoutX="192.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="38.0" prefWidth="168.0" style="-fx-background-color: #8BC081; -fx-border-color: #3F6B36;" text="Log Out" />
       <Button layoutX="191.0" layoutY="162.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="168.0" style="-fx-background-color: #8BC081; -fx-border-color: #3F6B36;" text="Delete a Bite" textFill="#593f30" />
       <Label alignment="CENTER" layoutX="142.0" layoutY="93.0" prefHeight="47.0" prefWidth="267.0" text="Settings" textFill="#593f30">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
+      <Button fx:id="downloadBite" layoutX="191.0" layoutY="331.0" mnemonicParsing="false" onAction="#handleDownload" prefHeight="38.0" prefWidth="168.0" style="-fx-background-color: #8BC081; -fx-border-color: #3F6B36;" text="Download Bite Information" />
    </children>
 </AnchorPane>

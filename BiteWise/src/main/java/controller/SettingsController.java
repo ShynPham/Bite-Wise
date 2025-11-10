@@ -20,20 +20,29 @@ import java.util.prefs.Preferences;
 public  class SettingsController {
     //user clicks logout button, navigates to the sign-inscreen screen
     @FXML
-    private void handleLogOut(ActionEvent event) {
+    private void handleLogOut(javafx.event.ActionEvent actionEvent) {
         try {
-            Parent homeRoot = FXMLLoader.load(getClass().getResource("/edu/utsa/cs3443/group7/bitewise/sign-in.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(
+                    "/edu/utsa/cs3443/group7/bitewise/sign-in.fxml"
+            ));
+            Parent settingsRoot = loader.load();
 
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(homeRoot));
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+
+            Scene scene = new Scene(settingsRoot);
+            stage.setScene(scene);
             stage.show();
 
         } catch (IOException e) {
             e.printStackTrace();
-        }
-
-
-
-
+            System.out.println("Failed to load settings-screen.fxml");
         }
     }
+
+    @FXML
+    private void handleDownload(javafx.event.ActionEvent actionEvent) {
+        // You can leave it empty if you don't need it yet
+        System.out.println("Download clicked");
+    }
+
+}

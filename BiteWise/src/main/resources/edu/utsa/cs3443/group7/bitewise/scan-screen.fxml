@@ -9,7 +9,8 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="798.0" prefWidth="1121.0" style="-fx-background-color: #eeffea;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InterferenceController">
+<BorderPane prefHeight="798.0" prefWidth="1121.0" style="-fx-background-color: #eeffea;"
+            stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InterferenceController">
 
     <top>
         <HBox alignment="CENTER_LEFT" prefHeight="99.0" prefWidth="1128.0" style="-fx-background-color: #a8c474; -fx-padding: 0 20 0 20;" BorderPane.alignment="CENTER">

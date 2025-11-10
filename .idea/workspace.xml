@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="button font">
+    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="updated settings-screen.fxml">
+      <change afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/ForgotPasswordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/forgot-password.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/scan-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/scan-screen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -81,6 +83,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise" />
       <recent name="C:\Users\shyna\IdeaProjects\7.IdeaForgers\BiteWise\src\main\resources\utsa\cs3443\group7\bitewise" />
       <recent name="C:\Users\shyna\IdeaProjects\7.IdeaForgers\BiteWise\src\main\java\utsa\cs3443\group7\bitewise" />
     </key>
@@ -145,7 +148,23 @@
       <option name="project" value="LOCAL" />
       <updated>1761898617010</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="updated settings-screen.fxml">
+      <option name="closed" value="true" />
+      <created>1762760274052</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762760274052</updated>
+    </task>
+    <task id="LOCAL-00006" summary="updated settings-screen.fxml">
+      <option name="closed" value="true" />
+      <created>1762760371637</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1762760371637</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,7 +193,8 @@
     <MESSAGE value="delete" />
     <MESSAGE value="fresh start" />
     <MESSAGE value="button font" />
-    <option name="LAST_COMMIT_MESSAGE" value="button font" />
+    <MESSAGE value="updated settings-screen.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated settings-screen.fxml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

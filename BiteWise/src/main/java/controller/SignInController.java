@@ -48,4 +48,8 @@ package controller;
      public void shutdown() {
          InterferenceController.shutdown();
      }
+
+     public void handleForgotPasswordClick() {
+         viewSwitcher.switchScene("forgot-password.fxml");
+     }
  }

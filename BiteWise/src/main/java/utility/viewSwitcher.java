@@ -116,5 +116,9 @@ public class viewSwitcher {
             // old method for debugging
             e.printStackTrace();
         }
+        // Check the file name
+        // If it's the scan screen, make the window RESIZABLE.
+        // For all other screens (login, signup, settings), lock the size.
+        mainStage.setResizable(fxmlFileName.equals("scan-screen.fxml"));
     }
 }

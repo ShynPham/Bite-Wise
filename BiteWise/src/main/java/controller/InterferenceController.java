@@ -26,10 +26,8 @@ import javafx.stage.Stage;
 import utility.viewSwitcher;
 
 import javax.imageio.ImageIO;
-import javax.print.DocFlavor;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
-import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -62,6 +60,7 @@ import java.util.HashMap;
  * - Calling utility classes to draw detections on the screen.
  */
 public class InterferenceController {
+    public Button settingsButton;
 
     // --- FXML Bindings (UI Elements) ---
 
@@ -740,6 +739,6 @@ public class InterferenceController {
         }
     }
 
-//    @FXML
-  //  private void handleBiteHistoryClick() {viewSwitcher.switchScene("bite-history.fxml");}
+    @FXML
+    private void handleSettingsButtonClick() { viewSwitcher.switchScene("settings-screen.fxml");}
 }

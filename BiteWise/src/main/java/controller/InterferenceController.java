@@ -689,9 +689,6 @@ public class InterferenceController {
         }
     }
 
-    @FXML
-    private void handleBiteHistoryClick(){
-        viewSwitcher.switchScene("bite-history.fxml");}
 
     /**
      * A private inner class to hold the results of the pre-processing step.
@@ -742,4 +739,7 @@ public class InterferenceController {
                     "  - Protein: " + protein + "\n";
         }
     }
+
+    @FXML
+    private void handleBiteHistoryClick() {viewSwitcher.switchScene("bite-history.fxml");}
 }

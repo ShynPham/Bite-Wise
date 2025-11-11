@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="updated forgot-password.fxml ui to match sign-in ui">
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/ForgotPasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/ForgotPasswordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/forgot-password.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/forgot-password.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +35,12 @@
     &quot;assignee&quot;: &quot;ShynPham&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers.git",
-    "accountId": "9af2f4e8-cacb-4d6c-b5a1-720872e75567"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers.git&quot;,
+    &quot;accountId&quot;: &quot;9af2f4e8-cacb-4d6c-b5a1-720872e75567&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -358,9 +360,9 @@
     <MESSAGE value="added a back Button on Bite History but haven't gotten it to work or centered it yet" />
     <MESSAGE value="change fonts" />
     <MESSAGE value="expanded &quot;Already have an account?&quot; text box" />
-    <MESSAGE value="re-call forgot-password code to bmo code" />
     <MESSAGE value="updated forgot-password.fxml ui to match sign-in ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated forgot-password.fxml ui to match sign-in ui" />
+    <MESSAGE value="re-call forgot-password code to bmo code" />
+    <option name="LAST_COMMIT_MESSAGE" value="re-call forgot-password code to bmo code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

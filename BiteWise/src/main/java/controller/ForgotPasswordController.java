@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Hyperlink;
@@ -125,5 +126,8 @@ public class ForgotPasswordController {
 
     public void shutdown() {
         InterferenceController.shutdown();
+    }
+
+    public void handleSignInLinkClick() { viewSwitcher.switchScene("sign-in.fxml");
     }
 }

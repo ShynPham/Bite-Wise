@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="added a back Button on Bite History but haven't gotten it to work or centered it yet">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="change fonts" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -288,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762832737937</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="change fonts">
+      <option name="closed" value="true" />
+      <created>1762837396487</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1762837396487</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -325,7 +331,8 @@
     <MESSAGE value="changed the buttons of &quot;change password&quot; to &quot;Scan Screen&quot; and &quot;Delete a bite&quot; to &quot;Bite History&quot;" />
     <MESSAGE value="expanded the &quot;Dont have an account&quot; text box" />
     <MESSAGE value="added a back Button on Bite History but haven't gotten it to work or centered it yet" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a back Button on Bite History but haven't gotten it to work or centered it yet" />
+    <MESSAGE value="change fonts" />
+    <option name="LAST_COMMIT_MESSAGE" value="change fonts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

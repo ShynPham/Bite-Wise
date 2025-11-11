@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="placed the BiteHistory method in InterferenceController.java">
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/module-info.java" afterDir="false" />
+    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="updated settings-screen.fxml ui to match ui">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,15 +34,12 @@
     &quot;assignee&quot;: &quot;ShynPham&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers.git&quot;,
-    &quot;accountId&quot;: &quot;9af2f4e8-cacb-4d6c-b5a1-720872e75567&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers.git",
+    "accountId": "9af2f4e8-cacb-4d6c-b5a1-720872e75567"
   }
-}</component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -322,23 +320,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762880996143</updated>
     </task>
-    <task id="LOCAL-00023" summary="re-call forgot-password code to bmo code and added call to signin screen">
+    <task id="LOCAL-00023" summary="updated settings-screen.fxml ui to match ui">
       <option name="closed" value="true" />
-      <created>1762882779521</created>
+      <created>1762881753690</created>
       <option name="number" value="00023" />
       <option name="presentableId" value="LOCAL-00023" />
       <option name="project" value="LOCAL" />
-      <updated>1762882779521</updated>
+      <updated>1762881753690</updated>
     </task>
-    <task id="LOCAL-00024" summary="placed the BiteHistory method in InterferenceController.java">
-      <option name="closed" value="true" />
-      <created>1762884050129</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1762884050129</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -379,8 +369,8 @@
     <MESSAGE value="expanded &quot;Already have an account?&quot; text box" />
     <MESSAGE value="re-call forgot-password code to bmo code" />
     <MESSAGE value="updated forgot-password.fxml ui to match sign-in ui" />
-    <MESSAGE value="placed the BiteHistory method in InterferenceController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="placed the BiteHistory method in InterferenceController.java" />
+    <MESSAGE value="updated settings-screen.fxml ui to match ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated settings-screen.fxml ui to match ui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

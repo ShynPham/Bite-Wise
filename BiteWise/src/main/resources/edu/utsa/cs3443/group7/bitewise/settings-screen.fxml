@@ -5,58 +5,56 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="1040.0" prefWidth="1440.0" style="-fx-background-color: #D4EAD0;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingsController">
+<AnchorPane prefHeight="680.0" prefWidth="462.0" style="-fx-background-color: #FAF0E6; -fx-padding: 20;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingsController">
 
     <children>
-        <!-- Center all content -->
-        <VBox alignment="CENTER" spacing="22.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <!-- Logo -->
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="131.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@ui_icons/logo.png" />
+            </image>
+        </ImageView>
 
-            <!-- Logo -->
-            <ImageView fitHeight="186.0" fitWidth="243.0" pickOnBounds="true" preserveRatio="true">
-                <image>
-                    <Image url="@ui_icons/logo.png" />
-                </image>
-            </ImageView>
+        <!-- Title -->
+        <Label layoutX="126.0" layoutY="193.0" text="Settings" textFill="#53382E">
+            <font>
+                <Font name="KG Red Hands" size="48.0" />
+            </font>
+        </Label>
 
-            <!-- Title -->
-            <Label alignment="CENTER" prefHeight="116.0" prefWidth="295.0" text="Settings" textFill="#53382E">
-                <font>
-                    <Font name="KG Red Hands" size="64.0" />
-                </font>
-            </Label>
+        <!-- Delete a bite -->
+        <Button layoutX="96.0" layoutY="283.0" onAction="#handleDeleteBite" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #A8C474; -fx-text-fill: white; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="Delete a bite">
+            <font>
+                <Font name="KG Red Hands" size="18.0" />
+            </font>
+        </Button>
 
-            <!-- Buttons -->
-            <VBox alignment="CENTER" prefHeight="266.0" prefWidth="1440.0" spacing="16.0">
+        <!-- Change password -->
+        <Button layoutX="96.0" layoutY="353.0" onAction="#handleChangePassword" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #F3AC92; -fx-text-fill: white; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="Change password">
+            <font>
+                <Font name="KG Red Hands" size="18.0" />
+            </font>
+        </Button>
 
-                <!-- Delete a bite -->
-                <Button prefHeight="59.0" prefWidth="299.0" style="-fx-background-color: #A8C474; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-background-radius: 25; -fx-border-color: #53382E; -fx-border-width: 2; -fx-border-radius: 25;" text="Delete a bite">
-                    <font>
-                        <Font name="KG Red Hands" size="18.0" />
-                    </font>
-                </Button>
+        <!-- Recent bite -->
+        <Button layoutX="96.0" layoutY="423.0" onAction="#handleRecentBite" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #FFF0EA; -fx-text-fill: #53382E; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="Recent bite">
+            <font>
+                <Font name="KG Red Hands" size="18.0" />
+            </font>
+        </Button>
 
-                <!-- Recent bite -->
-                <Button prefHeight="60.0" prefWidth="299.0" style="-fx-background-color: #F3AC92; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-background-radius: 25; -fx-border-color: #53382E; -fx-border-width: 2; -fx-border-radius: 25;" text="Recent bite">
-                    <font>
-                        <Font name="KG Red Hands" size="18.0" />
-                    </font>
-                </Button>
+        <!-- Log out -->
+        <Button layoutX="96.0" layoutY="493.0" onAction="#handleLogOut" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #EEFFEA; -fx-text-fill: #53382E; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="Log out">
+            <font>
+                <Font name="KG Red Hands" size="18.0" />
+            </font>
+        </Button>
 
-                <!-- Go back to Scan Screen -->
-                <Button prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #FFF0EA; -fx-text-fill: #53382E; -fx-font-weight: bold; -fx-font-size: 18px; -fx-background-radius: 25; -fx-border-color: #53382E; -fx-border-width: 2; -fx-border-radius: 25;" text="Scan Screen" onAction="#handleScanScreenClick">
-                    <font>
-                        <Font name="KG Red Hands" size="18.0" />
-                    </font>
-                </Button>
-
-                <!-- Log out -->
-                <Button prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #EEFFEA; -fx-text-fill: #53382E; -fx-font-weight: bold; -fx-font-size: 18px; -fx-background-radius: 25; -fx-border-color: #53382E; -fx-border-width: 2; -fx-border-radius: 25;" text="Log out" onAction="#handleLogOut">
-                    <font>
-                        <Font name="KG Red Hands" size="18.0" />
-                    </font>
-                </Button>
-
-            </VBox>
-        </VBox>
+        <!-- Back Arrow Button -->
+        <Button fx:id="backButton" layoutX="195.0" layoutY="570.0" onAction="#handleScanScreenClick" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #A8C474; -fx-background-radius: 50;                        -fx-border-color: #53382E; -fx-border-radius: 50;                        -fx-text-fill: #53382E; -fx-font-weight: bold;" text="→">
+            <font>
+                <Font name="KG Red Hands" size="28.0" />
+            </font>
+        </Button>
     </children>
 </AnchorPane>

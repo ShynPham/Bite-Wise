@@ -59,7 +59,7 @@
                     <Label styleClass="bite-history-element-title" text="Bite 3">
                         <font><Font name="KG Red Hands" size="16" /></font>
                     </Label>
-                    <Label text="• Mashed potato" />
+                    <Label text="• Mashed potatoes" />
                     <Label styleClass="bite-history-info" text="Calories: 780" />
                 </VBox>
             </VBox>

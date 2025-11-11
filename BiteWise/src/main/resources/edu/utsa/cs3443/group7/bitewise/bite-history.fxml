@@ -164,7 +164,7 @@
             </VBox>
         </VBox>
     </ScrollPane>
-   <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="64.0" style="-fx-background-color: #8BC081; -fx-border-color: #3F6B36; -fx-background-radius: 50; -fx-border-radius: 50; -fx-font-weight: bold;" text="Back">
+   <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="75.0" prefWidth="78.0" style="-fx-background-color: #8BC081; -fx-border-color: #3F6B36; -fx-background-radius: 50; -fx-border-radius: 50; -fx-font-weight: bold;" text="Back">
       <opaqueInsets>
          <Insets />
       </opaqueInsets></Button>

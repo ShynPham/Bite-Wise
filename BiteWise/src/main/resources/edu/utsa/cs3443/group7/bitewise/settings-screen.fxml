@@ -12,9 +12,9 @@
             <Image url="@ui_icons/logo.png" />
          </image>
       </ImageView>
-      <Button layoutX="191.0" layoutY="219.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="168.0" style="-fx-background-color: #8BC081; -fx-border-color: #3F6B36;" text="Change Password " />
+      <Button layoutX="191.0" layoutY="219.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="168.0" style="-fx-background-color: #8BC081; -fx-border-color: #3F6B36;" text="Scan Screen" />
       <Button fx:id="logOutButton" layoutX="192.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="38.0" prefWidth="168.0" style="-fx-background-color: #8BC081; -fx-border-color: #3F6B36;" text="Log Out" />
-      <Button layoutX="191.0" layoutY="162.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="168.0" style="-fx-background-color: #8BC081; -fx-border-color: #3F6B36;" text="Delete a Bite" textFill="#593f30" />
+      <Button layoutX="191.0" layoutY="162.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="168.0" style="-fx-background-color: #8BC081; -fx-border-color: #3F6B36;" text="Bite History" textFill="#593f30" />
       <Label alignment="CENTER" layoutX="142.0" layoutY="93.0" prefHeight="47.0" prefWidth="267.0" text="Settings" textFill="#593f30">
          <font>
             <Font name="KG Red Hands" size="36.0" />

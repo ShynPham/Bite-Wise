@@ -12,7 +12,7 @@
     </ImageView>
     <Label contentDisplay="CENTER" graphicTextGap="3.0" layoutX="120.0" layoutY="138.0" lineSpacing="3.0" styleClass="str" stylesheets="@style.css" text="BiteWise" textAlignment="JUSTIFY" textFill="#bde070" textOverrun="CLIP">
         <font>
-            <Font name="KG Red Hands " size="48.0" />
+            <Font name="KG Red Hands" size="48.0" />
         </font>
     </Label>
     <Label contentDisplay="CENTER" graphicTextGap="3.0" layoutX="125.0" layoutY="203.0" lineSpacing="3.0" styleClass="slogan" stylesheets="@style.css" text="Snap a bite, see the count" textAlignment="JUSTIFY" textFill="#53382e" textOverrun="CLIP">

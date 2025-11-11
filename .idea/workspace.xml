@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="changed the buttons of &quot;change password&quot; to &quot;Scan Screen&quot; and &quot;Delete a bite&quot; to &quot;Bite History&quot;" />
+    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="expanded the &quot;Dont have an account&quot; text box">
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -270,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762829286548</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="expanded the &quot;Dont have an account&quot; text box">
+      <option name="closed" value="true" />
+      <created>1762829373431</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1762829373431</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -305,7 +316,8 @@
     <MESSAGE value="fixed validate email method" />
     <MESSAGE value="font" />
     <MESSAGE value="changed the buttons of &quot;change password&quot; to &quot;Scan Screen&quot; and &quot;Delete a bite&quot; to &quot;Bite History&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the buttons of &quot;change password&quot; to &quot;Scan Screen&quot; and &quot;Delete a bite&quot; to &quot;Bite History&quot;" />
+    <MESSAGE value="expanded the &quot;Dont have an account&quot; text box" />
+    <option name="LAST_COMMIT_MESSAGE" value="expanded the &quot;Dont have an account&quot; text box" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

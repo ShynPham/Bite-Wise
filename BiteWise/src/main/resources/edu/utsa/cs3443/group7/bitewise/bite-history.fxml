@@ -30,7 +30,7 @@
     <!-- Scrollable Bite Entries -->
     <ScrollPane fitToWidth="true" layoutX="48.0" layoutY="272.0" prefHeight="320.0" prefWidth="362.0" style="-fx-background: #FAF0E6; -fx-background-color: #FAF0E6; -fx-border-color: transparent;">
 
-    <content>
+        <content>
             <VBox spacing="18" style="-fx-background-color: transparent;">
 
                 <!-- Entry 1 -->

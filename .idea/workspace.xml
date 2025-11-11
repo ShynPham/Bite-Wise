@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="workspace.xml" />
+    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/detectionApp/AppLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/detectionApp/AppLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/utility/viewSwitcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/utility/viewSwitcher.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,12 +36,12 @@
     &quot;assignee&quot;: &quot;ShynPham&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers.git&quot;,
-    &quot;accountId&quot;: &quot;31278bdb-4149-4196-a085-36ba1725f3ab&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers.git",
+    "accountId": "5a417c62-39c6-430c-9ab1-fe7d29290c75"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>

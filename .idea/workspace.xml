@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="change fonts" />
+    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="expanded &quot;Already have an account?&quot; text box">
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/sign-up.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/sign-up.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -294,7 +297,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762837396487</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="expanded &quot;Already have an account?&quot; text box">
+      <option name="closed" value="true" />
+      <created>1762840794960</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1762840794960</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -332,7 +343,8 @@
     <MESSAGE value="expanded the &quot;Dont have an account&quot; text box" />
     <MESSAGE value="added a back Button on Bite History but haven't gotten it to work or centered it yet" />
     <MESSAGE value="change fonts" />
-    <option name="LAST_COMMIT_MESSAGE" value="change fonts" />
+    <MESSAGE value="expanded &quot;Already have an account?&quot; text box" />
+    <option name="LAST_COMMIT_MESSAGE" value="expanded &quot;Already have an account?&quot; text box" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

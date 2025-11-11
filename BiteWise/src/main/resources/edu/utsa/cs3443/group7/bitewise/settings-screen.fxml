@@ -35,22 +35,22 @@
                     </font>
                 </Button>
 
-                <!-- Change password -->
-                <Button prefHeight="60.0" prefWidth="299.0" style="-fx-background-color: #F3AC92; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-background-radius: 25; -fx-border-color: #53382E; -fx-border-width: 2; -fx-border-radius: 25;" text="Change password">
+                <!-- Recent bite -->
+                <Button prefHeight="60.0" prefWidth="299.0" style="-fx-background-color: #F3AC92; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px; -fx-background-radius: 25; -fx-border-color: #53382E; -fx-border-width: 2; -fx-border-radius: 25;" text="Recent bite">
                     <font>
                         <Font name="KG Red Hands" size="18.0" />
                     </font>
                 </Button>
 
-                <!-- Recent bite -->
-                <Button prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #FFF0EA; -fx-text-fill: #53382E; -fx-font-weight: bold; -fx-font-size: 18px; -fx-background-radius: 25; -fx-border-color: #53382E; -fx-border-width: 2; -fx-border-radius: 25;" text="Recent bite">
+                <!-- Go back to Scan Screen -->
+                <Button prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #FFF0EA; -fx-text-fill: #53382E; -fx-font-weight: bold; -fx-font-size: 18px; -fx-background-radius: 25; -fx-border-color: #53382E; -fx-border-width: 2; -fx-border-radius: 25;" text="Scan Screen" onAction="#handleScanScreenClick">
                     <font>
                         <Font name="KG Red Hands" size="18.0" />
                     </font>
                 </Button>
 
                 <!-- Log out -->
-                <Button prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #EEFFEA; -fx-text-fill: #53382E; -fx-font-weight: bold; -fx-font-size: 18px; -fx-background-radius: 25; -fx-border-color: #53382E; -fx-border-width: 2; -fx-border-radius: 25;" text="Log out">
+                <Button prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #EEFFEA; -fx-text-fill: #53382E; -fx-font-weight: bold; -fx-font-size: 18px; -fx-background-radius: 25; -fx-border-color: #53382E; -fx-border-width: 2; -fx-border-radius: 25;" text="Log out" onAction="#handleLogOut">
                     <font>
                         <Font name="KG Red Hands" size="18.0" />
                     </font>

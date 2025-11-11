@@ -23,7 +23,7 @@
         </Label>
 
         <!-- Bite History -->
-        <Button layoutX="95.0" layoutY="275.0" onAction="#handleBiteHistory" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #A8C474; -fx-text-fill: white; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="Bite History">
+        <Button layoutX="95.0" layoutY="275.0" onAction="#handleBiteHistoryClick" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #A8C474; -fx-text-fill: white; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="Bite History">
             <font>
                 <Font name="KG Red Hands" size="18.0" />
             </font>
@@ -51,7 +51,7 @@
         </Button>
 
         <!-- About BiteWise -->
-        <Button layoutX="96.0" layoutY="487.0" onAction="#handleAboutBiteWise" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #BDE070; -fx-text-fill: #53382E; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="About BiteWise">
+        <Button layoutX="96.0" layoutY="487.0" onAction="#handleAboutBiteWiseClick" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #BDE070; -fx-text-fill: #53382E; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="About BiteWise">
             <font>
                 <Font name="KG Red Hands" size="18.0" />
             </font>

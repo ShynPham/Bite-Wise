@@ -50,7 +50,7 @@
 .circle-button{
     -fx-background-color: #c6eaaf; /* Light green background */
     -fx-background-radius: 50%;   /* Makes it perfectly circular */
-    -fx-border- radius: 50%;       /* Ensures the border is also circular */
+    -fx-border-radius: 50%;       /* Ensures the border is also circular */
     -fx-border-color: #8c7e6c;     /* Brown border color */
     -fx-border-width: 2px;        /* Border thickness */
     -fx-padding: 0;

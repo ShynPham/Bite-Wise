@@ -38,14 +38,12 @@ public class AppLauncher extends Application {
                 }
             } else {
                 // This is the most likely error if it fails
-                System.err.println("Error: Custom font 'KGR-Red-Hands.ttf' NOT FOUND.");
+                System.err.println("Error: Custom font 'KGRedHands.ttf' NOT FOUND.");
                 System.err.println("Check your file path in AppLauncher.java!");
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-            System.err.println("Error: Failed to load custom font.");
-        Font.loadFont(getClass().getResourceAsStream(".../KGR-Red-Hands.ttf"), 12);
         InputStream appIconStream = getClass().getResourceAsStream("/edu/utsa/cs3443/group7/bitewise/ui_icons/logo.png");
         if (appIconStream != null){
             Image appIcon = new Image(appIconStream);
@@ -71,7 +69,7 @@ public class AppLauncher extends Application {
     @Override
     public void stop() throws Exception {
         if (controller != null) {
-            controller.shutdown(); // Gracefully shut down the model and threads
+            controller.shutdown(); // shut the damnm thing down
         }
         super.stop();
     }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
@@ -23,15 +22,13 @@
             </image>
         </ImageView>
 
-        <!-- App Title with brown outline -->
-        <Label layoutX="120.0" layoutY="161.0" text="BiteWise" textFill="#bde070">
+        <!-- App Title -->
+        <Text fill="#CBE985" layoutX="121.0" layoutY="212.0" stroke="#53382E" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="2.3" text="BiteWise">
             <font>
                 <Font name="KG Red Hands" size="48.0" />
             </font>
-            <effect>
-                <DropShadow color="#53382E" radius="2.5" spread="1.0" />
-            </effect>
-        </Label>
+            <smooth>true</smooth>
+        </Text>
 
 
         <!-- About Heading -->

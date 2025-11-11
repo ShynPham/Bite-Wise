@@ -6,166 +6,71 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="400.0" prefWidth="600.0" spacing="0" style="-fx-background-color: #D4EAD0;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
-    <VBox alignment="CENTER" spacing="22.0" style="-fx-background-color: #D4EAD0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <!-- Logo -->
-        <ImageView fitHeight="62.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@ui_icons/logo.png" />
-            </image>
-        </ImageView>
-    </VBox>
-    <HBox alignment="CENTER" prefHeight="60.0">
-        <padding>
-            <Insets bottom="15" left="20" right="20" top="15" />
-        </padding>
-        <Label styleClass="str" text="Bite History">
-            <font>
-                <Font name="KG Red Hands" size="40" />
-            </font>
-        </Label>
-    </HBox>
+<AnchorPane prefHeight="680.0" prefWidth="462.0" style="-fx-background-color: #FAF0E6; -fx-padding: 20;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BiteHistoryController">
 
-    <ScrollPane fitToWidth="true" style="-fx-background-color: #D4EAD0; -fx-background: #D4EAD0;" VBox.vgrow="ALWAYS">
-        <VBox spacing="10" style="-fx-background-color: #D4EAD0;">
-            <padding>
-                <Insets bottom="15" left="15" right="15" top="15" />
-            </padding>
+    <!-- Logo -->
+    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="133.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@ui_icons/logo.png" />
+    </ImageView>
 
-            <VBox spacing="10" style="-fx-padding: 10;">
-                <TitledPane animated="true" collapsible="true" expanded="false" style="-fx-background-color: transparent;" text="Today - November 10, 2025">
-                    <content>
-                        <VBox spacing="15" style="-fx-background-color: #F8FFF0;                                      -fx-background-radius: 0 0 15 15;                                      -fx-padding: 10;">
-                            <padding>
-                                <Insets bottom="10" left="10" right="10" top="10" />
-                            </padding>
-                            <VBox spacing="5" styleClass="bite-history-element">
-                                <padding>
-                                    <Insets bottom="12" left="12" right="12" top="12" />
-                                </padding>
-                                <Label styleClass="bite-history-element-title" text="Breakfast - 8:30 AM">
-                                    <font><Font name="KG Red Hands" size="14" /></font>
-                                </Label>
-                                <Label text="• Scrambled eggs with toast" />
-                                <Label text="• Orange juice" />
-                                <Label text="• Fresh berries" />
-                                <Label styleClass="bite-history-info" text="Calories: 450">
-                                    <font><Font size="12" /></font>
-                                </Label>
-                            </VBox>
-                            <VBox spacing="5" styleClass="bite-history-element">
-                                <padding>
-                                    <Insets bottom="12" left="12" right="12" top="12" />
-                                </padding>
-                                <Label styleClass="bite-history-element-title" text="Lunch - 12:45 PM">
-                                    <font><Font name="KG Red Hands" size="14" /></font>
-                                </Label>
-                                <Label text="• Grilled chicken salad" />
-                                <Label text="• Whole grain bread" />
-                                <Label text="• Apple" />
-                                <Label styleClass="bite-history-info" text="Calories: 620">
-                                    <font><Font size="12" /></font>
-                                </Label>
-                            </VBox>
-                            <VBox spacing="5" styleClass="bite-history-element">
-                                <padding>
-                                    <Insets bottom="12" left="12" right="12" top="12" />
-                                </padding>
-                                <Label styleClass="bite-history-element-title" text="Dinner - 7:00 PM">
-                                    <font><Font name="KG Red Hands" size="14" /></font>
-                                </Label>
-                                <Label text="• Salmon with vegetables" />
-                                <Label text="• Brown rice" />
-                                <Label text="• Side salad" />
-                                <Label styleClass="bite-history-info" text="Calories: 780">
-                                    <font><Font size="12" /></font>
-                                </Label>
-                            </VBox>
-                        </VBox>
-                    </content>
-                </TitledPane>
-                <TitledPane animated="true" collapsible="true" expanded="false" style="-fx-background-color: transparent;" text="Yesterday - November 9, 2025">
-                    <content>
-                        <VBox spacing="15">
-                            <padding>
-                                <Insets bottom="10" left="10" right="10" top="10" />
-                            </padding>
-                            <VBox spacing="5" styleClass="bite-history-element">
-                                <padding>
-                                    <Insets bottom="12" left="12" right="12" top="12" />
-                                </padding>
-                                <Label styleClass="bite-history-element-title" text="Breakfast - 9:00 AM">
-                                    <font><Font name="KG Red Hands" size="14" /></font>
-                                </Label>
-                                <Label text="• Oatmeal with honey" />
-                                <Label text="• Banana" />
-                                <Label text="• Coffee" />
-                                <Label styleClass="bite-history-info" text="Calories: 380">
-                                    <font><Font size="12" /></font>
-                                </Label>
-                            </VBox>
-                            <VBox spacing="5" styleClass="bite-history-element">
-                                <padding>
-                                    <Insets bottom="12" left="12" right="12" top="12" />
-                                </padding>
-                                <Label styleClass="bite-history-element-title" text="Lunch - 1:15 PM">
-                                    <font><Font name="KG Red Hands" size="14" /></font>
-                                </Label>
-                                <Label text="• Turkey sandwich" />
-                                <Label text="• Carrot sticks" />
-                                <Label text="• Yogurt" />
-                                <Label styleClass="bite-history-info" text="Calories: 550">
-                                    <font><Font size="12" /></font>
-                                </Label>
-                            </VBox>
-                        </VBox>
-                    </content>
-                </TitledPane>
+    <!-- BiteWise Title (outlined) -->
+    <Label layoutX="118.0" layoutY="143.0" styleClass="str" text="BiteWise">
+        <font>
+            <Font name="KG Red Hands" size="48.0" />
+        </font>
+    </Label>
 
-                <TitledPane animated="true" collapsible="true" expanded="false" style="-fx-background-color: transparent;" text="November 8, 2025">
-                    <content>
-                        <VBox spacing="15">
-                            <padding>
-                                <Insets bottom="10" left="10" right="10" top="10" />
-                            </padding>
+    <!-- Subheading -->
+    <Label layoutX="133.0" layoutY="220.0" styleClass="slogan" text="Bite History" textFill="#53382E">
+        <font>
+            <Font name="KG Red Hands" size="30.0" />
+        </font>
+    </Label>
 
-                            <VBox spacing="5" styleClass="bite-history-element">
-                                <padding>
-                                    <Insets bottom="12" left="12" right="12" top="12" />
-                                </padding>
-                                <Label styleClass="bite-history-element-title" text="Breakfast - 8:00 AM">
-                                    <font><Font name="KG Red Hands" size="14" /></font>
-                                </Label>
-                                <Label text="• Greek yogurt parfait" />
-                                <Label text="• Granola and berries" />
-                                <Label text="• Green tea" />
-                                <Label styleClass="bite-history-info" text="Calories: 420">
-                                    <font><Font size="12" /></font>
-                                </Label>
-                            </VBox>
+    <!-- Scrollable Bite Entries -->
+    <ScrollPane fitToWidth="true" layoutX="48.0" layoutY="272.0" prefHeight="320.0" prefWidth="362.0" style="-fx-background: #FAF0E6; -fx-background-color: #FAF0E6; -fx-border-color: transparent;">
 
-                            <VBox spacing="5" styleClass="bite-history-element">
-                                <padding>
-                                    <Insets bottom="12" left="12" right="12" top="12" />
-                                </padding>
-                                <Label styleClass="bite-history-element-title" text="Dinner - 6:30 PM">
-                                    <font><Font name="KG Red Hands" size="14" /></font>
-                                </Label>
-                                <Label text="• Pasta with marinara" />
-                                <Label text="• Garlic bread" />
-                                <Label text="• Caesar salad" />
-                                <Label styleClass="bite-history-info" text="Calories: 850">
-                                    <font><Font size="12" /></font>
-                                </Label>
-                            </VBox>
-                        </VBox>
-                    </content>
-                </TitledPane>
+    <content>
+            <VBox spacing="18" style="-fx-background-color: transparent;">
+
+                <!-- Entry 1 -->
+                <VBox spacing="8" styleClass="bite-history-element">
+                    <padding><Insets bottom="12" left="12" right="12" top="12" /></padding>
+                    <Label styleClass="bite-history-element-title" text="Bite 1">
+                        <font><Font name="KG Red Hands" size="16" /></font>
+                    </Label>
+                    <Label text="• Scrambled eggs" />
+                    <Label styleClass="bite-history-info" text="Calories: 450" />
+                </VBox>
+
+                <!-- Entry 2 -->
+                <VBox spacing="8" styleClass="bite-history-element">
+                    <padding><Insets bottom="12" left="12" right="12" top="12" /></padding>
+                    <Label styleClass="bite-history-element-title" text="Bite 2">
+                        <font><Font name="KG Red Hands" size="16" /></font>
+                    </Label>
+                    <Label text="• Whole grain bread" />
+                    <Label styleClass="bite-history-info" text="Calories: 620" />
+                </VBox>
+
+                <!-- Entry 3 -->
+                <VBox spacing="8" styleClass="bite-history-element">
+                    <padding><Insets bottom="12" left="12" right="12" top="12" /></padding>
+                    <Label styleClass="bite-history-element-title" text="Bite 3">
+                        <font><Font name="KG Red Hands" size="16" /></font>
+                    </Label>
+                    <Label text="• Baked potato" />
+                    <Label styleClass="bite-history-info" text="Calories: 780" />
+                </VBox>
             </VBox>
-        </VBox>
+        </content>
     </ScrollPane>
-   <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="75.0" prefWidth="78.0" style="-fx-background-color: #8BC081; -fx-border-color: #3F6B36; -fx-background-radius: 50; -fx-border-radius: 50; -fx-font-weight: bold;" text="Back">
-      <opaqueInsets>
-         <Insets />
-      </opaqueInsets></Button>
-</VBox>
+
+    <!-- Back Button -->
+    <Button fx:id="backButton" layoutX="190.0" layoutY="610.0" onAction="#handleBackClick" prefHeight="70.0" prefWidth="80.0" style="-fx-background-color: #A8C474; -fx-background-radius: 50;                    -fx-border-color: #53382E; -fx-border-radius: 50;                    -fx-font-weight: bold;" text="←">
+        <font>
+            <Font name="KG Red Hands" size="28.0" />
+        </font>
+    </Button>
+
+</AnchorPane>

@@ -48,7 +48,7 @@
     </Hyperlink>
 
     <HBox alignment="CENTER" layoutX="-19.0" layoutY="600.0" prefWidth="500.0" spacing="5.0">
-        <Label prefHeight="33.0" prefWidth="206.0" styleClass="slogan" text="Already have an account?" textFill="#53382e">
+        <Label prefHeight="33.0" prefWidth="163.0" styleClass="slogan" text="Already have an account?" textFill="#53382e">
             <font>
                 <Font name="KG Red Hands" size="14.0" />
             </font>

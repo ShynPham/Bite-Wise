@@ -15,14 +15,14 @@
             <Font name="KG Red Hands" size="48.0" />
         </font>
     </Label>
-    <Label contentDisplay="CENTER" graphicTextGap="3.0" layoutX="136.0" layoutY="203.0" lineSpacing="3.0" prefHeight="21.0" prefWidth="184.0" styleClass="slogan" stylesheets="@style.css" text="Snap a bite, see the count" textAlignment="JUSTIFY" textFill="#53382e" textOverrun="CLIP">
+    <Label contentDisplay="CENTER" graphicTextGap="3.0" layoutX="125.0" layoutY="203.0" lineSpacing="3.0" styleClass="slogan" stylesheets="@style.css" text="Snap a bite, see the count" textAlignment="JUSTIFY" textFill="#53382e" textOverrun="CLIP">
         <font>
             <Font name="KG Red Hands " size="15.0" />
         </font>
     </Label>
     <Label contentDisplay="CENTER" graphicTextGap="3.0" layoutX="143.0" layoutY="260.0" lineSpacing="3.0" styleClass="slogan" stylesheets="@style.css" text="Sign In" textAlignment="JUSTIFY" textFill="#53382e" textOverrun="CLIP">
         <font>
-            <Font name="KG Red Hands" size="46.0" />
+            <Font name="KG Red Hands " size="48.0" />
         </font>
     </Label>
     <TextField fx:id="emailField" layoutX="106.0" layoutY="344.0" prefHeight="41.0" prefWidth="253.0" promptText="Your Email" styleClass="textbox">
@@ -55,7 +55,7 @@
         </Label>
         <Hyperlink fx:id="onSignUpClick" onAction="#handleSignUpLinkClick" text="SIGN UP" textFill="#53382e" underline="true">
             <font>
-                <Font name="KG Red Hands" size="14.0" />
+                <Font name="KG Red Hands " size="14.0" />
             </font>
         </Hyperlink>
     </HBox>

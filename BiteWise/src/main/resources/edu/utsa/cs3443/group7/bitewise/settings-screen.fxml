@@ -9,51 +9,51 @@
 
     <children>
         <!-- Logo -->
-        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="131.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="130.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@ui_icons/logo.png" />
             </image>
         </ImageView>
 
         <!-- Title -->
-        <Label layoutX="126.0" layoutY="193.0" text="Settings" textFill="#53382E">
+        <Label layoutX="126.0" layoutY="180.0" text="Settings" textFill="#53382E">
             <font>
                 <Font name="KG Red Hands" size="48.0" />
             </font>
         </Label>
 
-        <!-- Delete a bite -->
-        <Button layoutX="96.0" layoutY="283.0" onAction="#handleDeleteBite" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #A8C474; -fx-text-fill: white; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="Delete a bite">
+        <!-- Bite History -->
+        <Button layoutX="95.0" layoutY="275.0" onAction="#handleBiteHistory" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #A8C474; -fx-text-fill: white; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="Bite History">
             <font>
                 <Font name="KG Red Hands" size="18.0" />
             </font>
         </Button>
 
-        <!-- Change password -->
-        <Button layoutX="96.0" layoutY="353.0" onAction="#handleChangePassword" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #F3AC92; -fx-text-fill: white; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="Change password">
+        <!-- Recent Bite -->
+        <Button layoutX="95.0" layoutY="345.0" onAction="#handleRecentBite" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #F3AC92; -fx-text-fill: white; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="Recent Bite">
             <font>
                 <Font name="KG Red Hands" size="18.0" />
             </font>
         </Button>
 
-        <!-- Recent bite -->
-        <Button layoutX="96.0" layoutY="423.0" onAction="#handleRecentBite" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #FFF0EA; -fx-text-fill: #53382E; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="Recent bite">
+        <!-- Scan Screen -->
+        <Button layoutX="95.0" layoutY="415.0" onAction="#handleScanScreenClick" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #FFF0EA; -fx-text-fill: #53382E; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="Scan Screen">
             <font>
                 <Font name="KG Red Hands" size="18.0" />
             </font>
         </Button>
 
-        <!-- Log out -->
-        <Button layoutX="96.0" layoutY="493.0" onAction="#handleLogOut" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #EEFFEA; -fx-text-fill: #53382E; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="Log out">
+        <!-- Log Out -->
+        <Button layoutX="95.0" layoutY="559.0" onAction="#handleLogOut" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #EEFFEA; -fx-text-fill: #53382E; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="Log Out">
             <font>
                 <Font name="KG Red Hands" size="18.0" />
             </font>
         </Button>
 
-        <!-- Back Arrow Button -->
-        <Button fx:id="backButton" layoutX="195.0" layoutY="570.0" onAction="#handleScanScreenClick" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #A8C474; -fx-background-radius: 50;                        -fx-border-color: #53382E; -fx-border-radius: 50;                        -fx-text-fill: #53382E; -fx-font-weight: bold;" text="→">
+        <!-- About BiteWise -->
+        <Button layoutX="96.0" layoutY="487.0" onAction="#handleAboutBiteWise" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #BDE070; -fx-text-fill: #53382E; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="About BiteWise">
             <font>
-                <Font name="KG Red Hands" size="28.0" />
+                <Font name="KG Red Hands" size="18.0" />
             </font>
         </Button>
     </children>

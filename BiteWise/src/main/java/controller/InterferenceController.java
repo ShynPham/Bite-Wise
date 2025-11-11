@@ -23,6 +23,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import utility.viewSwitcher;
 
 import javax.imageio.ImageIO;
 import java.awt.Graphics2D;
@@ -580,6 +581,10 @@ public class InterferenceController {
             System.out.println("Failed to load settings-screen.fxml");
         }
     }
+
+    @FXML
+    private void handleBiteHistoryClick(){
+        viewSwitcher.switchScene("bite-history.fxml");}
 
     /**
      * A private inner class to hold the results of the pre-processing step.

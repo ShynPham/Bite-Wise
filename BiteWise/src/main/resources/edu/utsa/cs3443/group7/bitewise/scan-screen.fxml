@@ -22,7 +22,7 @@
             </effect>
             <Label prefHeight="62.0" prefWidth="681.0" styleClass="str" text="BiteWise Food Scanner" textFill="#53382e">
                 <font>
-                    <Font name="KG Red Hands " size="44.0" />
+                    <Font name="KG Red Hands" size="44.0" />
                 </font>
             </Label>
             <Region HBox.hgrow="ALWAYS" />

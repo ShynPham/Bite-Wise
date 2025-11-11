@@ -1,6 +1,15 @@
+@font-face {
+    /* This is the name you will use in your CSS */
+    font-family: 'KG Red Hands';
+
+    /* This is the path from style.css to your font file */
+    src: url('fonts/KGRedHands.ttf');
+}
+
 .str {
     /* opacity */
     -fx-opacity: 0.79;
+    -fx-font-family:"KG Red Hands";
 }
 
 .str .text {
@@ -9,9 +18,15 @@
     -fx-stroke: #53382E;
     -fx-stroke-width: 3px;
     -fx-stroke-opacity: 100%;
+    -fx-font-family:"KG Red Hands";
+
+}
+.slogan {
+    -fx-font-family:"KG Red Hands";
 }
 .slogan .text {
     -fx-fill: #53382E;
+    -fx-font-family:"KG Red Hands";
 }
 
 .textbox{
@@ -21,6 +36,7 @@
     -fx-border-color: #FFF0EA;
     -fx-border-width: 1px;
     -fx-prompt-text-fill: #a9a08d;
+    -fx-font-family:"KG Red Hands";
 }
 
 .textbox:focused {
@@ -28,12 +44,13 @@
     -fx-border-width: 2px;
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
+    -fx-font-family:"KG Red Hands";
 }
 
 .circle-button{
     -fx-background-color: #c6eaaf; /* Light green background */
     -fx-background-radius: 50%;   /* Makes it perfectly circular */
-    -fx-border-radius: 50%;       /* Ensures the border is also circular */
+    -fx-border- radius: 50%;       /* Ensures the border is also circular */
     -fx-border-color: #8c7e6c;     /* Brown border color */
     -fx-border-width: 2px;        /* Border thickness */
     -fx-padding: 0;
@@ -43,4 +60,27 @@
     -fx-fill: white;              /* White color for the arrow */
     -fx-scale-x: 2;             /* Adjust arrow size horizontally */
     -fx-scale-y: 2;             /* Adjust arrow size vertically */
+}
+
+.bite-history-element{
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-border-color: #6B8E4E;
+    -fx-border-width: 2;
+    -fx-border-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 3, 0, 1, 2);
+}
+
+.bite-history-element-title {
+    -fx-text-fill: #4A4A4A;
+    -fx-font-weight: bold;
+}
+
+.bite-history-element .text {
+    -fx-text-fill: #666666;
+}
+
+.bite-history-info {
+    -fx-text-fill: #6B8E4E;
+    -fx-font-weight: bold;
 }

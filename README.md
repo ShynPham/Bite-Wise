@@ -56,7 +56,9 @@ Before you begin, ensure you have the following installed on your system:
 │       │   │   
 │       │   ├───controller
 │       │   │       entryScreen.java
+│       │   │       ForgotPasswordController.java
 │       │   │       InterferenceController.java
+│       │   │       SettingsController.java
 |       |   |       SignInController.java
 |       |   |       SignupController.java
 │       │   │       
@@ -79,10 +81,12 @@ Before you begin, ensure you have the following installed on your system:
 │                       └───group7
 │                           └───bitewise
 │                               │   best.onnx
+│                               │   bite-history.fxml
+│                               │   forgot-password.fxml
 │                               │   scan-screen.fxml
+│                               │   settings-screen.fxml
 │                               │   sign-in.fxml
 │                               │   sign-up.fxml
-│                               │   settings-screen.fxml
 │                               │   style.css
 │                               │   
 │                               ├───images

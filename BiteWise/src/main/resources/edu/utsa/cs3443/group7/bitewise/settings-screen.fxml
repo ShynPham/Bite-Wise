@@ -5,21 +5,56 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D4EAD0; -fx-border-color: #6DAB60;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingsController">
-   <children>
-      <ImageView fitHeight="97.0" fitWidth="143.0" layoutX="204.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@ui_icons/logo.png" />
-         </image>
-      </ImageView>
-      <Button layoutX="191.0" layoutY="219.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="168.0" style="-fx-background-color: #8BC081; -fx-border-color: #3F6B36;" text="Change Password " />
-      <Button fx:id="logOutButton" layoutX="192.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="38.0" prefWidth="168.0" style="-fx-background-color: #8BC081; -fx-border-color: #3F6B36;" text="Log Out" />
-      <Button layoutX="191.0" layoutY="162.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="168.0" style="-fx-background-color: #8BC081; -fx-border-color: #3F6B36;" text="Delete a Bite" textFill="#593f30" />
-      <Label alignment="CENTER" layoutX="142.0" layoutY="93.0" prefHeight="47.0" prefWidth="267.0" text="Settings" textFill="#593f30">
-         <font>
-            <Font name="System Bold" size="36.0" />
-         </font>
-      </Label>
-      <Button fx:id="downloadBite" layoutX="191.0" layoutY="331.0" mnemonicParsing="false" onAction="#handleDownload" prefHeight="38.0" prefWidth="168.0" style="-fx-background-color: #8BC081; -fx-border-color: #3F6B36;" text="Download Bite Information" />
-   </children>
+<AnchorPane prefHeight="680.0" prefWidth="462.0" style="-fx-background-color: #FAF0E6; -fx-padding: 20;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingsController">
+
+    <children>
+        <!-- Logo -->
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="130.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@ui_icons/logo.png" />
+            </image>
+        </ImageView>
+
+        <!-- Title -->
+        <Label layoutX="126.0" layoutY="180.0" text="Settings" textFill="#53382E">
+            <font>
+                <Font name="KG Red Hands" size="48.0" />
+            </font>
+        </Label>
+
+        <!-- Bite History -->
+        <Button layoutX="95.0" layoutY="275.0" onAction="#handleBiteHistory" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #A8C474; -fx-text-fill: white; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="Bite History">
+            <font>
+                <Font name="KG Red Hands" size="18.0" />
+            </font>
+        </Button>
+
+        <!-- Recent Bite -->
+        <Button layoutX="95.0" layoutY="345.0" onAction="#handleRecentBite" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #F3AC92; -fx-text-fill: white; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="Recent Bite">
+            <font>
+                <Font name="KG Red Hands" size="18.0" />
+            </font>
+        </Button>
+
+        <!-- Scan Screen -->
+        <Button layoutX="95.0" layoutY="415.0" onAction="#handleScanScreenClick" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #FFF0EA; -fx-text-fill: #53382E; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="Scan Screen">
+            <font>
+                <Font name="KG Red Hands" size="18.0" />
+            </font>
+        </Button>
+
+        <!-- Log Out -->
+        <Button layoutX="95.0" layoutY="559.0" onAction="#handleLogOut" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #EEFFEA; -fx-text-fill: #53382E; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="Log Out">
+            <font>
+                <Font name="KG Red Hands" size="18.0" />
+            </font>
+        </Button>
+
+        <!-- About BiteWise -->
+        <Button layoutX="96.0" layoutY="487.0" onAction="#handleAboutBiteWise" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: #BDE070; -fx-text-fill: #53382E; -fx-font-weight: bold;                        -fx-background-radius: 25; -fx-border-color: #53382E;                        -fx-border-width: 2; -fx-border-radius: 25;" text="About BiteWise">
+            <font>
+                <Font name="KG Red Hands" size="18.0" />
+            </font>
+        </Button>
+    </children>
 </AnchorPane>

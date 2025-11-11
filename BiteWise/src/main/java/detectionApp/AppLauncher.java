@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import utility.viewSwitcher;
 import javafx.scene.image.Image;
@@ -19,6 +20,32 @@ public class AppLauncher extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         viewSwitcher.setStage(stage);
+        // --- DEBUG FONT LOADING ---
+        try (InputStream fontStream = getClass().getResourceAsStream("/edu/utsa/cs3443/group7/bitewise/fonts/KGRedHands.ttf")) {
+
+            if (fontStream != null) {
+                // Load the font and save the object
+                Font loadedFont = Font.loadFont(fontStream, 12);
+
+                if (loadedFont != null) {
+                    // Print its real names to the console
+                    System.out.println("--- FONT LOADED SUCCESSFULLY ---");
+                    System.out.println("Use this name in CSS: " + loadedFont.getFamily());
+                    System.out.println(" (Full PostScript Name: " + loadedFont.getName() + ")");
+                    System.out.println("---------------------------------");
+                } else {
+                    System.err.println("Error: Font file was found, but FAILED TO LOAD.");
+                }
+            } else {
+                // This is the most likely error if it fails
+                System.err.println("Error: Custom font 'KGR-Red-Hands.ttf' NOT FOUND.");
+                System.err.println("Check your file path in AppLauncher.java!");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+            System.err.println("Error: Failed to load custom font.");
+        Font.loadFont(getClass().getResourceAsStream(".../KGR-Red-Hands.ttf"), 12);
         InputStream appIconStream = getClass().getResourceAsStream("/edu/utsa/cs3443/group7/bitewise/ui_icons/logo.png");
         if (appIconStream != null){
             Image appIcon = new Image(appIconStream);

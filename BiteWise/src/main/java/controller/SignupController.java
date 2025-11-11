@@ -28,6 +28,11 @@ public class SignupController {
             return;
         }
 
+        if (!isValidEmail(email)) {
+            showAlert("Invalid email format. \nPlease use a valid email like:\n user@gmail.com or user@yahoo.com");
+            return;
+        }
+
         Preferences prefs = Preferences.userRoot().node("BiteWiseUser");
         prefs.put("email", email);
         prefs.put("password", password);
@@ -35,8 +40,12 @@ public class SignupController {
         showAlert("Account created successfully!");
         exportToCSV(email, password);
         // navigate to log in screen
-        viewSwitcher viewSwitch;
         viewSwitcher.switchScene("sign-in.fxml");
+    }
+
+    private boolean isValidEmail(String email) {
+        // Basic email pattern
+        return email.matches("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$");
     }
 
     private void exportToCSV(String email, String password) throws IOException {

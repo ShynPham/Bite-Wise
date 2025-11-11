@@ -1,0 +1,93 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b\" name=\"Changes\" comment=\"fresh start\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"first\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;ShynPham&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers.git&quot;,\r\n    &quot;accountId&quot;: &quot;115e8e50-523e-4429-9a33-6ac20479e520&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 6\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"34otFW9spreN6fke3yt0xs8vGX7\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;Application.AppLauncher.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,\r\n    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,\r\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\r\n    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,\r\n    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.31383473&quot;,\r\n    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\shyna\\IdeaProjects\\7.IdeaForgers\\BiteWise\\src\\main\\resources\\utsa\\cs3443\\group7\\bitewise\" />\r\n      <recent name=\"C:\\Users\\shyna\\IdeaProjects\\7.IdeaForgers\\BiteWise\\src\\main\\java\\utsa\\cs3443\\group7\\bitewise\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.AppLauncher\">\r\n    <configuration name=\"AppLauncher\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"detectionApp.AppLauncher\" />\r\n      <module name=\"BiteWise\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"detectionApp.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Unnamed\" type=\"Application\" factoryName=\"Application\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"utsa.cs3443.group7.bitewise.HelloApplication\" />\r\n      <module name=\"BiteWise\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.AppLauncher\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b\" name=\"Changes\" comment=\"\" />\r\n      <created>1761891648315</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1761891648315</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"deleted everything\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1761895468406</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1761895468406</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"deleted everything\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1761895493321</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1761895493321</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"delete\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1761895737914</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1761895737914</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"fresh start\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1761898617010</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1761898617010</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"fresh start\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1762729401771</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1762729401771</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"fresh start\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1762729405361</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1762729405361</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"7\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"OPEN_GENERIC_TABS\">\r\n      <map>\r\n        <entry key=\"4f3e1b8d-432f-4cc9-a70a-345c482a5d4f\" value=\"TOOL_WINDOW\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"4f3e1b8d-432f-4cc9-a70a-345c482a5d4f\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"deleted everything\" />\r\n    <MESSAGE value=\"delete\" />\r\n    <MESSAGE value=\"fresh start\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"fresh start\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.IllegalStateException\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d9e3031ffde657ee0dc1f93c3d638fb4ec0d66b1)
++++ b/.idea/workspace.xml	(date 1762747593977)
+@@ -36,7 +36,7 @@
+   <component name="GithubPullRequestsUISettings">{
+   &quot;selectedUrlAndAccountId&quot;: {
+     &quot;url&quot;: &quot;https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers.git&quot;,
+-    &quot;accountId&quot;: &quot;115e8e50-523e-4429-9a33-6ac20479e520&quot;
++    &quot;accountId&quot;: &quot;31278bdb-4149-4196-a085-36ba1725f3ab&quot;
+   }
+ }</component>
+   <component name="ProjectColorInfo">{
+@@ -47,31 +47,32 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;Application.AppLauncher.executor&quot;: &quot;Run&quot;,
+-    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+-    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.31383473&quot;,
+-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "Application.AppLauncher.executor": "Run",
++    "Application.Unnamed.executor": "Run",
++    "Downloaded.Files.Path.Enabled": "false",
++    "ModuleVcsDetector.initialDetectionPerformed": "true",
++    "Repository.Attach.Annotations": "false",
++    "Repository.Attach.JavaDocs": "false",
++    "Repository.Attach.Sources": "false",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
++    "RunOnceActivity.git.unshallow": "true",
++    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
++    "deletionFromPopupRequiresConfirmation": "false",
++    "git-widget-placeholder": "main",
++    "ignore.virus.scanning.warn.message": "true",
++    "junie.onboarding.icon.badge.shown": "true",
++    "kotlin-language-version-configured": "true",
++    "project.structure.last.edited": "Libraries",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.31383473",
++    "settings.editor.selected.configurable": "preferences.pluginManager",
++    "to.speed.mode.migration.done": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\Users\shyna\IdeaProjects\7.IdeaForgers\BiteWise\src\main\resources\utsa\cs3443\group7\bitewise" />
+@@ -161,7 +162,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1762729405361</updated>
+     </task>
+-    <option name="localTasksCounter" value="7" />
++    <task id="LOCAL-00007" summary="fresh start">
++      <option name="closed" value="true" />
++      <created>1762730102818</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1762730102818</updated>
++    </task>
++    <option name="localTasksCounter" value="8" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">

@@ -43,6 +43,8 @@ public  class SettingsController {
     private void handleScanScreenClick(){viewSwitcher.switchScene("scan-screen.fxml");}
 
     @FXML
+    private void handleAboutBiteWiseClick() { viewSwitcher.switchScene("about-screen.fxml");}
+    @FXML
     private void handleBackToSettings() { viewSwitcher.switchScene("settings-screen.fxml");}
     @FXML
     private void handleDownload(javafx.event.ActionEvent actionEvent) {

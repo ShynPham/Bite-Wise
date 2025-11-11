@@ -43,7 +43,7 @@ public  class SettingsController {
     private void handleScanScreenClick(){viewSwitcher.switchScene("scan-screen.fxml");}
 
     @FXML
-    private void handleBiteHistoryClick(){viewSwitcher.switchScene("bite-history.fxml");}
+    private void handleBackToSettings() { viewSwitcher.switchScene("settings-screen.fxml");}
     @FXML
     private void handleDownload(javafx.event.ActionEvent actionEvent) {
         // You can leave it empty if you don't need it yet

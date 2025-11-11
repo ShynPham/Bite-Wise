@@ -23,8 +23,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import utility.viewSwitcher;
 
 import javax.imageio.ImageIO;
+import javax.print.DocFlavor;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
@@ -42,6 +44,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+
 
 /**
  * detectionApp.Main JavaFX Controller for the BiteWise application.
@@ -180,6 +189,12 @@ public class InterferenceController {
             "ice_cream", "onion_rings", "nachos", "strawberry_shortcake", "tacos"
     };
 
+    /**
+     * Holds all nutrition data, using a lowercase food name as the key
+     * for easy lookup.
+     */
+    private final Map<String, NutritionInfo> nutritionMap = new HashMap<>();
+
 
     /**
      * This method is called automatically by JavaFX after the FXML file is loaded.
@@ -215,6 +230,9 @@ public class InterferenceController {
                 // Clean up the temp file
                 Files.delete(tempFile);
 
+                // Load the nutrition data vales
+                loadNutritionData();
+
                 // Update UI on the JavaFX Application Thread
                 Platform.runLater(() -> {
                     statusLabel.setText("Model loaded: " + MODEL_RESOURCE_NAME);
@@ -226,6 +244,41 @@ public class InterferenceController {
                 Platform.runLater(() -> updateUIForTask(false, ""));
             }
         });
+    }
+
+    /**
+     * Loads and parses the food_nutrition.json file from resources
+     * and populates the nutritionMap.
+     */
+    private void loadNutritionData() {
+        try (InputStream is = getClass().getResourceAsStream("/edu/utsa/cs3443/group7/bitewise/food_nutrition.json")) {
+            if (is == null) {
+                throw new RuntimeException("Cannot find nutrition JSON in resources.");
+            }
+
+            // Read the file into a string
+            String jsonText = new String(is.readAllBytes(), StandardCharsets.UTF_8);
+
+            // Parse the string into a JSON array
+            JSONArray jsonArray = new JSONArray(jsonText);
+
+            // Loop through each food object in the array
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject obj = jsonArray.getJSONObject(i);
+                NutritionInfo info = new NutritionInfo(obj);
+
+                // Store it in the map with a lowercase key for easy matching
+                nutritionMap.put(info.name().toLowerCase(), info);
+            }
+
+            // Print to console to confirm it loaded
+            System.out.println("Loaded " + nutritionMap.size() + " nutrition entries.");
+
+        } catch (Exception e) {
+            // If this fails, the app can still run, but nutrition facts won't show
+            e.printStackTrace();
+            Platform.runLater(() -> statusLabel.setText("Model loaded, but nutrition data failed."));
+        }
     }
 
     /**
@@ -261,8 +314,6 @@ public class InterferenceController {
             });
         }
     }
-
-
 
 
     /**
@@ -306,8 +357,7 @@ public class InterferenceController {
                     // 5. Post-process (NMS, coordinate conversion)
                     List<Detection> dets = postprocess(transposedOutput, prep.scale, prep.dx, prep.dy, bimg.getWidth(), bimg.getHeight());
 
-                    // --- THIS IS THE NEW LOGIC ---
-                    // Logic that process the output into a textfield
+                    // 6. Logic that process the output into a textfield
                     Platform.runLater(() -> {
                         statusLabel.setText("Found " + dets.size() + " detections.");
                         DetectionDrawer.draw(imageView, overlayCanvas, imageContainer, bimg, dets, CLASS_NAMES);
@@ -328,13 +378,13 @@ public class InterferenceController {
                             detectionResults.setText(sb.toString());
                         }
                     });
-                    // --- END OF NEW LOGIC ---
 
                     // 6. Update UI on the JavaFX Application Thread
                     Platform.runLater(() -> {
                         statusLabel.setText("Found " + dets.size() + " detections.");
                         // Use the DetectionDrawer utility to draw the boxes
                         DetectionDrawer.draw(imageView, overlayCanvas, imageContainer, bimg, dets, CLASS_NAMES);
+                        detectionResults.setText(buildNutritionString(dets));
                     });
                 } finally {
                     input.close(); // Ensure tensor is closed
@@ -350,8 +400,59 @@ public class InterferenceController {
     }
 
     /**
+     * Helper method for writing the detctionResults into textArea,
+     * including nutritional information
+     */
+    private String buildNutritionString(List<Detection> dets) {
+        if (dets.isEmpty()) {
+            return "No food items detected.";
+        }
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("Found ").append(dets.size()).append(" item(s):\n\n");
+
+        for (Detection d : dets) {
+            // Get the food  name from the class list
+            String foodName = "Unknown";
+            if (d.classID() >= 0 && d.classID() < CLASS_NAMES.length) {
+                foodName = CLASS_NAMES[d.classID()];
+            }
+
+            // Add the main detection line
+            sb.append(String.format("► %s (%.2f%%)\n", foodName, d.score() * 100));
+
+            // --- NUTRITION LOOKUP (IMPROVED LOGIC) ---
+
+            // 1. First, check for the FULL name
+            NutritionInfo info = nutritionMap.get(foodName.toLowerCase());
+
+            if (info != null) {
+                // If we find the full name (e.g., "Apple"), show its info
+                sb.append(info.toString());
+            } else {
+                // 2. If no full name, check for parts (e.g., "Apple Pie")
+                String[] foodParts = foodName.split(" ");
+                if (foodParts.length > 1) {
+                    for (String part : foodParts) {
+                        // Look up the lowercase version of the part
+                        NutritionInfo partInfo = nutritionMap.get(part.toLowerCase());
+                        if (partInfo != null) {
+                            // If we find a part, append its nutrition info
+                            sb.append(" (" + part + "):\n"); // Add a sub-header
+                            sb.append(partInfo.toString());
+                        }
+                    }
+                }
+            }
+            sb.append("\n"); // Add a space before the next item
+        }
+        return sb.toString();
+    }
+
+    /**
      * Transposes a 2D float array.
      * Assumes input is [channels][predictions] and outputs [predictions][channels].
+     *
      * @param data The 2D array to transpose.
      * @return A new transposed 2D array.
      */
@@ -369,8 +470,9 @@ public class InterferenceController {
 
     /**
      * Helper method to update the UI state (buttons, spinner) during a task.
+     *
      * @param isRunning True if a task is starting, false if it has finished.
-     * @param status The status message to display.
+     * @param status    The status message to display.
      */
     private void updateUIForTask(boolean isRunning, String status) {
         progressIndicator.setVisible(isRunning);
@@ -394,7 +496,7 @@ public class InterferenceController {
      * 3. Normalization: Converting 0-255 pixel values to 0.0-1.0 floats.
      * 4. Reformatting: Converting from HWC (Height, Width, Channel) to NCHW (Batch, Channel, Height, Width).
      *
-     * @param src The source BufferedImage.
+     * @param src     The source BufferedImage.
      * @param targetW The model's target width (e.g., 640).
      * @param targetH The model's target height (e.g., 640).
      * @return A PreprocessResult object containing the float array and scaling info.
@@ -451,8 +553,8 @@ public class InterferenceController {
      *
      * @param preds The [8400][208] transposed output from the model.
      * @param scale The scaling factor used during pre-processing.
-     * @param dx The x-padding used during pre-processing.
-     * @param dy The y-padding used during pre-processing.
+     * @param dx    The x-padding used during pre-processing.
+     * @param dy    The y-padding used during pre-processing.
      * @param origW The original image width.
      * @param origH The original image height.
      * @return A list of final, filtered Detection objects.
@@ -501,12 +603,10 @@ public class InterferenceController {
     }
 
 
-
-
-
     /**
      * Performs Non-Max Suppression (NMS) to filter overlapping bounding boxes.
-     * @param dets A list of all detections above the confidence threshold.
+     *
+     * @param dets      A list of all detections above the confidence threshold.
      * @param iouThresh The Intersection over Union (IoU) threshold.
      * @return A new list of filtered, non-overlapping detections.
      */
@@ -533,6 +633,7 @@ public class InterferenceController {
 
     /**
      * Calculates the Intersection over Union (IoU) of two Detection objects.
+     *
      * @param a The first detection.
      * @param b The second detection.
      * @return The IoU score (a float between 0.0 and 1.0).
@@ -558,9 +659,16 @@ public class InterferenceController {
      */
     public static void shutdown() {
         executor.shutdownNow();
-        try { if (session != null) session.close(); } catch (Exception ignored) {}
-        try { if (env != null) env.close(); } catch (Exception ignored) {}
+        try {
+            if (session != null) session.close();
+        } catch (Exception ignored) {
+        }
+        try {
+            if (env != null) env.close();
+        } catch (Exception ignored) {
+        }
     }
+
     @FXML
     public void SettingsSelected(javafx.event.ActionEvent actionEvent) {
         try {
@@ -581,11 +689,57 @@ public class InterferenceController {
         }
     }
 
+    @FXML
+    private void handleBiteHistoryClick(){
+        viewSwitcher.switchScene("bite-history.fxml");}
+
     /**
      * A private inner class to hold the results of the pre-processing step.
      * This allows returning multiple values (the float data, scale, and padding)
      * from the `letterboxAndPreprocess` method.
      */
     private record PreprocessResult(float[] data, float scale, int dx, int dy) {
+    }
+
+    /**
+     * A private inner class to hold the results of the pre-processing step.
+     */
+    private record NutritionPreprocessResult(float[] data, float scale, int dx, int dy) {
+    }
+
+    /**
+     * NEW: A private record to hold nutritional data from the JSON file.
+     */
+    private record NutritionInfo(String name, String calories, String totalFat,
+                                 String satFat, String cholesterol,
+                                 String sodium, String protein) {
+
+        /**
+         * A helper constructor to parse a JSONObject.
+         */
+        public NutritionInfo(org.json.JSONObject obj) {
+            this(
+                    obj.optString("name", "N/A"),
+                    obj.optString("calories", "N/A"),
+                    obj.optString("total_fat", "N/A"),
+                    obj.optString("saturated_fat", "N/A"),
+                    obj.optString("cholesterol", "N/A"),
+                    obj.optString("sodium", "N/A"),
+                    obj.optString("protein", "N/A")
+            );
+        }
+
+        /**
+         * Formats the nutrition data as a clean string for the TextArea.
+         */
+        @Override
+        public String toString() {
+            return "  - Calories: " + calories + "\n" +
+                    "  - Total Fat: " + totalFat + "\n" +
+                    "  - Sat. Fat: " + satFat + "\n" +
+                    "  - Cholesterol: " + cholesterol + "\n" +
+                    "  - Sodium: " + sodium + "\n" +
+                    "  - Protein: " + protein + "\n";
+        }
     }
 }

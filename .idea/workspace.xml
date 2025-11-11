@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="expanded &quot;Already have an account?&quot; text box">
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/sign-up.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/sign-up.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/forgot-password.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/forgot-password.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +34,12 @@
     &quot;assignee&quot;: &quot;ShynPham&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers.git&quot;,
-    &quot;accountId&quot;: &quot;31278bdb-4149-4196-a085-36ba1725f3ab&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers.git",
+    "accountId": "888cfdfa-1e36-4008-9a55-08519caf8a61"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -116,7 +116,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="24" />
+      <option name="ALTERNATIVE_JRE_PATH" value="25" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="detectionApp.Main" />
       <module name="BiteWise" />
@@ -129,15 +129,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>

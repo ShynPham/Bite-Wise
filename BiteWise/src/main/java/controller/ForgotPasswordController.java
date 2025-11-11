@@ -35,6 +35,7 @@ public class ForgotPasswordController {
     /**
      * Handles the reset password logic.
      */
+    @FXML
     private void handleResetPasswordClick() {
         String email = emailField.getText().trim();
         String newPassword = newPasswordField.getText().trim();

@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="fresh start">
+    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="Settings button on scan-screen.fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/InterferenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/InterferenceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/SettingsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bitewise_users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bitewise_users.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761898617010</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Settings button on scan-screen.fxml">
+      <option name="closed" value="true" />
+      <created>1762807301126</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762807301126</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -215,7 +221,8 @@
     <MESSAGE value="deleted everything" />
     <MESSAGE value="delete" />
     <MESSAGE value="fresh start" />
-    <option name="LAST_COMMIT_MESSAGE" value="fresh start" />
+    <MESSAGE value="Settings button on scan-screen.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Settings button on scan-screen.fxml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

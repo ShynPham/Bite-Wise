@@ -35,7 +35,7 @@
             <Font name="KG Red Hands " size="15.0" />
         </font>
     </PasswordField>
-    <Button fx:id="continueButton" layoutX="183.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleSignInButtonClick" prefHeight="100.0" prefWidth="100.0" styleClass="circle-button" stylesheets="@style.css">
+    <Button fx:id="continueButton" layoutX="183.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleSignInButtonClick" prefHeight="100.0" prefWidth="100.0" style="-fx-border-radius: 50;" styleClass="circle-button" stylesheets="@style.css">
         <graphic>
             <SVGPath content="M 0 0 L 10 5 L 0 10 L 0 6 L -10 6 L -10 4 L 0 4 Z" styleClass="svg-path" />
         </graphic>

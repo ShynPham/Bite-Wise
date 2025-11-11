@@ -33,8 +33,8 @@ public  class SettingsController {
     @FXML
     private void handleAboutBiteWiseClick() { viewSwitcher.switchScene("about-screen.fxml");}
 
-    @FXML
-    private void handleAboutBiteWise() { viewSwitcher.switchScene("settings-screen.fxml");}
+ //   @FXML
+   // private void handleAboutBiteWise() { viewSwitcher.switchScene("settings-screen.fxml");}
 
     @FXML
     private void handleRecentBite(){viewSwitcher.switchScene("bite-history.fxml");}

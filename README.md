@@ -59,8 +59,8 @@ Before you begin, ensure you have the following installed on your system:
 │       │   │       ForgotPasswordController.java
 │       │   │       InterferenceController.java
 │       │   │       SettingsController.java
-|       |   |       SignInController.java
-|       |   |       SignupController.java
+│       │   │       SignInController.java
+│       │   │       SignupController.java
 │       │   │       
 │       │   ├───detectionApp
 │       │   │       AppLauncher.java
@@ -80,8 +80,10 @@ Before you begin, ensure you have the following installed on your system:
 │                   └───cs3443
 │                       └───group7
 │                           └───bitewise
+│                               │   about-screen.fxml
 │                               │   best.onnx
 │                               │   bite-history.fxml
+│                               │   food_nutrition.json
 │                               │   forgot-password.fxml
 │                               │   scan-screen.fxml
 │                               │   settings-screen.fxml
@@ -89,12 +91,29 @@ Before you begin, ensure you have the following installed on your system:
 │                               │   sign-up.fxml
 │                               │   style.css
 │                               │   
+│                               ├───fonts
+│                               │       KGFonts-TOU.txt
+│                               │       KGRedHands.ttf
+│                               │       KGRedHandsOutline.ttf
+│                               │       
 │                               ├───images
 │                               │       test1.png
 │                               │       
 │                               └───ui_icons
 │                                       arrow-button.png
-│                                       ....
+│                                       arrow-icon.png
+│                                       button-green.png
+│                                       button-red.png
+│                                       button-white.png
+│                                       camera-icon.png
+│                                       camera-vector-path-overlay.png
+│                                       cursor-icon.png
+│                                       error-icon.png
+│                                       loading-icon.png
+│                                       logo.png
+│                                       select-icon.png
+│                                       zoomin-icon.png
+│                                       zoomout-icon.png
 ```
 ---
 

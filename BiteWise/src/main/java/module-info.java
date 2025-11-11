@@ -6,6 +6,7 @@ module edu.utsa.cs.group.bitewise {
     requires javafx.graphics;
     requires java.prefs;
     requires org.json;
+   // requires edu.utsa.cs.group.bitewise;
 
 
     opens detectionApp to javafx.fxml, javafx.graphics;

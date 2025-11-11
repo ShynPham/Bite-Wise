@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="updated settings-screen.fxml ui, added about-bitewise button and fixed dimensions of screen">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="updated settings-screen.fxml ui to match ui" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +14,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -33,12 +32,12 @@
     &quot;assignee&quot;: &quot;ShynPham&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers.git&quot;,
-    &quot;accountId&quot;: &quot;9af2f4e8-cacb-4d6c-b5a1-720872e75567&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers.git",
+    "accountId": "31278bdb-4149-4196-a085-36ba1725f3ab"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -327,15 +326,7 @@
       <option name="project" value="LOCAL" />
       <updated>1762881753690</updated>
     </task>
-    <task id="LOCAL-00024" summary="updated settings-screen.fxml ui, added about-bitewise button and fixed dimensions of screen">
-      <option name="closed" value="true" />
-      <created>1762882789673</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1762882789673</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -377,8 +368,7 @@
     <MESSAGE value="re-call forgot-password code to bmo code" />
     <MESSAGE value="updated forgot-password.fxml ui to match sign-in ui" />
     <MESSAGE value="updated settings-screen.fxml ui to match ui" />
-    <MESSAGE value="updated settings-screen.fxml ui, added about-bitewise button and fixed dimensions of screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated settings-screen.fxml ui, added about-bitewise button and fixed dimensions of screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated settings-screen.fxml ui to match ui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

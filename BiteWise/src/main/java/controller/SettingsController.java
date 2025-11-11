@@ -19,35 +19,18 @@ import java.util.prefs.Preferences;
 
 public  class SettingsController {
     //user clicks logout button, navigates to the sign-inscreen screen
+
     @FXML
-    private void handleLogOut(javafx.event.ActionEvent actionEvent) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(
-                    "/edu/utsa/cs3443/group7/bitewise/sign-in.fxml"
-            ));
-            Parent settingsRoot = loader.load();
+    private void handleLogOut(){viewSwitcher.switchScene("sign-in.fxml");}
 
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-
-            Scene scene = new Scene(settingsRoot);
-            stage.setScene(scene);
-            stage.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("Failed to load settings-screen.fxml");
-        }
-    }
 
     @FXML
     private void handleScanScreenClick(){viewSwitcher.switchScene("scan-screen.fxml");}
 
     @FXML
-    private void handleBackToSettings() { viewSwitcher.switchScene("settings-screen.fxml");}
+    private void handleAboutBiteWiseClick() { viewSwitcher.switchScene("about-screen.fxml");}
     @FXML
-    private void handleDownload(javafx.event.ActionEvent actionEvent) {
-        // You can leave it empty if you don't need it yet
-        System.out.println("Download clicked");
-    }
+    private void handleAboutBiteWise() { viewSwitcher.switchScene("settings-screen.fxml");}
+
 
 }

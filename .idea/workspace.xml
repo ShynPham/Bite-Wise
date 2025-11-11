@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="update sforgot password stuff">
+    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="updated settings-screen.fxml ui to match ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/detectionApp/AppLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/detectionApp/AppLauncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitewise_users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bitewise_users.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/InterferenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/InterferenceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +79,6 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\shyna\IdeaProjects\7.IdeaForgers\BiteWise\src\main\resources\edu\utsa\cs3443\group7\bitewise" />
       <recent name="C:\Users\shyna\IdeaProjects\7.IdeaForgers\BiteWise\src\main\resources\utsa\cs3443\group7\bitewise" />
       <recent name="C:\Users\shyna\IdeaProjects\7.IdeaForgers\BiteWise\src\main\java\utsa\cs3443\group7\bitewise" />
     </key>
@@ -330,23 +330,7 @@
       <option name="project" value="LOCAL" />
       <updated>1762881753690</updated>
     </task>
-    <task id="LOCAL-00024" summary="recall a function to update food nutrution">
-      <option name="closed" value="true" />
-      <created>1762885043789</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1762885043789</updated>
-    </task>
-    <task id="LOCAL-00025" summary="update sforgot password stuff">
-      <option name="closed" value="true" />
-      <created>1762885053567</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1762885053567</updated>
-    </task>
-    <option name="localTasksCounter" value="26" />
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -386,9 +370,9 @@
     <MESSAGE value="change fonts" />
     <MESSAGE value="expanded &quot;Already have an account?&quot; text box" />
     <MESSAGE value="re-call forgot-password code to bmo code" />
-    <MESSAGE value="recall a function to update food nutrution" />
-    <MESSAGE value="update sforgot password stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="update sforgot password stuff" />
+    <MESSAGE value="updated forgot-password.fxml ui to match sign-in ui" />
+    <MESSAGE value="updated settings-screen.fxml ui to match ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated settings-screen.fxml ui to match ui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

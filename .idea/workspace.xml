@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="added about-screen.fxml that matches ui">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/about-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/about-screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/bite-history.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/bite-history.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="updated and polished bite-history.fxml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -345,7 +341,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762884516753</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="updated and polished bite-history.fxml">
+      <option name="closed" value="true" />
+      <created>1762887344418</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1762887344418</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -389,7 +393,8 @@
     <MESSAGE value="updated settings-screen.fxml ui to match ui" />
     <MESSAGE value="updated settings-screen.fxml ui, added about-bitewise button and fixed dimensions of screen" />
     <MESSAGE value="added about-screen.fxml that matches ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="added about-screen.fxml that matches ui" />
+    <MESSAGE value="updated and polished bite-history.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated and polished bite-history.fxml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

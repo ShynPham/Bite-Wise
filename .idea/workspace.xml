@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="updated forgot-password.fxml ui to match sign-in ui">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/InterferenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/InterferenceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/SettingsController.java" afterDir="false" />
+    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="placed the BiteHistory method in InterferenceController.java">
       <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitewise_users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bitewise_users.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762882779521</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="placed the BiteHistory method in InterferenceController.java">
+      <option name="closed" value="true" />
+      <created>1762884050129</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1762884050129</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -375,7 +379,8 @@
     <MESSAGE value="expanded &quot;Already have an account?&quot; text box" />
     <MESSAGE value="re-call forgot-password code to bmo code" />
     <MESSAGE value="updated forgot-password.fxml ui to match sign-in ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated forgot-password.fxml ui to match sign-in ui" />
+    <MESSAGE value="placed the BiteHistory method in InterferenceController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="placed the BiteHistory method in InterferenceController.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

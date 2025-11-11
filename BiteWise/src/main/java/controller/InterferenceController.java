@@ -740,6 +740,6 @@ public class InterferenceController {
         }
     }
 
-    @FXML
-    private void handleBiteHistoryClick() {viewSwitcher.switchScene("bite-history.fxml");}
+//    @FXML
+  //  private void handleBiteHistoryClick() {viewSwitcher.switchScene("bite-history.fxml");}
 }

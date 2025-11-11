@@ -44,3 +44,26 @@
     -fx-scale-x: 2;             /* Adjust arrow size horizontally */
     -fx-scale-y: 2;             /* Adjust arrow size vertically */
 }
+
+.bite-history-element{
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-border-color: #6B8E4E;
+    -fx-border-width: 2;
+    -fx-border-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 3, 0, 1, 2);
+}
+
+.bite-history-element-title {
+    -fx-text-fill: #4A4A4A;
+    -fx-font-weight: bold;
+}
+
+.bite-history-element .text {
+    -fx-text-fill: #666666;
+}
+
+.bite-history-info {
+    -fx-text-fill: #6B8E4E;
+    -fx-font-weight: bold;
+}

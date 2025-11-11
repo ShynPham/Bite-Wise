@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="deleted AboutController.java" />
+    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="added AboutController.java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -375,7 +377,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762894397116</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="deleted AboutController.java">
+      <option name="closed" value="true" />
+      <created>1762894422164</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1762894422164</updated>
+    </task>
+    <task id="LOCAL-00031" summary="added AboutController.java">
+      <option name="closed" value="true" />
+      <created>1762894532504</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1762894532504</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -421,7 +439,8 @@
     <MESSAGE value="added AboutController.java to show the about-screen" />
     <MESSAGE value="added bitewise_users.csv" />
     <MESSAGE value="deleted AboutController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted AboutController.java" />
+    <MESSAGE value="added AboutController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="added AboutController.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

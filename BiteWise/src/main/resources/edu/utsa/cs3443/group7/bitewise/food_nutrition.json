@@ -1,0 +1,2261 @@
+[
+    {
+        "name": "Apple",
+        "calories": "95",
+        "total_fat": "0.3g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "2mg",
+        "protein": "0.5g"
+    },
+    {
+        "name": "Apple",
+        "calories": "95",
+        "total_fat": "0.3g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "1mg",
+        "protein": "0.5g."
+    },
+    {
+        "name": "Pie",
+        "calories": "320",
+        "total_fat": "16g",
+        "saturated_fat": "7g",
+        "cholesterol": "30mg",
+        "sodium": "280mg",
+        "protein": "4g"
+    },
+    {
+        "name": "Avocado",
+        "calories": "322",
+        "total_fat": "29g",
+        "saturated_fat": "4g",
+        "cholesterol": "0mg",
+        "sodium": "14mg",
+        "protein": "4g"
+    },
+    {
+        "name": "Banana",
+        "calories": "105",
+        "total_fat": "0.4g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "1mg",
+        "protein": "1.3g"
+    },
+    {
+        "name": "Basil",
+        "calories": "22",
+        "total_fat": "0.6g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "4mg",
+        "protein": "3g"
+    },
+    {
+        "name": "Rice",
+        "calories": "206",
+        "total_fat": "0.6g",
+        "saturated_fat": "0.2g",
+        "cholesterol": "0mg",
+        "sodium": "6mg",
+        "protein": "4.3g"
+    },
+    {
+        "name": "Beetroot",
+        "calories": "43",
+        "total_fat": "0.2g",
+        "saturated_fat": "0.03g",
+        "cholesterol": "0mg",
+        "sodium": "78mg",
+        "protein": "1.6g"
+    },
+    {
+        "name": "Bell",
+        "calories": "52",
+        "total_fat": "0.5g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "1mg",
+        "protein": "3.3g"
+    },
+    {
+        "name": "Pepper",
+        "calories": "40",
+        "total_fat": "0.4g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "4mg",
+        "protein": "1.3g"
+    },
+    {
+        "name": "Bread",
+        "calories": "80",
+        "total_fat": "1g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "150mg",
+        "protein": "3g."
+    },
+    {
+        "name": "Broccoli",
+        "calories": "55",
+        "total_fat": "0.6g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "81mg",
+        "protein": "4.3g"
+    },
+    {
+        "name": "Bualoy",
+        "calories": "104",
+        "total_fat": "0g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "0mg",
+        "protein": "0g"
+    },
+    {
+        "name": "Burger",
+        "calories": "250",
+        "total_fat": "10g",
+        "saturated_fat": "4g",
+        "cholesterol": "30mg",
+        "sodium": "450mg",
+        "protein": "15g"
+    },
+    {
+        "name": "Cabbage",
+        "calories": "22",
+        "total_fat": "0.1g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "13mg",
+        "protein": "1.3g"
+    },
+    {
+        "name": "Cake",
+        "calories": "250",
+        "total_fat": "10g",
+        "saturated_fat": "3g",
+        "cholesterol": "30mg",
+        "sodium": "200mg",
+        "protein": "3g."
+    },
+    {
+        "name": "Carrot",
+        "calories": "41",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "88mg",
+        "protein": "0.9g"
+    },
+    {
+        "name": "Cauliflower",
+        "calories": "25",
+        "total_fat": "0.3g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "30mg",
+        "protein": "1.9g"
+    },
+    {
+        "name": "Cheese",
+        "calories": "402",
+        "total_fat": "33g",
+        "saturated_fat": "21g",
+        "cholesterol": "110mg",
+        "sodium": "621mg",
+        "protein": "25g"
+    },
+    {
+        "name": "Cheesecake",
+        "calories": "257",
+        "total_fat": "15g",
+        "saturated_fat": "8g",
+        "cholesterol": "86mg",
+        "sodium": "224mg",
+        "protein": "7g"
+    },
+    {
+        "name": "Chicken",
+        "calories": "239",
+        "total_fat": "14g",
+        "saturated_fat": "4g",
+        "cholesterol": "88mg",
+        "sodium": "74mg",
+        "protein": "27g"
+    },
+    {
+        "name": "Chicken",
+        "calories": "165",
+        "total_fat": "3.6g",
+        "saturated_fat": "1g",
+        "cholesterol": "85mg",
+        "sodium": "74mg",
+        "protein": "31g."
+    },
+    {
+        "name": "Rice",
+        "calories": "205",
+        "total_fat": "0.6g",
+        "saturated_fat": "0.2g",
+        "cholesterol": "0mg",
+        "sodium": "1mg",
+        "protein": "4.3g"
+    },
+    {
+        "name": "Coconut",
+        "calories": "354",
+        "total_fat": "33g",
+        "saturated_fat": "30g",
+        "cholesterol": "0mg",
+        "sodium": "20mg",
+        "protein": "3.3g"
+    },
+    {
+        "name": "Coke",
+        "calories": "140",
+        "total_fat": "0g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "45mg",
+        "protein": "0g"
+    },
+    {
+        "name": "Cookie",
+        "calories": "52",
+        "total_fat": "2.5g",
+        "saturated_fat": "1.3g",
+        "cholesterol": "5mg",
+        "sodium": "45mg",
+        "protein": "0.6g"
+    },
+    {
+        "name": "Corn",
+        "calories": "96",
+        "total_fat": "1.5g",
+        "saturated_fat": "0.2g",
+        "cholesterol": "0mg",
+        "sodium": "15mg",
+        "protein": "3.4g"
+    },
+    {
+        "name": "Crispy",
+        "calories": "150",
+        "total_fat": "9g",
+        "saturated_fat": "2g",
+        "cholesterol": "20mg",
+        "sodium": "200mg",
+        "protein": "7g"
+    },
+    {
+        "name": "Pork",
+        "calories": "242",
+        "total_fat": "14.5g",
+        "saturated_fat": "5.1g",
+        "cholesterol": "82mg",
+        "sodium": "77mg",
+        "protein": "26.3g."
+    },
+    {
+        "name": "Kale",
+        "calories": "49",
+        "total_fat": "0.9g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "38mg",
+        "protein": "3g"
+    },
+    {
+        "name": "Croissant",
+        "calories": "272",
+        "total_fat": "15g",
+        "saturated_fat": "9g",
+        "cholesterol": "44mg",
+        "sodium": "257mg",
+        "protein": "6g"
+    },
+    {
+        "name": "Donut",
+        "calories": "195",
+        "total_fat": "10g",
+        "saturated_fat": "4g",
+        "cholesterol": "16mg",
+        "sodium": "195mg",
+        "protein": "3g"
+    },
+    {
+        "name": "Egg",
+        "calories": "70",
+        "total_fat": "5g",
+        "saturated_fat": "1.5g",
+        "cholesterol": "185mg",
+        "sodium": "70mg",
+        "protein": "6g"
+    },
+    {
+        "name": "Eggplant",
+        "calories": "20",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "1mg",
+        "protein": "1g."
+    },
+    {
+        "name": "Fig",
+        "calories": "47",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "2mg",
+        "protein": "0.8g"
+    },
+    {
+        "name": "Fish",
+        "calories": "206",
+        "total_fat": "11g",
+        "saturated_fat": "2g",
+        "cholesterol": "77mg",
+        "sodium": "68mg",
+        "protein": "22g"
+    },
+    {
+        "name": "French",
+        "calories": "200",
+        "total_fat": "10g",
+        "saturated_fat": "3g",
+        "cholesterol": "100mg",
+        "sodium": "400mg",
+        "protein": "20g"
+    },
+    {
+        "name": "Fries",
+        "calories": "365",
+        "total_fat": "17g",
+        "saturated_fat": "3g",
+        "cholesterol": "0mg",
+        "sodium": "1167mg",
+        "protein": "4g"
+    },
+    {
+        "name": "Grape",
+        "calories": "69",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "2mg",
+        "protein": "0.7g."
+    },
+    {
+        "name": "Grapefruit",
+        "calories": "52",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "0mg",
+        "protein": "1g"
+    },
+    {
+        "name": "Green",
+        "calories": "15",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "2mg",
+        "protein": "1.4g"
+    },
+    {
+        "name": "Curry",
+        "calories": "250",
+        "total_fat": "15g",
+        "saturated_fat": "8g",
+        "cholesterol": "50mg",
+        "sodium": "800mg",
+        "protein": "20g"
+    },
+    {
+        "name": "Grilled",
+        "calories": "200",
+        "total_fat": "10g",
+        "saturated_fat": "3g",
+        "cholesterol": "70mg",
+        "sodium": "400mg",
+        "protein": "25g"
+    },
+    {
+        "name": "Chicken",
+        "calories": "335",
+        "total_fat": "20g",
+        "saturated_fat": "6g",
+        "cholesterol": "139mg",
+        "sodium": "74mg",
+        "protein": "31g"
+    },
+    {
+        "name": "Hamburger",
+        "calories": "250",
+        "total_fat": "8g",
+        "saturated_fat": "3g",
+        "cholesterol": "30mg",
+        "sodium": "500mg",
+        "protein": "15g"
+    },
+    {
+        "name": "Homok",
+        "calories": "175",
+        "total_fat": "3g",
+        "saturated_fat": "0.5g",
+        "cholesterol": "0mg",
+        "sodium": "16mg",
+        "protein": "6g."
+    },
+    {
+        "name": "Hot",
+        "calories": "300",
+        "total_fat": "12g",
+        "saturated_fat": "4.5g",
+        "cholesterol": "65mg",
+        "sodium": "600mg",
+        "protein": "20g"
+    },
+    {
+        "name": "Dog",
+        "calories": "250",
+        "total_fat": "15g",
+        "saturated_fat": "6g",
+        "cholesterol": "70mg",
+        "sodium": "400mg",
+        "protein": "20g"
+    },
+    {
+        "name": "Ice",
+        "calories": "0",
+        "total_fat": "0g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "0mg",
+        "protein": "0g"
+    },
+    {
+        "name": "Cream",
+        "calories": "52",
+        "total_fat": "5.5g",
+        "saturated_fat": "3.5g",
+        "cholesterol": "20mg",
+        "sodium": "7mg",
+        "protein": "0.6g."
+    },
+    {
+        "name": "Jackfruit",
+        "calories": "94",
+        "total_fat": "0.3g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "2mg",
+        "protein": "2.8g"
+    },
+    {
+        "name": "Japanese-style-pancake",
+        "calories": "250",
+        "total_fat": "11g",
+        "saturated_fat": "6g",
+        "cholesterol": "45mg",
+        "sodium": "200mg",
+        "protein": "7g."
+    },
+    {
+        "name": "Jok",
+        "calories": "230",
+        "total_fat": "5g",
+        "saturated_fat": "1g",
+        "cholesterol": "240mg",
+        "sodium": "660mg",
+        "protein": "12g"
+    },
+    {
+        "name": "Juice",
+        "calories": "60",
+        "total_fat": "0g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "15mg",
+        "protein": "0g."
+    },
+    {
+        "name": "Khao",
+        "calories": "218",
+        "total_fat": "0.8g",
+        "saturated_fat": "0.3g",
+        "cholesterol": "0mg",
+        "sodium": "5mg",
+        "protein": "4.3g."
+    },
+    {
+        "name": "kha",
+        "calories": "387",
+        "total_fat": "18g",
+        "saturated_fat": "3g",
+        "cholesterol": "0mg",
+        "sodium": "496mg",
+        "protein": "5g"
+    },
+    {
+        "name": "moo",
+        "calories": "120",
+        "total_fat": "8g",
+        "saturated_fat": "5g",
+        "cholesterol": "30mg",
+        "sodium": "100mg",
+        "protein": "8g"
+    },
+    {
+        "name": "Laab",
+        "calories": "280",
+        "total_fat": "17g",
+        "saturated_fat": "4.5g",
+        "cholesterol": "80mg",
+        "sodium": "730mg",
+        "protein": "24g."
+    },
+    {
+        "name": "Laadna",
+        "calories": "250",
+        "total_fat": "12g",
+        "saturated_fat": "7g",
+        "cholesterol": "30mg",
+        "sodium": "130mg",
+        "protein": "3g."
+    },
+    {
+        "name": "Lemon",
+        "calories": "17",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "1mg",
+        "protein": "0.6g"
+    },
+    {
+        "name": "Lettuce",
+        "calories": "5",
+        "total_fat": "0g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "5mg",
+        "protein": "1g"
+    },
+    {
+        "name": "Macaron",
+        "calories": "90",
+        "total_fat": "3g",
+        "saturated_fat": "1.5g",
+        "cholesterol": "10mg",
+        "sodium": "20mg",
+        "protein": "1g"
+    },
+    {
+        "name": "Mango",
+        "calories": "60",
+        "total_fat": "0.4g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "1mg",
+        "protein": "0.8g"
+    },
+    {
+        "name": "Muffin",
+        "calories": "250",
+        "total_fat": "10g",
+        "saturated_fat": "2g",
+        "cholesterol": "30mg",
+        "sodium": "300mg",
+        "protein": "5g."
+    },
+    {
+        "name": "Mushroom",
+        "calories": "15",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "5mg",
+        "protein": "2.2g"
+    },
+    {
+        "name": "Namprig",
+        "calories": "40",
+        "total_fat": "0g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "690mg",
+        "protein": "0g"
+    },
+    {
+        "name": "Omelette",
+        "calories": "94",
+        "total_fat": "7g",
+        "saturated_fat": "2g",
+        "cholesterol": "186mg",
+        "sodium": "93mg",
+        "protein": "6g"
+    },
+    {
+        "name": "Orange",
+        "calories": "62",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "0mg",
+        "protein": "1.2g."
+    },
+    {
+        "name": "Padthai",
+        "calories": "960",
+        "total_fat": "35g",
+        "saturated_fat": "6g",
+        "cholesterol": "265mg",
+        "sodium": "2370mg",
+        "protein": "36g"
+    },
+    {
+        "name": "Pancake",
+        "calories": "220",
+        "total_fat": "2g",
+        "saturated_fat": "0.5g",
+        "cholesterol": "35mg",
+        "sodium": "490mg",
+        "protein": "6g"
+    },
+    {
+        "name": "Papaya",
+        "calories": "67",
+        "total_fat": "0.3g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "8mg",
+        "protein": "0.5g"
+    },
+    {
+        "name": "Salad",
+        "calories": "150",
+        "total_fat": "9g",
+        "saturated_fat": "2g",
+        "cholesterol": "10mg",
+        "sodium": "200mg",
+        "protein": "5g"
+    },
+    {
+        "name": "Pasta",
+        "calories": "221",
+        "total_fat": "1.3g",
+        "saturated_fat": "0.3g",
+        "cholesterol": "0mg",
+        "sodium": "1mg",
+        "protein": "8.1g"
+    },
+    {
+        "name": "Peach",
+        "calories": "59",
+        "total_fat": "0.3g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "0mg",
+        "protein": "1.4g"
+    },
+    {
+        "name": "Pear",
+        "calories": "101",
+        "total_fat": "0.1g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "1mg",
+        "protein": "1g"
+    },
+    {
+        "name": "Peas",
+        "calories": "118",
+        "total_fat": "0.6g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "230mg",
+        "protein": "8.2g"
+    },
+    {
+        "name": "Pineapple",
+        "calories": "83",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "1mg",
+        "protein": "0.9g"
+    },
+    {
+        "name": "Pizza",
+        "calories": "285",
+        "total_fat": "10g",
+        "saturated_fat": "4.5g",
+        "cholesterol": "22mg",
+        "sodium": "640mg",
+        "protein": "12g."
+    },
+    {
+        "name": "Pomegranate",
+        "calories": "83",
+        "total_fat": "1 g",
+        "saturated_fat": "0.1 g",
+        "cholesterol": "0 mg",
+        "sodium": "3 mg",
+        "protein": "1.7 g"
+    },
+    {
+        "name": "Popcorn",
+        "calories": "31",
+        "total_fat": "0.4g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "1mg",
+        "protein": "1.2g"
+    },
+    {
+        "name": "Pork",
+        "calories": "242",
+        "total_fat": "14.5g",
+        "saturated_fat": "5.1g",
+        "cholesterol": "83mg",
+        "sodium": "62mg",
+        "protein": "24.1g"
+    },
+    {
+        "name": "Satay",
+        "calories": "290",
+        "total_fat": "17g",
+        "saturated_fat": "5g",
+        "cholesterol": "75mg",
+        "sodium": "790mg",
+        "protein": "20g"
+    },
+    {
+        "name": "Potato",
+        "calories": "110",
+        "total_fat": "0.2g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "6mg",
+        "protein": "2g"
+    },
+    {
+        "name": "Pretzel",
+        "calories": "108",
+        "total_fat": "1g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "309mg",
+        "protein": "3g"
+    },
+    {
+        "name": "Pumpkin",
+        "calories": "30",
+        "total_fat": "0.1g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "1mg",
+        "protein": "1.2g."
+    },
+    {
+        "name": "Radish",
+        "calories": "16",
+        "total_fat": "0.1g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "39mg",
+        "protein": "0.7g."
+    },
+    {
+        "name": "Rice",
+        "calories": "206",
+        "total_fat": "0.6g",
+        "saturated_fat": "0.2g",
+        "cholesterol": "0mg",
+        "sodium": "1mg",
+        "protein": "4.3g"
+    },
+    {
+        "name": "Salad",
+        "calories": "100",
+        "total_fat": "4g",
+        "saturated_fat": "1g",
+        "cholesterol": "10mg",
+        "sodium": "200mg",
+        "protein": "5g"
+    },
+    {
+        "name": "Salmon",
+        "calories": "206",
+        "total_fat": "10g",
+        "saturated_fat": "2g",
+        "cholesterol": "85mg",
+        "sodium": "50mg",
+        "protein": "22g."
+    },
+    {
+        "name": "Sandwich",
+        "calories": "350",
+        "total_fat": "15g",
+        "saturated_fat": "3.5g",
+        "cholesterol": "30mg",
+        "sodium": "700mg",
+        "protein": "20g"
+    },
+    {
+        "name": "Shrimp",
+        "calories": "84",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "152mg",
+        "sodium": "111mg",
+        "protein": "18g."
+    },
+    {
+        "name": "Spinach",
+        "calories": "23",
+        "total_fat": "0.4g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "77mg",
+        "protein": "2.9g"
+    },
+    {
+        "name": "Steak",
+        "calories": "250",
+        "total_fat": "15g",
+        "saturated_fat": "6g",
+        "cholesterol": "90mg",
+        "sodium": "75mg",
+        "protein": "25g"
+    },
+    {
+        "name": "Strawberry",
+        "calories": "32kcal",
+        "total_fat": "0.3g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "1mg",
+        "protein": "0.7g"
+    },
+    {
+        "name": "Sukee",
+        "calories": "300",
+        "total_fat": "10g",
+        "saturated_fat": "3g",
+        "cholesterol": "50mg",
+        "sodium": "800mg",
+        "protein": "20g"
+    },
+    {
+        "name": "Sweet",
+        "calories": "387",
+        "total_fat": "17g",
+        "saturated_fat": "10g",
+        "cholesterol": "49mg",
+        "sodium": "158mg",
+        "protein": "4g"
+    },
+    {
+        "name": "Potato",
+        "calories": "110",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "6mg",
+        "protein": "2g"
+    },
+    {
+        "name": "Tiramisu",
+        "calories": "450",
+        "total_fat": "31g",
+        "saturated_fat": "18g",
+        "cholesterol": "215mg",
+        "sodium": "50mg",
+        "protein": "7g"
+    },
+    {
+        "name": "Tom",
+        "calories": "100",
+        "total_fat": "4g",
+        "saturated_fat": "1g",
+        "cholesterol": "20mg",
+        "sodium": "250mg",
+        "protein": "10g"
+    },
+    {
+        "name": "Yum",
+        "calories": "200",
+        "total_fat": "8g",
+        "saturated_fat": "4g",
+        "cholesterol": "20mg",
+        "sodium": "300mg",
+        "protein": "10g"
+    },
+    {
+        "name": "Tomato",
+        "calories": "18",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "6mg",
+        "protein": "0.9g"
+    },
+    {
+        "name": "Waffle",
+        "calories": "82",
+        "total_fat": "0.8g",
+        "saturated_fat": "0.2g",
+        "cholesterol": "11mg",
+        "sodium": "170mg",
+        "protein": "3g"
+    },
+    {
+        "name": "Watermelon",
+        "calories": "30",
+        "total_fat": "0g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "0mg",
+        "protein": "1g"
+    },
+    {
+        "name": "Zucchini",
+        "calories": "17",
+        "total_fat": "0.3g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "8mg",
+        "protein": "1.2g."
+    },
+    {
+        "name": "alooparatha-chapati",
+        "calories": "180",
+        "total_fat": "4g",
+        "saturated_fat": "1g",
+        "cholesterol": "0mg",
+        "sodium": "380mg",
+        "protein": "4g."
+    },
+    {
+        "name": "baklava",
+        "calories": "330",
+        "total_fat": "20g",
+        "saturated_fat": "7g",
+        "cholesterol": "25mg",
+        "sodium": "160mg",
+        "protein": "3g"
+    },
+    {
+        "name": "bakso",
+        "calories": "250",
+        "total_fat": "15g",
+        "saturated_fat": "6g",
+        "cholesterol": "60mg",
+        "sodium": "750mg",
+        "protein": "20g."
+    },
+    {
+        "name": "bamia",
+        "calories": "33",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "6mg",
+        "protein": "2g"
+    },
+    {
+        "name": "beans",
+        "calories": "130",
+        "total_fat": "0.5g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "15mg",
+        "protein": "9g"
+    },
+    {
+        "name": "beef-curry",
+        "calories": "220",
+        "total_fat": "12g",
+        "saturated_fat": "4.5g",
+        "cholesterol": "60mg",
+        "sodium": "480mg",
+        "protein": "18g."
+    },
+    {
+        "name": "beef-noodle",
+        "calories": "350",
+        "total_fat": "12g",
+        "saturated_fat": "5g",
+        "cholesterol": "40mg",
+        "sodium": "800mg",
+        "protein": "20g"
+    },
+    {
+        "name": "beet",
+        "calories": "44",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "65mg",
+        "protein": "1.6g"
+    },
+    {
+        "name": "besan_cheela",
+        "calories": "150",
+        "total_fat": "6g",
+        "saturated_fat": "1g",
+        "cholesterol": "0mg",
+        "sodium": "500mg",
+        "protein": "10g"
+    },
+    {
+        "name": "bibimbap",
+        "calories": "635",
+        "total_fat": "30g",
+        "saturated_fat": "8g",
+        "cholesterol": "260mg",
+        "sodium": "1170mg",
+        "protein": "31g"
+    },
+    {
+        "name": "biriyani",
+        "calories": "400",
+        "total_fat": "15g",
+        "saturated_fat": "4g",
+        "cholesterol": "50mg",
+        "sodium": "800mg",
+        "protein": "20g"
+    },
+    {
+        "name": "brus",
+        "calories": "43",
+        "total_fat": "0.3g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "5mg",
+        "protein": "2.4g"
+    },
+    {
+        "name": "capusta",
+        "calories": "100",
+        "total_fat": "7g",
+        "saturated_fat": "3g",
+        "cholesterol": "20mg",
+        "sodium": "250mg",
+        "protein": "6g"
+    },
+    {
+        "name": "cabbage",
+        "calories": "22",
+        "total_fat": "0.1g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "18mg",
+        "protein": "1.3g"
+    },
+    {
+        "name": "carrot_eggs",
+        "calories": "132",
+        "total_fat": "9g",
+        "saturated_fat": "2.1g",
+        "cholesterol": "372mg",
+        "sodium": "121mg",
+        "protein": "11g"
+    },
+    {
+        "name": "cayliflower",
+        "calories": "25",
+        "total_fat": "0.3g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "30mg",
+        "protein": "2g."
+    },
+    {
+        "name": "celery",
+        "calories": "6",
+        "total_fat": "0.1g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "32mg",
+        "protein": "0.5g"
+    },
+    {
+        "name": "chicken-n-egg-on-rice",
+        "calories": "450",
+        "total_fat": "12g",
+        "saturated_fat": "3g",
+        "cholesterol": "230mg",
+        "sodium": "650mg",
+        "protein": "30g"
+    },
+    {
+        "name": "chicken-rice",
+        "calories": "350",
+        "total_fat": "8g",
+        "saturated_fat": "2g",
+        "cholesterol": "80mg",
+        "sodium": "600mg",
+        "protein": "25g."
+    },
+    {
+        "name": "chicken_nuggets",
+        "calories": "260",
+        "total_fat": "16g",
+        "saturated_fat": "3g",
+        "cholesterol": "45mg",
+        "sodium": "470mg",
+        "protein": "15g"
+    },
+    {
+        "name": "chinese_cabbage",
+        "calories": "13",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "5mg",
+        "protein": "1.1g"
+    },
+    {
+        "name": "chinese_sausage",
+        "calories": "180",
+        "total_fat": "16g",
+        "saturated_fat": "6g",
+        "cholesterol": "45mg",
+        "sodium": "600mg",
+        "protein": "7g"
+    },
+    {
+        "name": "chip-butty",
+        "calories": "480",
+        "total_fat": "24g",
+        "saturated_fat": "10g",
+        "cholesterol": "40mg",
+        "sodium": "980mg",
+        "protein": "11g"
+    },
+    {
+        "name": "chole",
+        "calories": "211",
+        "total_fat": "12g",
+        "saturated_fat": "4g",
+        "cholesterol": "95mg",
+        "sodium": "350mg",
+        "protein": "24g"
+    },
+    {
+        "name": "corn",
+        "calories": "96",
+        "total_fat": "1.5g",
+        "saturated_fat": "0.2g",
+        "cholesterol": "0mg",
+        "sodium": "15mg",
+        "protein": "3.4g"
+    },
+    {
+        "name": "croquette",
+        "calories": "150",
+        "total_fat": "10g",
+        "saturated_fat": "1.5g",
+        "cholesterol": "25mg",
+        "sodium": "280mg",
+        "protein": "6g."
+    },
+    {
+        "name": "cucumber",
+        "calories": "15",
+        "total_fat": "0.1g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "2mg",
+        "protein": "0.6g"
+    },
+    {
+        "name": "curry",
+        "calories": "200",
+        "total_fat": "12g",
+        "saturated_fat": "6g",
+        "cholesterol": "50mg",
+        "sodium": "800mg",
+        "protein": "15g"
+    },
+    {
+        "name": "dal",
+        "calories": "198",
+        "total_fat": "6g",
+        "saturated_fat": "1g",
+        "cholesterol": "0mg",
+        "sodium": "900mg",
+        "protein": "12g"
+    },
+    {
+        "name": "dalmakhani",
+        "calories": "360",
+        "total_fat": "20g",
+        "saturated_fat": "6g",
+        "cholesterol": "40mg",
+        "sodium": "480mg",
+        "protein": "14g"
+    },
+    {
+        "name": "dosa",
+        "calories": "133",
+        "total_fat": "2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "424mg",
+        "protein": "4g"
+    },
+    {
+        "name": "dosa-uttapam",
+        "calories": "150",
+        "total_fat": "2g",
+        "saturated_fat": "0.5g",
+        "cholesterol": "0mg",
+        "sodium": "400mg",
+        "protein": "4g"
+    },
+    {
+        "name": "eels-on-rice",
+        "calories": "344",
+        "total_fat": "6g",
+        "saturated_fat": "2g",
+        "cholesterol": "188mg",
+        "sodium": "705mg",
+        "protein": "27g"
+    },
+    {
+        "name": "eggplant",
+        "calories": "25",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "2mg",
+        "protein": "1g."
+    },
+    {
+        "name": "falafel",
+        "calories": "330",
+        "total_fat": "18g",
+        "saturated_fat": "2g",
+        "cholesterol": "0mg",
+        "sodium": "610mg",
+        "protein": "17g"
+    },
+    {
+        "name": "fasol",
+        "calories": "120",
+        "total_fat": "0g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "25mg",
+        "protein": "7g"
+    },
+    {
+        "name": "fried",
+        "calories": "312",
+        "total_fat": "18g",
+        "saturated_fat": "2.3g",
+        "cholesterol": "68mg",
+        "sodium": "695mg",
+        "protein": "12g"
+    },
+    {
+        "name": "eggplant",
+        "calories": "25",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "2mg",
+        "protein": "1g"
+    },
+    {
+        "name": "fried-fish",
+        "calories": "200",
+        "total_fat": "12g",
+        "saturated_fat": "2g",
+        "cholesterol": "50mg",
+        "sodium": "350mg",
+        "protein": "20g"
+    },
+    {
+        "name": "fried-noodle",
+        "calories": "400",
+        "total_fat": "20g",
+        "saturated_fat": "4g",
+        "cholesterol": "60mg",
+        "sodium": "800mg",
+        "protein": "10g"
+    },
+    {
+        "name": "fried-rice",
+        "calories": "250",
+        "total_fat": "10g",
+        "saturated_fat": "2g",
+        "cholesterol": "50mg",
+        "sodium": "600mg",
+        "protein": "8g"
+    },
+    {
+        "name": "fried_chicken",
+        "calories": "240",
+        "total_fat": "13g",
+        "saturated_fat": "3.5g",
+        "cholesterol": "75mg",
+        "sodium": "340mg",
+        "protein": "24g"
+    },
+    {
+        "name": "fried_dumplings",
+        "calories": "212",
+        "total_fat": "10g",
+        "saturated_fat": "2g",
+        "cholesterol": "22mg",
+        "sodium": "342mg",
+        "protein": "7g"
+    },
+    {
+        "name": "fried_eggs",
+        "calories": "90",
+        "total_fat": "7g",
+        "saturated_fat": "2g",
+        "cholesterol": "215mg",
+        "sodium": "70mg",
+        "protein": "6g"
+    },
+    {
+        "name": "ganmodoki",
+        "calories": "80",
+        "total_fat": "3g",
+        "saturated_fat": "0.5g",
+        "cholesterol": "0mg",
+        "sodium": "150mg",
+        "protein": "8g"
+    },
+    {
+        "name": "garlic",
+        "calories": "4",
+        "total_fat": "0g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "1mg",
+        "protein": "0.2g"
+    },
+    {
+        "name": "ghanouj",
+        "calories": "70",
+        "total_fat": "6g",
+        "saturated_fat": "1g",
+        "cholesterol": "0mg",
+        "sodium": "370mg",
+        "protein": "2g."
+    },
+    {
+        "name": "gratin",
+        "calories": "320",
+        "total_fat": "22g",
+        "saturated_fat": "13g",
+        "cholesterol": "65mg",
+        "sodium": "560mg",
+        "protein": "14g."
+    },
+    {
+        "name": "grilled-eggplant",
+        "calories": "35",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "1mg",
+        "protein": "1.2g"
+    },
+    {
+        "name": "grilled-pacific-saury-",
+        "calories": "200",
+        "total_fat": "12g",
+        "saturated_fat": "3g",
+        "cholesterol": "85mg",
+        "sodium": "70mg",
+        "protein": "22g"
+    },
+    {
+        "name": "grilled-salmon",
+        "calories": "367",
+        "total_fat": "22g",
+        "saturated_fat": "4g",
+        "cholesterol": "109mg",
+        "sodium": "69mg",
+        "protein": "39g"
+    },
+    {
+        "name": "gulab_jamun",
+        "calories": "150",
+        "total_fat": "7g",
+        "saturated_fat": "1.5g",
+        "cholesterol": "10mg",
+        "sodium": "10mg",
+        "protein": "2g"
+    },
+    {
+        "name": "halawa",
+        "calories": "513",
+        "total_fat": "31g",
+        "saturated_fat": "15g",
+        "cholesterol": "33mg",
+        "sodium": "142mg",
+        "protein": "19g"
+    },
+    {
+        "name": "hamburger",
+        "calories": "250",
+        "total_fat": "9g",
+        "saturated_fat": "3.5g",
+        "cholesterol": "30mg",
+        "sodium": "450mg",
+        "protein": "16g"
+    },
+    {
+        "name": "hot",
+        "calories": "0",
+        "total_fat": "0g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "0mg",
+        "protein": "0g"
+    },
+    {
+        "name": "pepper",
+        "calories": "31",
+        "total_fat": "0.3g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "4mg",
+        "protein": "1.2g."
+    },
+    {
+        "name": "idli",
+        "calories": "39",
+        "total_fat": "0.2g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "28mg",
+        "protein": "1.5g"
+    },
+    {
+        "name": "jiaozi",
+        "calories": "25",
+        "total_fat": "0.6g",
+        "saturated_fat": "0.2g",
+        "cholesterol": "6mg",
+        "sodium": "122mg",
+        "protein": "1.8g."
+    },
+    {
+        "name": "kabsa",
+        "calories": "500",
+        "total_fat": "20g",
+        "saturated_fat": "7g",
+        "cholesterol": "60mg",
+        "sodium": "800mg",
+        "protein": "25g."
+    },
+    {
+        "name": "khichdi",
+        "calories": "300",
+        "total_fat": "10g",
+        "saturated_fat": "2g",
+        "cholesterol": "20mg",
+        "sodium": "500mg",
+        "protein": "12g"
+    },
+    {
+        "name": "khubz",
+        "calories": "80",
+        "total_fat": "0.5g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "150mg",
+        "protein": "3g"
+    },
+    {
+        "name": "kofta",
+        "calories": "310",
+        "total_fat": "24g",
+        "saturated_fat": "10g",
+        "cholesterol": "90mg",
+        "sodium": "600mg",
+        "protein": "16g."
+    },
+    {
+        "name": "kunafah",
+        "calories": "300",
+        "total_fat": "15g",
+        "saturated_fat": "8g",
+        "cholesterol": "30mg",
+        "sodium": "150mg",
+        "protein": "5g."
+    },
+    {
+        "name": "kushari",
+        "calories": "437",
+        "total_fat": "7g",
+        "saturated_fat": "1g",
+        "cholesterol": "2mg",
+        "sodium": "828mg",
+        "protein": "20g."
+    },
+    {
+        "name": "mansaf",
+        "calories": "600",
+        "total_fat": "25g",
+        "saturated_fat": "8g",
+        "cholesterol": "100mg",
+        "sodium": "800mg",
+        "protein": "40g."
+    },
+    {
+        "name": "middle",
+        "calories": "100",
+        "total_fat": "5g",
+        "saturated_fat": "2.5g",
+        "cholesterol": "20mg",
+        "sodium": "150mg",
+        "protein": "10g."
+    },
+    {
+        "name": "east",
+        "calories": "70",
+        "total_fat": "0.5g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "0mg",
+        "protein": "5g"
+    },
+    {
+        "name": "burger",
+        "calories": "250",
+        "total_fat": "9g",
+        "saturated_fat": "3.5g",
+        "cholesterol": "30mg",
+        "sodium": "450mg",
+        "protein": "20g"
+    },
+    {
+        "name": "middle",
+        "calories": "100",
+        "total_fat": "5g",
+        "saturated_fat": "2.5g",
+        "cholesterol": "10mg",
+        "sodium": "200mg",
+        "protein": "15g."
+    },
+    {
+        "name": "east",
+        "calories": "135",
+        "total_fat": "0.7g",
+        "saturated_fat": "0.2g",
+        "cholesterol": "0mg",
+        "sodium": "0.8mg",
+        "protein": "6.6g"
+    },
+    {
+        "name": "pizza",
+        "calories": "285",
+        "total_fat": "10g",
+        "saturated_fat": "4.5g",
+        "cholesterol": "25mg",
+        "sodium": "560mg",
+        "protein": "12g"
+    },
+    {
+        "name": "middle",
+        "calories": "200",
+        "total_fat": "8g",
+        "saturated_fat": "2g",
+        "cholesterol": "50mg",
+        "sodium": "400mg",
+        "protein": "20g"
+    },
+    {
+        "name": "east",
+        "calories": "135",
+        "total_fat": "6g",
+        "saturated_fat": "1.5g",
+        "cholesterol": "186mg",
+        "sodium": "186mg",
+        "protein": "19g"
+    },
+    {
+        "name": "salad",
+        "calories": "150",
+        "total_fat": "10g",
+        "saturated_fat": "2g",
+        "cholesterol": "20mg",
+        "sodium": "300mg",
+        "protein": "5g"
+    },
+    {
+        "name": "middle",
+        "calories": "200",
+        "total_fat": "8g",
+        "saturated_fat": "3g",
+        "cholesterol": "30mg",
+        "sodium": "400mg",
+        "protein": "20g"
+    },
+    {
+        "name": "east",
+        "calories": "75",
+        "total_fat": "0g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "0mg",
+        "protein": "7g"
+    },
+    {
+        "name": "soup",
+        "calories": "150",
+        "total_fat": "5g",
+        "saturated_fat": "2g",
+        "cholesterol": "20mg",
+        "sodium": "800mg",
+        "protein": "10g"
+    },
+    {
+        "name": "miso-soup",
+        "calories": "66",
+        "total_fat": "2g",
+        "saturated_fat": "0.4g",
+        "cholesterol": "0mg",
+        "sodium": "959mg",
+        "protein": "4g"
+    },
+    {
+        "name": "mujaddara",
+        "calories": "350",
+        "total_fat": "8g",
+        "saturated_fat": "1g",
+        "cholesterol": "0mg",
+        "sodium": "860mg",
+        "protein": "14g"
+    },
+    {
+        "name": "mulukhiyah",
+        "calories": "45",
+        "total_fat": "0.6g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "12mg",
+        "protein": "4g."
+    },
+    {
+        "name": "mung_bean_sprouts",
+        "calories": "30",
+        "total_fat": "0g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "6mg",
+        "protein": "3g"
+    },
+    {
+        "name": "oden",
+        "calories": "200",
+        "total_fat": "8g",
+        "saturated_fat": "2.5g",
+        "cholesterol": "65mg",
+        "sodium": "610mg",
+        "protein": "15g"
+    },
+    {
+        "name": "omelet",
+        "calories": "94",
+        "total_fat": "7g",
+        "saturated_fat": "2g",
+        "cholesterol": "185mg",
+        "sodium": "140mg",
+        "protein": "7g"
+    },
+    {
+        "name": "omelette",
+        "calories": "94",
+        "total_fat": "7g",
+        "saturated_fat": "2g",
+        "cholesterol": "186mg",
+        "sodium": "158mg",
+        "protein": "6g."
+    },
+    {
+        "name": "onion",
+        "calories": "40",
+        "total_fat": "0g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "2mg",
+        "protein": "1g"
+    },
+    {
+        "name": "palakpaneer",
+        "calories": "260",
+        "total_fat": "20g",
+        "saturated_fat": "12g",
+        "cholesterol": "50mg",
+        "sodium": "710mg",
+        "protein": "8g."
+    },
+    {
+        "name": "papad",
+        "calories": "22",
+        "total_fat": "0.3g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "121mg",
+        "protein": "1.3g"
+    },
+    {
+        "name": "peas",
+        "calories": "81",
+        "total_fat": "0.8g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "4mg",
+        "protein": "5.4g"
+    },
+    {
+        "name": "pilaf",
+        "calories": "218",
+        "total_fat": "3g",
+        "saturated_fat": "1g",
+        "cholesterol": "0mg",
+        "sodium": "450mg",
+        "protein": "5g"
+    },
+    {
+        "name": "pita",
+        "calories": "165",
+        "total_fat": "1g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "300mg",
+        "protein": "6g"
+    },
+    {
+        "name": "pizza_full",
+        "calories": "285",
+        "total_fat": "10g",
+        "saturated_fat": "4.5g",
+        "cholesterol": "27mg",
+        "sodium": "590mg",
+        "protein": "12g"
+    },
+    {
+        "name": "pizza_half",
+        "calories": "270",
+        "total_fat": "10g",
+        "saturated_fat": "4.5g",
+        "cholesterol": "25mg",
+        "sodium": "650mg",
+        "protein": "13g"
+    },
+    {
+        "name": "pizza_slice",
+        "calories": "285",
+        "total_fat": "10g",
+        "saturated_fat": "4.5g",
+        "cholesterol": "25mg",
+        "sodium": "600mg",
+        "protein": "12g"
+    },
+    {
+        "name": "poha",
+        "calories": "250",
+        "total_fat": "5g",
+        "saturated_fat": "1g",
+        "cholesterol": "0mg",
+        "sodium": "600mg",
+        "protein": "5g."
+    },
+    {
+        "name": "poori",
+        "calories": "250",
+        "total_fat": "15g",
+        "saturated_fat": "2g",
+        "cholesterol": "0mg",
+        "sodium": "30mg",
+        "protein": "4g"
+    },
+    {
+        "name": "pork-cutlet-on-rice",
+        "calories": "450",
+        "total_fat": "15g",
+        "saturated_fat": "4g",
+        "cholesterol": "90mg",
+        "sodium": "800mg",
+        "protein": "30g"
+    },
+    {
+        "name": "potage",
+        "calories": "150",
+        "total_fat": "8g",
+        "saturated_fat": "5g",
+        "cholesterol": "25mg",
+        "sodium": "600mg",
+        "protein": "4g"
+    },
+    {
+        "name": "qatayef",
+        "calories": "112",
+        "total_fat": "1g",
+        "saturated_fat": "0g",
+        "cholesterol": "19mg",
+        "sodium": "35mg",
+        "protein": "4g."
+    },
+    {
+        "name": "raisin-bread",
+        "calories": "217",
+        "total_fat": "1g",
+        "saturated_fat": "0.2g",
+        "cholesterol": "0mg",
+        "sodium": "204mg",
+        "protein": "6g"
+    },
+    {
+        "name": "rajma",
+        "calories": "225",
+        "total_fat": "1g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "878mg",
+        "protein": "15g"
+    },
+    {
+        "name": "ramen-noodle",
+        "calories": "188",
+        "total_fat": "7g",
+        "saturated_fat": "3.5g",
+        "cholesterol": "0mg",
+        "sodium": "861mg",
+        "protein": "5g"
+    },
+    {
+        "name": "rasgulla",
+        "calories": "186",
+        "total_fat": "0.5g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "58mg",
+        "protein": "4g."
+    },
+    {
+        "name": "rediska",
+        "calories": "16",
+        "total_fat": "0.1g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "20mg",
+        "protein": "0.7g"
+    },
+    {
+        "name": "redka",
+        "calories": "17",
+        "total_fat": "0.1g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "23mg",
+        "protein": "0.7g"
+    },
+    {
+        "name": "rendang",
+        "calories": "380",
+        "total_fat": "24g",
+        "saturated_fat": "11g",
+        "cholesterol": "105mg",
+        "sodium": "790mg",
+        "protein": "31g"
+    },
+    {
+        "name": "roll-bread",
+        "calories": "200",
+        "total_fat": "2g",
+        "saturated_fat": "0.5g",
+        "cholesterol": "0mg",
+        "sodium": "300mg",
+        "protein": "8g"
+    },
+    {
+        "name": "salad",
+        "calories": "150",
+        "total_fat": "8g",
+        "saturated_fat": "2g",
+        "cholesterol": "20mg",
+        "sodium": "300mg",
+        "protein": "5g"
+    },
+    {
+        "name": "salmon-meuniere",
+        "calories": "281",
+        "total_fat": "19.9g",
+        "saturated_fat": "4.3g",
+        "cholesterol": "81mg",
+        "sodium": "101mg",
+        "protein": "21.6g."
+    },
+    {
+        "name": "sambhar",
+        "calories": "120",
+        "total_fat": "2g",
+        "saturated_fat": "0.5g",
+        "cholesterol": "0mg",
+        "sodium": "650mg",
+        "protein": "5g."
+    },
+    {
+        "name": "sambosak",
+        "calories": "180",
+        "total_fat": "11g",
+        "saturated_fat": "6g",
+        "cholesterol": "30mg",
+        "sodium": "230mg",
+        "protein": "7g."
+    },
+    {
+        "name": "samosa",
+        "calories": "160",
+        "total_fat": "10g",
+        "saturated_fat": "2g",
+        "cholesterol": "5mg",
+        "sodium": "160mg",
+        "protein": "4g"
+    },
+    {
+        "name": "sandwiches",
+        "calories": "250",
+        "total_fat": "10g",
+        "saturated_fat": "2.5g",
+        "cholesterol": "30mg",
+        "sodium": "500mg",
+        "protein": "15g"
+    },
+    {
+        "name": "sashimi",
+        "calories": "128",
+        "total_fat": "5g",
+        "saturated_fat": "1g",
+        "cholesterol": "48mg",
+        "sodium": "33mg",
+        "protein": "20g"
+    },
+    {
+        "name": "sausage",
+        "calories": "268",
+        "total_fat": "22g",
+        "saturated_fat": "8g",
+        "cholesterol": "65mg",
+        "sodium": "767mg",
+        "protein": "16g"
+    },
+    {
+        "name": "sauteed-spinach",
+        "calories": "41",
+        "total_fat": "2.4g",
+        "saturated_fat": "0.4g",
+        "cholesterol": "0mg",
+        "sodium": "77mg",
+        "protein": "3.8g"
+    },
+    {
+        "name": "sauteed-vegetables",
+        "calories": "152",
+        "total_fat": "9g",
+        "saturated_fat": "1g",
+        "cholesterol": "0mg",
+        "sodium": "468mg",
+        "protein": "3g"
+    },
+    {
+        "name": "sfiha",
+        "calories": "180",
+        "total_fat": "6g",
+        "saturated_fat": "2g",
+        "cholesterol": "20mg",
+        "sodium": "270mg",
+        "protein": "10g"
+    },
+    {
+        "name": "shawarma",
+        "calories": "231",
+        "total_fat": "11g",
+        "saturated_fat": "3g",
+        "cholesterol": "65mg",
+        "sodium": "514mg",
+        "protein": "25g"
+    },
+    {
+        "name": "shish",
+        "calories": "265",
+        "total_fat": "10g",
+        "saturated_fat": "5g",
+        "cholesterol": "80mg",
+        "sodium": "570mg",
+        "protein": "35g"
+    },
+    {
+        "name": "taouk",
+        "calories": "350",
+        "total_fat": "8g",
+        "saturated_fat": "2g",
+        "cholesterol": "180mg",
+        "sodium": "200mg",
+        "protein": "50g"
+    },
+    {
+        "name": "soba-noodle",
+        "calories": "113",
+        "total_fat": "0.3g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "4mg",
+        "protein": "4g"
+    },
+    {
+        "name": "spaghetti",
+        "calories": "220",
+        "total_fat": "1g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "0mg",
+        "protein": "8g"
+    },
+    {
+        "name": "squash-patisson",
+        "calories": "28",
+        "total_fat": "0.1g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "4mg",
+        "protein": "1.1g"
+    },
+    {
+        "name": "stew",
+        "calories": "can vary greatly depending on ingredients and recipe",
+        "total_fat": "can vary greatly depending on ingredients and recipe",
+        "saturated_fat": "can vary greatly depending on ingredients and recipe",
+        "cholesterol": "can vary greatly depending on ingredients and recipe",
+        "sodium": "can vary greatly depending on ingredients and recipe",
+        "protein": "can vary greatly depending on ingredients and recipe"
+    },
+    {
+        "name": "sukiyaki",
+        "calories": "379",
+        "total_fat": "11g",
+        "saturated_fat": "3g",
+        "cholesterol": "47mg",
+        "sodium": "1735mg",
+        "protein": "26g"
+    },
+    {
+        "name": "sushi",
+        "calories": "200",
+        "total_fat": "2g",
+        "saturated_fat": "0.5g",
+        "cholesterol": "20mg",
+        "sodium": "300mg",
+        "protein": "15g"
+    },
+    {
+        "name": "takoyaki",
+        "calories": "100",
+        "total_fat": "5g",
+        "saturated_fat": "1g",
+        "cholesterol": "35mg",
+        "sodium": "250mg",
+        "protein": "6g"
+    },
+    {
+        "name": "telur_balado",
+        "calories": "220",
+        "total_fat": "15g",
+        "saturated_fat": "3.5g",
+        "cholesterol": "372mg",
+        "sodium": "500mg",
+        "protein": "18g"
+    },
+    {
+        "name": "tempura-bowl",
+        "calories": "650",
+        "total_fat": "25g",
+        "saturated_fat": "4g",
+        "cholesterol": "100mg",
+        "sodium": "1180mg",
+        "protein": "30g"
+    },
+    {
+        "name": "tempura-udon",
+        "calories": "579",
+        "total_fat": "16g",
+        "saturated_fat": "2g",
+        "cholesterol": "159mg",
+        "sodium": "2140mg",
+        "protein": "29g"
+    },
+    {
+        "name": "tensin-noodle",
+        "calories": "300",
+        "total_fat": "5g",
+        "saturated_fat": "2g",
+        "cholesterol": "0mg",
+        "sodium": "700mg",
+        "protein": "8g"
+    },
+    {
+        "name": "teriyaki-grilled-fish",
+        "calories": "200",
+        "total_fat": "9g",
+        "saturated_fat": "1.5g",
+        "cholesterol": "80mg",
+        "sodium": "600mg",
+        "protein": "25g."
+    },
+    {
+        "name": "toast",
+        "calories": "80",
+        "total_fat": "1g",
+        "saturated_fat": "0.3g",
+        "cholesterol": "0mg",
+        "sodium": "150mg",
+        "protein": "3g"
+    },
+    {
+        "name": "triangle_hash_brown",
+        "calories": "150",
+        "total_fat": "9g",
+        "saturated_fat": "2g",
+        "cholesterol": "0mg",
+        "sodium": "320mg",
+        "protein": "2g"
+    },
+    {
+        "name": "udon-noodle",
+        "calories": "200",
+        "total_fat": "1g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "600mg",
+        "protein": "8g"
+    },
+    {
+        "name": "vada",
+        "calories": "122",
+        "total_fat": "5g",
+        "saturated_fat": "1g",
+        "cholesterol": "0mg",
+        "sodium": "283mg",
+        "protein": "2g"
+    },
+    {
+        "name": "vegetable",
+        "calories": "25",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "17mg",
+        "protein": "2g"
+    },
+    {
+        "name": "marrow",
+        "calories": "40",
+        "total_fat": "0.2g",
+        "saturated_fat": "0g",
+        "cholesterol": "0mg",
+        "sodium": "2mg",
+        "protein": "1g."
+    },
+    {
+        "name": "vegetable-tempura",
+        "calories": "345",
+        "total_fat": "20g",
+        "saturated_fat": "4g",
+        "cholesterol": "0mg",
+        "sodium": "900mg",
+        "protein": "5g"
+    },
+    {
+        "name": "water_spinach",
+        "calories": "19",
+        "total_fat": "0.4g",
+        "saturated_fat": "0.1g",
+        "cholesterol": "0mg",
+        "sodium": "62mg",
+        "protein": "2.6g."
+    },
+    {
+        "name": "mac_and_cheese",
+        "calories": "330",
+        "total_fat": "9g",
+        "saturated_fat": "5g",
+        "cholesterol": "30mg",
+        "sodium": "660mg",
+        "protein": "12g."
+    },
+    {
+        "name": "chocolate_cake",
+        "calories": "350",
+        "total_fat": "16g",
+        "saturated_fat": "6g",
+        "cholesterol": "40mg",
+        "sodium": "280mg",
+        "protein": "5g"
+    },
+    {
+        "name": "ice_cream",
+        "calories": "207",
+        "total_fat": "11g",
+        "saturated_fat": "7g",
+        "cholesterol": "51mg",
+        "sodium": "56mg",
+        "protein": "2.8g"
+    },
+    {
+        "name": "onion_rings",
+        "calories": "276",
+        "total_fat": "15g",
+        "saturated_fat": "2g",
+        "cholesterol": "0mg",
+        "sodium": "415mg",
+        "protein": "3g"
+    },
+    {
+        "name": "nachos",
+        "calories": "364",
+        "total_fat": "17g",
+        "saturated_fat": "8g",
+        "cholesterol": "39mg",
+        "sodium": "746mg",
+        "protein": "10g"
+    },
+    {
+        "name": "strawberry_shortcake",
+        "calories": "276",
+        "total_fat": "11g",
+        "saturated_fat": "6g",
+        "cholesterol": "33mg",
+        "sodium": "295mg",
+        "protein": "4g"
+    },
+    {
+        "name": "tacos",
+        "calories": "218",
+        "total_fat": "9g",
+        "saturated_fat": "3g",
+        "cholesterol": "39mg",
+        "sodium": "410mg",
+        "protein": "13g"
+    }
+]

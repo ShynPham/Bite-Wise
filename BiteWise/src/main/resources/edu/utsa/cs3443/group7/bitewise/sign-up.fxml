@@ -10,7 +10,7 @@
     <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="131.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
         <Image url="@ui_icons/logo.png" />
     </ImageView>
-    <Label contentDisplay="CENTER" graphicTextGap="3.0" layoutX="120.0" layoutY="138.0" lineSpacing="3.0" styleClass="str" stylesheets="@style.css" text="BiteWise" textAlignment="JUSTIFY" textFill="#bde070" textOverrun="CLIP">
+    <Label contentDisplay="CENTER" graphicTextGap="3.0" layoutX="120.0" layoutY="138.0" lineSpacing="3.0" stylesheets="@style.css" text="BiteWise" textAlignment="JUSTIFY" textFill="#bde070" textOverrun="CLIP">
         <font>
             <Font name="KG Red Hands" size="48.0" />
         </font>

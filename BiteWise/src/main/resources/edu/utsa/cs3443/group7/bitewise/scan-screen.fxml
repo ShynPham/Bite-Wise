@@ -52,17 +52,16 @@
                 </font>
             </Label>
             <Separator prefWidth="200.0" />
-            <Button prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #f3ac92; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 20;" text="Scan Image">
-                <font>
-                    <Font name="KG Red Hands" size="16.0" />
-                </font>
-            </Button>
             <Button fx:id="chooseImageButton" onAction="#onChooseImage" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #a8c474; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 20;" text="Upload Food Image">
                 <font>
                     <Font name="KG Red Hands" size="16.0" />
                 </font>
             </Button>
-
+            <Button prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #f3ac92; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 20;" text="View History">
+                <font>
+                    <Font name="KG Red Hands" size="16.0" />
+                </font>
+            </Button>
             <Label styleClass="text" text="Detections:" textFill="#53382e">
                 <font>
                     <Font name="KG Red Hands " size="22.0" />
@@ -72,6 +71,7 @@
                 </VBox.margin>
             </Label>
             <TextArea fx:id="detectionResults" editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-font-family: 'Arial';" wrapText="true" VBox.vgrow="ALWAYS" />
+            <Button fx:id="saveButton" disable="true" onAction="#onSaveDetections" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #f3ac92; -fx-background-radius: 20; -fx-text-fill: #53382e;" styleClass="slogan" text="Save Detections"> </Button>
             <ImageView fitHeight="183.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@ui_icons/logo.png" />
             </ImageView>

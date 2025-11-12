@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
@@ -27,50 +27,22 @@
         </font>
     </Label>
 
-    <!-- Scrollable Bite Entries -->
-    <ScrollPane fitToWidth="true" layoutX="48.0" layoutY="272.0" prefHeight="320.0" prefWidth="362.0" style="-fx-background: #FAF0E6; -fx-background-color: #FAF0E6; -fx-border-color: transparent;">
+    <!-- Splitpanel Bite Entries -->
+    <SplitPane dividerPositions="0.6" layoutX="40.0" layoutY="272.0" orientation="VERTICAL" prefHeight="320.0" prefWidth="382.0" style="-fx-border-color: #a8c474; -fx-border-width: 2;">
+        <ListView fx:id="historyListView" prefHeight="200.0" prefWidth="200.0" />
 
-        <content>
-            <VBox spacing="18" style="-fx-background-color: transparent;">
-
-                <!-- Entry 1 -->
-                <VBox spacing="8" styleClass="bite-history-element">
-                    <padding><Insets bottom="12" left="12" right="12" top="12" /></padding>
-                    <Label styleClass="bite-history-element-title" text="Bite 1">
-                        <font><Font name="KG Red Hands" size="16" /></font>
-                    </Label>
-                    <Label text="• Scrambled eggs" />
-                    <Label styleClass="bite-history-info" text="Calories: 450" />
-                </VBox>
-
-                <!-- Entry 2 -->
-                <VBox spacing="8" styleClass="bite-history-element">
-                    <padding><Insets bottom="12" left="12" right="12" top="12" /></padding>
-                    <Label styleClass="bite-history-element-title" text="Bite 2">
-                        <font><Font name="KG Red Hands" size="16" /></font>
-                    </Label>
-                    <Label text="• Whole grain bread" />
-                    <Label styleClass="bite-history-info" text="Calories: 620" />
-                </VBox>
-
-                <!-- Entry 3 -->
-                <VBox spacing="8" styleClass="bite-history-element">
-                    <padding><Insets bottom="12" left="12" right="12" top="12" /></padding>
-                    <Label styleClass="bite-history-element-title" text="Bite 3">
-                        <font><Font name="KG Red Hands" size="16" /></font>
-                    </Label>
-                    <Label text="• Mashed potatos" />
-                    <Label styleClass="bite-history-info" text="Calories: 780" />
-                </VBox>
-            </VBox>
-        </content>
-    </ScrollPane>
+        <TextArea fx:id="detailsTextArea" editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-font-family: 'Arial'; -fx-font-size: 14px;" wrapText="true" />
+    </SplitPane>
 
     <!-- Back Button -->
-    <Button fx:id="backButton" layoutX="190.0" layoutY="610.0" onAction="#handleBackClick" prefHeight="70.0" prefWidth="80.0" style="-fx-background-color: #A8C474; -fx-background-radius: 50;                    -fx-border-color: #53382E; -fx-border-radius: 50;                    -fx-font-weight: bold;" text="←">
-        <font>
-            <Font name="KG Red Hands" size="28.0" />
-        </font>
-    </Button>
+    <HBox alignment="CENTER" layoutX="40.0" layoutY="610.0" spacing="20.0">
+        <Button fx:id="backButton" onAction="#handleBackClick" prefHeight="70.0" prefWidth="80.0" text="←">
+         <styleClass>
+            <String fx:value="bite-history-element" />
+            <String fx:value="str" />
+         </styleClass></Button>
+
+        <Button fx:id="deleteButton" onAction="#onDeleteClick" prefHeight="70.0" prefWidth="200.0" styleClass="bite-history-element-title" text="Deleted" />
+    </HBox>
 
 </AnchorPane>

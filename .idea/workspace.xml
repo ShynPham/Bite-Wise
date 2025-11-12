@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="add a logic to prevent user from maximize the screen and only exclude the scan-screen.fxml to be maximize">
+    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="deleted unnecessary stuff">
+      <change afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/BiteHistoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiteWise/src/main/java/model/HistoryEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiteWise/src/main/java/model/NutritionInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiteWise/src/main/java/utility/HistoryManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/InterferenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/InterferenceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/bite-history.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/bite-history.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/scan-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/scan-screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bitewise_users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bitewise_users.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,12 +42,15 @@
     &quot;assignee&quot;: &quot;ShynPham&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers.git",
-    "accountId": "5a417c62-39c6-430c-9ab1-fe7d29290c75"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers.git&quot;,
+    &quot;accountId&quot;: &quot;5a417c62-39c6-430c-9ab1-fe7d29290c75&quot;
   }
-}]]></component>
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -414,7 +420,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762897510210</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="fix resolution problem">
+      <option name="closed" value="true" />
+      <created>1762900053255</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1762900053255</updated>
+    </task>
+    <task id="LOCAL-00035" summary="deleted unnecessary stuff">
+      <option name="closed" value="true" />
+      <created>1762900183530</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1762900183530</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -439,7 +461,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="deleted everything" />
     <MESSAGE value="delete" />
     <MESSAGE value="fresh start" />
     <MESSAGE value="added the handleForgotPassword on sign-in.fxml and SignInController.java" />
@@ -463,7 +484,9 @@
     <MESSAGE value="added AboutController.java" />
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="add a logic to prevent user from maximize the screen and only exclude the scan-screen.fxml to be maximize" />
-    <option name="LAST_COMMIT_MESSAGE" value="add a logic to prevent user from maximize the screen and only exclude the scan-screen.fxml to be maximize" />
+    <MESSAGE value="fix resolution problem" />
+    <MESSAGE value="deleted unnecessary stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted unnecessary stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

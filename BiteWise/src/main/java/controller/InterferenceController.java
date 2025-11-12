@@ -10,19 +10,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.*;
 import model.Detection;
+import model.HistoryEntry;
 import utility.DetectionDrawer;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.Label;
-import javafx.scene.control.ProgressIndicator;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import utility.HistoryManager;
 import utility.viewSwitcher;
 
 import javax.imageio.ImageIO;
@@ -36,6 +35,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.nio.FloatBuffer;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -43,8 +43,10 @@ import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import model.NutritionInfo;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import utility.viewSwitcher;
 
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
@@ -60,6 +62,11 @@ import java.util.HashMap;
  * - Calling utility classes to draw detections on the screen.
  */
 public class InterferenceController {
+    @FXML
+    private Button saveButton;
+    @FXML
+    private Button historyButton;
+    @FXML
     public Button settingsButton;
 
     // --- FXML Bindings (UI Elements) ---
@@ -193,7 +200,10 @@ public class InterferenceController {
      * for easy lookup.
      */
     private final Map<String, NutritionInfo> nutritionMap = new HashMap<>();
-
+    /**
+     * Holds all the lastest results are each successful detection
+     */
+    private List<Detection> currentDetections = new ArrayList<>();
 
     /**
      * This method is called automatically by JavaFX after the FXML file is loaded.
@@ -355,35 +365,18 @@ public class InterferenceController {
 
                     // 5. Post-process (NMS, coordinate conversion)
                     List<Detection> dets = postprocess(transposedOutput, prep.scale, prep.dx, prep.dy, bimg.getWidth(), bimg.getHeight());
-
+                    this.currentDetections = postprocess(transposedOutput, prep.scale, prep.dx, prep.dy, bimg.getWidth(), bimg.getHeight());
                     // 6. Logic that process the output into a textfield
-                    Platform.runLater(() -> {
-                        statusLabel.setText("Found " + dets.size() + " detections.");
-                        DetectionDrawer.draw(imageView, overlayCanvas, imageContainer, bimg, dets, CLASS_NAMES);
 
-                        // Build the results string and set it to the text area
-                        if (dets.isEmpty()) {
-                            detectionResults.setText("No food items detected.");
-                        } else {
-                            StringBuilder sb = new StringBuilder();
-                            sb.append("Found ").append(dets.size()).append(" item(s):\n\n");
-                            for (Detection d : dets) {
-                                String foodName = "Unknown";
-                                if (d.classID() >= 0 && d.classID() < CLASS_NAMES.length) {
-                                    foodName = CLASS_NAMES[d.classID()];
-                                }
-                                sb.append(String.format("- %s (%.2f%%)\n", foodName, d.score() * 100));
-                            }
-                            detectionResults.setText(sb.toString());
-                        }
-                    });
 
-                    // 6. Update UI on the JavaFX Application Thread
+                    // 6.1 Update UI on the JavaFX Application Thread
                     Platform.runLater(() -> {
                         statusLabel.setText("Found " + dets.size() + " detections.");
                         // Use the DetectionDrawer utility to draw the boxes
                         DetectionDrawer.draw(imageView, overlayCanvas, imageContainer, bimg, dets, CLASS_NAMES);
                         detectionResults.setText(buildNutritionString(dets));
+                        // Set the save button to enable is the current detection detect something
+                        saveButton.setDisable(currentDetections.isEmpty());
                     });
                 } finally {
                     input.close(); // Ensure tensor is closed
@@ -668,26 +661,6 @@ public class InterferenceController {
         }
     }
 
-    @FXML
-    public void SettingsSelected(javafx.event.ActionEvent actionEvent) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(
-                    "/edu/utsa/cs3443/group7/bitewise/settings-screen.fxml"
-            ));
-            Parent settingsRoot = loader.load();
-
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-
-            Scene scene = new Scene(settingsRoot);
-            stage.setScene(scene);
-            stage.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("Failed to load settings-screen.fxml");
-        }
-    }
-
 
     /**
      * A private inner class to hold the results of the pre-processing step.
@@ -697,48 +670,61 @@ public class InterferenceController {
     private record PreprocessResult(float[] data, float scale, int dx, int dy) {
     }
 
-    /**
-     * A private inner class to hold the results of the pre-processing step.
-     */
-    private record NutritionPreprocessResult(float[] data, float scale, int dx, int dy) {
-    }
-
-    /**
-     * NEW: A private record to hold nutritional data from the JSON file.
-     */
-    private record NutritionInfo(String name, String calories, String totalFat,
-                                 String satFat, String cholesterol,
-                                 String sodium, String protein) {
-
-        /**
-         * A helper constructor to parse a JSONObject.
-         */
-        public NutritionInfo(org.json.JSONObject obj) {
-            this(
-                    obj.optString("name", "N/A"),
-                    obj.optString("calories", "N/A"),
-                    obj.optString("total_fat", "N/A"),
-                    obj.optString("saturated_fat", "N/A"),
-                    obj.optString("cholesterol", "N/A"),
-                    obj.optString("sodium", "N/A"),
-                    obj.optString("protein", "N/A")
-            );
-        }
-
-        /**
-         * Formats the nutrition data as a clean string for the TextArea.
-         */
-        @Override
-        public String toString() {
-            return "  - Calories: " + calories + "\n" +
-                    "  - Total Fat: " + totalFat + "\n" +
-                    "  - Sat. Fat: " + satFat + "\n" +
-                    "  - Cholesterol: " + cholesterol + "\n" +
-                    "  - Sodium: " + sodium + "\n" +
-                    "  - Protein: " + protein + "\n";
-        }
+    @FXML
+    private void handleSettingsButtonClick() {
+        viewSwitcher.switchScene("settings-screen.fxml");
     }
 
     @FXML
-    private void handleSettingsButtonClick() { viewSwitcher.switchScene("settings-screen.fxml");}
+    private void onSaveDetections() {
+        if (currentDetections == null || currentDetections.isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, "Save Error", "No detections to save.");
+            return;
+        }
+
+        // 1. Load the existing history
+        List<HistoryEntry> history = HistoryManager.loadHistory();
+
+        String detectionTime = LocalDateTime.now().toString(); // Get a timestamp
+
+        // 2. Add all current detections to the history
+        for (Detection d : currentDetections) {
+            String foodName = CLASS_NAMES[d.classID()];
+
+            // Look up nutrition info (using your existing map)
+            NutritionInfo info = nutritionMap.get(foodName.toLowerCase());
+            if (info == null) {
+                String firstPart = foodName.split(" ")[0];
+                info = nutritionMap.get(firstPart.toLowerCase());
+            }
+            if (info == null) {
+                // If still no info, create a blank one
+                info = new NutritionInfo("N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A");
+            }
+
+            // Create and add the new history entry
+            HistoryEntry newEntry = new HistoryEntry(foodName, detectionTime, info);
+            history.add(newEntry);
+        }
+
+        // 3. Save the newly modified list back to the file
+        HistoryManager.saveHistory(history);
+
+        // 4. Notify user
+        showAlert(Alert.AlertType.INFORMATION, "Success", "Detections have been saved to your history.");
+        saveButton.setDisable(true); // Disable button after saving
+    }
+
+    @FXML
+    private void onHistoryClick() {
+        viewSwitcher.switchScene("bite-history.fxml");
+    }
+
+    private void showAlert(Alert.AlertType type, String title, String msg) {
+        Alert alert = new Alert(type);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(msg);
+        alert.showAndWait();
+    }
 }

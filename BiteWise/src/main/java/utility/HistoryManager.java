@@ -2,7 +2,6 @@ package utility;
 
 import model.HistoryEntry;
 import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FileWriter;

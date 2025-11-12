@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="deleted unnecessary stuff">
-      <change afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/BiteHistoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiteWise/src/main/java/model/HistoryEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiteWise/src/main/java/model/NutritionInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiteWise/src/main/java/utility/HistoryManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="update a method to save bite and logic to handle deteld bite">
       <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/InterferenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/InterferenceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/bite-history.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/bite-history.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/utility/HistoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/utility/HistoryManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/scan-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/scan-screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitewise_users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bitewise_users.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -436,7 +430,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762900183530</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="update a method to save bite and logic to handle deteld bite">
+      <option name="closed" value="true" />
+      <created>1762987086312</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1762987086312</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -461,7 +463,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="delete" />
     <MESSAGE value="fresh start" />
     <MESSAGE value="added the handleForgotPassword on sign-in.fxml and SignInController.java" />
     <MESSAGE value="fixing ForgotPasswordController.java" />
@@ -486,7 +487,8 @@
     <MESSAGE value="add a logic to prevent user from maximize the screen and only exclude the scan-screen.fxml to be maximize" />
     <MESSAGE value="fix resolution problem" />
     <MESSAGE value="deleted unnecessary stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted unnecessary stuff" />
+    <MESSAGE value="update a method to save bite and logic to handle deteld bite" />
+    <option name="LAST_COMMIT_MESSAGE" value="update a method to save bite and logic to handle deteld bite" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

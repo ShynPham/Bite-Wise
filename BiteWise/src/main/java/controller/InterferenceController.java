@@ -6,10 +6,6 @@ package controller;
 
 import ai.onnxruntime.*;
 import detectionApp.AppLauncher;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import model.Detection;
 import model.HistoryEntry;
@@ -29,7 +25,6 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -46,7 +41,6 @@ import java.util.concurrent.Executors;
 import model.NutritionInfo;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import utility.viewSwitcher;
 
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;

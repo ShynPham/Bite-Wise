@@ -57,7 +57,7 @@
                     <Font name="KG Red Hands" size="16.0" />
                 </font>
             </Button>
-            <Button prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #f3ac92; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 20;" text="View History">
+            <Button fx:id="historyButton" onAction="#onHistoryClick" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #f3ac92; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 20;" text="View History">
                 <font>
                     <Font name="KG Red Hands" size="16.0" />
                 </font>

@@ -114,6 +114,8 @@ Before you begin, ensure you have the following installed on your system:
 │                                       select-icon.png
 │                                       zoomin-icon.png
 │                                       zoomout-icon.png
+├──docs
+│   └──flowchart.png    
 ```
 ---
 

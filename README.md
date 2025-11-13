@@ -46,6 +46,10 @@ Before you begin, ensure you have the following installed on your system:
     Then you can run the program
 
 ---
+# Flowchart
+<p align ="center">
+    <img src="https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers/blob/main/BiteWise/docs/flowchart.png" alt="flowchart.png" />
+</p>
 
 ## Project code structure ( so far)
 ```
@@ -98,6 +102,13 @@ Before you begin, ensure you have the following installed on your system:
 │                               │       
 │                               ├───images
 │                               │       test1.png
+│                               │       about-screen.png
+│                               │       forgot-password-screen.png
+│                               │       history-screen.png
+│                               │       scan-screen.png
+│                               │       settings-screen.png
+│                               │       signin-screen.png
+│                               │       signup-screen.png
 │                               │       
 │                               └───ui_icons
 │                                       arrow-button.png
@@ -115,13 +126,21 @@ Before you begin, ensure you have the following installed on your system:
 │                                       zoomin-icon.png
 │                                       zoomout-icon.png
 ├──docs
-│   └──flowchart.png    
+│   └──flowchart.png
+
+
 ```
 ---
 
 ## ScreenShot
 
 <img src="https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers/blob/main/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/images/test1.png" />
+<img src="https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers/blob/main/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/images/history-screen.png" />
+<img src="https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers/blob/main/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/images/settings-screen.png" />
+<img src="https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers/blob/main/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/images/signin-screen.png" />
+<img src="https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers/blob/main/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/images/signup-screen.png" />
+<img src="https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers/blob/main/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/images/forgot-password-screen.png" />
+<img src="https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers/blob/main/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/images/about-screen.png" />
 
 ## Reference
 <p1> Special thanks to these sources that helped me throughout the project: </p1>

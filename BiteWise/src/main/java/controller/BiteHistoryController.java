@@ -56,7 +56,7 @@ public class BiteHistoryController {
 
     @FXML
     private void handleBackClick() {
-        viewSwitcher.switchScene("scan-screen.fxml");
+        viewSwitcher.switchScene("settings-screen.fxml");
     }
 
     @FXML

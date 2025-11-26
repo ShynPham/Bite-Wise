@@ -21,6 +21,8 @@ import java.util.List;
  *     This class provides a static method {@link #draw(ImageView, Canvas, StackPane, BufferedImage, List, String[])}
  *     to render a source image in an {@link ImageView} and overlay bounding boxes and labels on seperate {@link java.awt.Canvas}
  * </p>
+ *
+ * @author Phu Pham
  */
 public final class DetectionDrawer {
 

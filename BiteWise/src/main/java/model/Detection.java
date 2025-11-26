@@ -12,6 +12,8 @@ package model;
  * @param y2      The y-coordinate of the bottom-right corner of the bounding box.
  * @param score   The confidence score of the detection, typically ranging from [0.0, 1.0].
  * @param classID The class ID of the detected object.
+ *
+ * @author Phu Pham
  */
 public record Detection(float x1, float y1, float x2, float y2, float score, int classID) {
 

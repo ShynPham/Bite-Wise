@@ -12,6 +12,7 @@ import java.util.List;
 
 /**
  * Manages saving and loading detection history to/from detection_history.json.
+ * @author Phu Pham
  */
 public class HistoryManager {
 

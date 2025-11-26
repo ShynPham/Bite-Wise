@@ -54,6 +54,7 @@ import java.util.HashMap;
  * - Running inference in a background thread.
  * - Pre-processing images (letterboxing) and post-processing model output (NMS).
  * - Calling utility classes to draw detections on the screen.
+ * @author  Phu Pham
  */
 public class InterferenceController {
     @FXML

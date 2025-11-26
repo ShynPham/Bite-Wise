@@ -13,8 +13,10 @@ import java.util.Objects;
 /**
  * A utility class for switching scenes on the primary stage.
  * <p>
- * This class provides a method to smoothly transition between FXML scenes
+ * This class provides a method to smoothly, fancy way of transition between FXML scenes
  * using a fade-out, fade-in animation.
+ *
+ * @author Phu Pham
  */
 public class viewSwitcher {
 

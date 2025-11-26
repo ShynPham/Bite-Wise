@@ -4,6 +4,7 @@ import org.json.JSONObject;
 
 /**
  * A record to hold nutritional data from the JSON file.
+ * @author Phu Pham
  */
 public record NutritionInfo(String name, String calories, String totalFat,
                             String satFat, String cholesterol,

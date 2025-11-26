@@ -10,6 +10,8 @@ import ai.onnxruntime.OrtSession;
  * <p>
  * This class provides a simple method to create an {@link OrtSession} which
  * is used to run inference with the model.
+ *
+ * @author Phu Pham
  */
 public class ModelLoader {
 

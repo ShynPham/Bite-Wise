@@ -5,7 +5,9 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import model.HistoryEntry;
+import model.NutritionInfo;
 import utility.HistoryManager;
+import utility.NutritionManager;
 import utility.viewSwitcher;
 
 import java.time.LocalDate;
@@ -15,13 +17,16 @@ import java.util.List;
 import java.util.Optional;
 import java.util.prefs.Preferences;
 
+/**
+ * @author Phu Pham
+ */
 public class BiteHistoryController {
 
     // --- UI Elements ---
     @FXML private Label totalCaloriesLabel;
     @FXML private Label calorieLimitLabel;
     @FXML private Button changeLimitButton;
-
+    @FXML private Label recommendationLabel;
     @FXML private ListView<HistoryEntry> historyListView;
     @FXML private TextArea detailsTextArea;
 
@@ -115,7 +120,8 @@ public class BiteHistoryController {
 
         // Update label
         totalCaloriesLabel.setText(todayCalories + " kcal");
-
+        // update recommendation
+        generateRecommendation(todayCalories);
         // Highlight if over limit
         if (todayCalories > currentCalorieLimit) {
             totalCaloriesLabel.setStyle("-fx-text-fill: red; -fx-font-weight: bold;");
@@ -155,7 +161,25 @@ public class BiteHistoryController {
             }
         });
     }
+    private void generateRecommendation(int currentCalories) {
+        int remaining = currentCalorieLimit - currentCalories;
 
+        if (remaining <= 0) {
+            recommendationLabel.setText("You've hit your limit! Stay hydrated 💧");
+            recommendationLabel.setStyle("-fx-text-fill: #d9534f;"); // Red color
+        } else {
+            // Ask our new Manager for a food that fits 'remaining'
+            NutritionInfo suggestion = NutritionManager.getRecommendation(remaining);
+
+            if (suggestion != null) {
+                recommendationLabel.setText("Try having: " + suggestion.name() +
+                        " (" + suggestion.getNutritionAsInt() + " kcal)");
+                recommendationLabel.setStyle("-fx-text-fill: #6B8E4E;"); // Green color
+            } else {
+                recommendationLabel.setText("You have " + remaining + " kcal left. Maybe a light snack?");
+            }
+        }
+    }
     @FXML
     private void onDeleteClick() {
         HistoryEntry selected = historyListView.getSelectionModel().getSelectedItem();

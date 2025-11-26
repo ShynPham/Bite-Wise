@@ -4,37 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="update a method to save bite and logic to handle deteld bite">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2025_11_45_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2025_11_45_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2025_12_04_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2025_12_04_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2025_1_28_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2025_1_28_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2025_1_33_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2025_1_33_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2025_1_44_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2025_1_44_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2025_3_06_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2025_3_06_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2025_4_26_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2025_4_26_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_11_2025_11_05_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_11_2025_11_05_AM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_11_2025_11_08_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_11_2025_11_08_AM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_11_2025_12_18_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_11_2025_12_18_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_11_2025_12_46_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_11_2025_12_46_AM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_11_2025_2_33_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_11_2025_2_33_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_9_2025_5_22_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_9_2025_5_22_PM__Changes_.xml" beforeDir="false" />
+    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="update a method to set a calories limit for a day">
+      <change afterPath="$PROJECT_DIR$/BiteWise/src/main/java/utility/NutritionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/BiteHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/BiteHistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/InterferenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/InterferenceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/model/Detection.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/model/Detection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/model/HistoryEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/model/HistoryEntry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/model/NutritionInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/model/NutritionInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/utility/DetectionDrawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/utility/DetectionDrawer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/utility/HistoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/utility/HistoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/utility/ModelLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/utility/ModelLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/utility/viewSwitcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/utility/viewSwitcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/bite-history.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/bite-history.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitewise_users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bitewise_users.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -465,7 +448,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762987086312</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="update a method to set a calories limit for a day">
+      <option name="closed" value="true" />
+      <created>1764115643253</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1764115643253</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -490,7 +481,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fresh start" />
     <MESSAGE value="added the handleForgotPassword on sign-in.fxml and SignInController.java" />
     <MESSAGE value="fixing ForgotPasswordController.java" />
     <MESSAGE value="added methods to validate emails in ForgotPasswordController.java, SignupController.java, and SignupController.java" />
@@ -515,7 +505,8 @@
     <MESSAGE value="fix resolution problem" />
     <MESSAGE value="deleted unnecessary stuff" />
     <MESSAGE value="update a method to save bite and logic to handle deteld bite" />
-    <option name="LAST_COMMIT_MESSAGE" value="update a method to save bite and logic to handle deteld bite" />
+    <MESSAGE value="update a method to set a calories limit for a day" />
+    <option name="LAST_COMMIT_MESSAGE" value="update a method to set a calories limit for a day" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

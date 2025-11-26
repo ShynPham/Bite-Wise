@@ -6,6 +6,8 @@ import java.time.format.DateTimeFormatter;
 
 /**
  * Represents one saved detection in the user's history.
+ *
+ * @author Phu Pham
  */
 public record HistoryEntry(String foodName, String detectionTime, NutritionInfo nutrition) {
 

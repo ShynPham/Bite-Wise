@@ -3,37 +3,52 @@ package controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
-import javafx.scene.layout.VBox;
+import javafx.scene.control.*;
 import model.HistoryEntry;
 import utility.HistoryManager;
 import utility.viewSwitcher;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.prefs.Preferences;
 
 public class BiteHistoryController {
+
+    // --- UI Elements ---
+    @FXML private Label totalCaloriesLabel;
+    @FXML private Label calorieLimitLabel;
+    @FXML private Button changeLimitButton;
 
     @FXML private ListView<HistoryEntry> historyListView;
     @FXML private TextArea detailsTextArea;
 
-    @FXML private VBox historyViewerContainer;
-
-    private ObservableList<HistoryEntry> historyList; // A list that the ListView can "watch"
+    // --- Data ---
+    private ObservableList<HistoryEntry> historyList;
+    private Preferences prefs;
+    private int currentCalorieLimit;
+    private static final String CALORIE_LIMIT_KEY = "dailyCalorieLimit";
+    private static final int DEFAULT_CALORIE_LIMIT = 2000;
 
     @FXML
     public void initialize() {
-        // 1. Load the history from the file
+        // 1. Setup Preferences
+        prefs = Preferences.userRoot().node("BiteWiseUsers");
+
+        // 2. Load and display the limit
+        loadCalorieLimit();
+
+        // 3. Load History Data
         List<HistoryEntry> loadedEntries = HistoryManager.loadHistory();
-
-        // 2. Put them in an ObservableList
         historyList = FXCollections.observableArrayList(loadedEntries);
-
-        // 3. Set the items in the ListView
         historyListView.setItems(historyList);
 
-        // 4. Add a listener to show details when an item is clicked
+        // 4. Calculate and display today's totals
+        calculateDailyCalories();
+
+        // 5. Setup Listener for Details
         historyListView.getSelectionModel().selectedItemProperty().addListener(
                 (obs, oldSelection, newSelection) -> {
                     if (newSelection != null) {
@@ -45,7 +60,70 @@ public class BiteHistoryController {
         );
     }
 
-    // Shows the full details of the selected item in the text area
+    private void loadCalorieLimit() {
+        currentCalorieLimit = prefs.getInt(CALORIE_LIMIT_KEY, DEFAULT_CALORIE_LIMIT);
+        calorieLimitLabel.setText(currentCalorieLimit + " kcal");
+        // Re-calculate highlighting whenever limit changes
+        calculateDailyCalories();
+    }
+
+    /**
+     * Calculates total calories for TODAY and updates the UI label.
+     */
+    private void calculateDailyCalories() {
+        int todayCalories = 0;
+        LocalDate today = LocalDate.now();
+
+        System.out.println("--- STARTING CALORIE CALCULATION ---");
+        System.out.println("Today's Date: " + today);
+
+        if (historyList != null) {
+            for (HistoryEntry entry : historyList) {
+                try {
+                    // 1. Check the raw date string
+                    String rawTime = entry.detectionTime();
+                    if (rawTime == null || rawTime.equals("Unknown")) {
+                        System.out.println("Skipping entry: Date is unknown");
+                        continue;
+                    }
+
+                    // 2. Parse the date
+                    LocalDateTime entryTime = LocalDateTime.parse(rawTime);
+
+                    // 3. Check if it matches today
+                    if (entryTime.toLocalDate().isEqual(today)) {
+
+                        // 4. Get calories
+                        // NOTE: Make sure your NutritionInfo class has this method!
+                        int cals = entry.nutrition().getNutritionAsInt();
+
+                        System.out.println("Found entry for today: " + entry.foodName() + " (" + cals + " kcal)");
+                        todayCalories += cals;
+                    } else {
+                        System.out.println("Skipping entry: Wrong date (" + entryTime.toLocalDate() + ")");
+                    }
+
+                } catch (Exception e) {
+                    System.err.println("Error calculating entry '" + entry.foodName() + "': " + e.getMessage());
+                     e.printStackTrace(); // Uncomment to see full error if needed
+                }
+            }
+        }
+
+        System.out.println("Total Calculated: " + todayCalories);
+        System.out.println("------------------------------------");
+
+        // Update label
+        totalCaloriesLabel.setText(todayCalories + " kcal");
+
+        // Highlight if over limit
+        if (todayCalories > currentCalorieLimit) {
+            totalCaloriesLabel.setStyle("-fx-text-fill: red; -fx-font-weight: bold;");
+        } else {
+            totalCaloriesLabel.setStyle("-fx-text-fill: #6B8E4E; -fx-font-weight: bold;");
+        }
+    }
+
     private void showDetails(HistoryEntry entry) {
         StringBuilder sb = new StringBuilder();
         sb.append(entry.foodName().toUpperCase()).append("\n");
@@ -55,21 +133,49 @@ public class BiteHistoryController {
     }
 
     @FXML
-    private void handleBackClick() {
-        viewSwitcher.switchScene("settings-screen.fxml");
+    private void onChangeLimitClick() {
+        TextInputDialog dialog = new TextInputDialog(String.valueOf(currentCalorieLimit));
+        dialog.setTitle("Change Calorie Limit");
+        dialog.setHeaderText("Set your daily goal.");
+        dialog.setContentText("Limit (kcal):");
+
+        Optional<String> result = dialog.showAndWait();
+
+        result.ifPresent(limitStr -> {
+            try {
+                int newLimit = Integer.parseInt(limitStr);
+                if (newLimit > 0) {
+                    prefs.putInt(CALORIE_LIMIT_KEY, newLimit);
+                    loadCalorieLimit(); // Refresh UI
+                } else {
+                    showAlert(Alert.AlertType.ERROR, "Invalid Input", "Please enter a positive number.");
+                }
+            } catch (NumberFormatException e) {
+                showAlert(Alert.AlertType.ERROR, "Invalid Input", "Invalid number format.");
+            }
+        });
     }
 
     @FXML
     private void onDeleteClick() {
-        // Get the selected item
         HistoryEntry selected = historyListView.getSelectionModel().getSelectedItem();
-
         if (selected != null) {
-            // 1. Remove it from the list in memory
             historyList.remove(selected);
-
-            // 2. Save the new, shorter list to the file
             HistoryManager.saveHistory(new ArrayList<>(historyList));
+            calculateDailyCalories(); // Re-calculate totals after deletion
         }
+    }
+
+    @FXML
+    private void handleBackClick() {
+        viewSwitcher.switchScene("settings-screen.fxml");
+    }
+
+    private void showAlert(Alert.AlertType type, String title, String s) {
+        Alert alert = new Alert(type);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(s);
+        alert.showAndWait();
     }
 }

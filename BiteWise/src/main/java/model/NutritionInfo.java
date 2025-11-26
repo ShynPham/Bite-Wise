@@ -51,4 +51,20 @@ public record NutritionInfo(String name, String calories, String totalFat,
                 "  - Sodium: " + sodium + "\n" +
                 "  - Protein: " + protein + "\n";
     }
+
+    /**
+     * Safely parses the calorie string into an integer.
+     * @return The calorie count as an int, or 0 if invalid.
+     */
+    public int getNutritionAsInt() {
+        try {
+            if (calories == null) return 0;
+            // Removes "kcal", spaces, and non-numbers
+            String cleanCalories = calories.replaceAll("[^\\d]", "");
+            if (cleanCalories.isEmpty()) return 0;
+            return Integer.parseInt(cleanCalories);
+        } catch (NumberFormatException e) {
+            return 0;
+        }
+    }
 }

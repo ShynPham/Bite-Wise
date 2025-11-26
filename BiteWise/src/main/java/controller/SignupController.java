@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert;
+import utility.APIService;
 import utility.viewSwitcher;
 
 import java.io.BufferedWriter;
@@ -33,14 +34,26 @@ public class SignupController {
             return;
         }
 
-        Preferences prefs = Preferences.userRoot().node("BiteWiseUser");
-        prefs.put("email", email);
-        prefs.put("password", password);
+        try {
+            APIService api = new APIService();
+            int userId = api.signUp(email, password);
 
-        showAlert("Account created successfully!");
-        exportToCSV(email, password);
-        // navigate to log in screen
-        viewSwitcher.switchScene("sign-in.fxml");
+            Preferences prefs = Preferences.userRoot().node("BiteWiseUser");
+            prefs.put("email", email);
+            prefs.put("password", password);
+
+            showAlert("Account created successfully!");
+
+            // navigate to log in screen
+            viewSwitcher.switchScene("sign-in.fxml");
+        } catch (Exception e) {
+            if (e.getMessage().equals("User already exists")) {
+                showAlert("User already exists!");
+            }
+            else  {
+                showAlert(e.getMessage());
+            }
+        }
     }
 
     private boolean isValidEmail(String email) {

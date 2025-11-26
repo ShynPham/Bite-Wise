@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="update a method to set a calories limit for a day">
-      <change afterPath="$PROJECT_DIR$/BiteWise/src/main/java/utility/NutritionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f189d2bd-51d5-4a53-bd1c-58e5f17c9b2b" name="Changes" comment="update author and add a recommendation to suggest what food to eat.">
       <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/BiteHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/BiteHistoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/controller/InterferenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/controller/InterferenceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/model/Detection.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/model/Detection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/model/HistoryEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/model/HistoryEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/model/NutritionInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/model/NutritionInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/utility/DetectionDrawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/utility/DetectionDrawer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/utility/HistoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/utility/HistoryManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/utility/ModelLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/utility/ModelLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiteWise/src/main/java/utility/viewSwitcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/java/utility/viewSwitcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/bite-history.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/bite-history.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitewise_users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bitewise_users.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -456,7 +446,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764115643253</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="update author and add a recommendation to suggest what food to eat.">
+      <option name="closed" value="true" />
+      <created>1764189012482</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1764189012482</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -481,7 +479,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added the handleForgotPassword on sign-in.fxml and SignInController.java" />
     <MESSAGE value="fixing ForgotPasswordController.java" />
     <MESSAGE value="added methods to validate emails in ForgotPasswordController.java, SignupController.java, and SignupController.java" />
     <MESSAGE value="mb" />
@@ -506,7 +503,8 @@
     <MESSAGE value="deleted unnecessary stuff" />
     <MESSAGE value="update a method to save bite and logic to handle deteld bite" />
     <MESSAGE value="update a method to set a calories limit for a day" />
-    <option name="LAST_COMMIT_MESSAGE" value="update a method to set a calories limit for a day" />
+    <MESSAGE value="update author and add a recommendation to suggest what food to eat." />
+    <option name="LAST_COMMIT_MESSAGE" value="update author and add a recommendation to suggest what food to eat." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

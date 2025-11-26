@@ -656,6 +656,14 @@ public class InterferenceController {
         }
     }
 
+    public Button getHistoryButton() {
+        return historyButton;
+    }
+
+    public void setHistoryButton(Button historyButton) {
+        this.historyButton = historyButton;
+    }
+
 
     /**
      * A private inner class to hold the results of the pre-processing step.

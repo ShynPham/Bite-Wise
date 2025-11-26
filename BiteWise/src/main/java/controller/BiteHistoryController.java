@@ -25,7 +25,6 @@ public class BiteHistoryController {
     // --- UI Elements ---
     @FXML private Label totalCaloriesLabel;
     @FXML private Label calorieLimitLabel;
-    @FXML private Button changeLimitButton;
     @FXML private Label recommendationLabel;
     @FXML private ListView<HistoryEntry> historyListView;
     @FXML private TextArea detailsTextArea;
@@ -55,7 +54,7 @@ public class BiteHistoryController {
 
         // 5. Setup Listener for Details
         historyListView.getSelectionModel().selectedItemProperty().addListener(
-                (obs, oldSelection, newSelection) -> {
+                (_, _, newSelection) -> {
                     if (newSelection != null) {
                         showDetails(newSelection);
                     } else {
@@ -131,11 +130,10 @@ public class BiteHistoryController {
     }
 
     private void showDetails(HistoryEntry entry) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(entry.foodName().toUpperCase()).append("\n");
-        sb.append("----------------------------\n");
-        sb.append(entry.nutrition().toString());
-        detailsTextArea.setText(sb.toString());
+        String sb = entry.foodName().toUpperCase() + "\n" +
+                "----------------------------\n" +
+                entry.nutrition().toString();
+        detailsTextArea.setText(sb);
     }
 
     @FXML
@@ -154,10 +152,10 @@ public class BiteHistoryController {
                     prefs.putInt(CALORIE_LIMIT_KEY, newLimit);
                     loadCalorieLimit(); // Refresh UI
                 } else {
-                    showAlert(Alert.AlertType.ERROR, "Invalid Input", "Please enter a positive number.");
+                    showAlert("Please enter a positive number.");
                 }
             } catch (NumberFormatException e) {
-                showAlert(Alert.AlertType.ERROR, "Invalid Input", "Invalid number format.");
+                showAlert("Invalid number format.");
             }
         });
     }
@@ -195,9 +193,9 @@ public class BiteHistoryController {
         viewSwitcher.switchScene("settings-screen.fxml");
     }
 
-    private void showAlert(Alert.AlertType type, String title, String s) {
-        Alert alert = new Alert(type);
-        alert.setTitle(title);
+    private void showAlert(String s) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Invalid Input");
         alert.setHeaderText(null);
         alert.setContentText(s);
         alert.showAndWait();

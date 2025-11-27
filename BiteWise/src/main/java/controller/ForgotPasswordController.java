@@ -7,6 +7,7 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
+import utility.APIService;
 import utility.viewSwitcher;
 
 import java.io.*;
@@ -38,72 +39,46 @@ public class ForgotPasswordController {
      */
     @FXML
     private void handleResetPasswordClick() {
-        String email = emailField.getText().trim();
-        String newPassword = newPasswordField.getText().trim();
+        String email = emailField.getText();
+        String newPassword = newPasswordField.getText();
 
-        if (email.isEmpty() || newPassword.isEmpty()) {
-            showAlert(Alert.AlertType.WARNING, "Please fill in all fields.");
+        if (!validated(email, newPassword)) {
             return;
         }
+
+        resetPassword(email, newPassword);
+    }
+
+    private void resetPassword(String email, String newPassword) {
+        try {
+            APIService api = new APIService();
+            api.changePassword(email, newPassword);
+
+            showAlert(Alert.AlertType.INFORMATION, "Password reset successful!");
+            viewSwitcher.switchScene("sign-in.fxml");
+        } catch (Exception e) {
+            if (e.getMessage().equals("Invalid email")) {
+                showAlert(Alert.AlertType.ERROR, "Invalid email!");
+            }
+            else {
+                showAlert(Alert.AlertType.ERROR, "Error resetting password!");
+            }
+        }
+    }
+
+    private boolean validated(String email, String newPassword) {
+        if (email.isEmpty() || newPassword.isEmpty()) {
+            showAlert(Alert.AlertType.WARNING, "Please fill in all fields.");
+            return false;
+        }
+
         if (!isValidEmail(email)) {
             showAlert(Alert.AlertType.ERROR,
                     "Invalid email format.\nPlease enter a valid email like:\nuser@gmail.com or user@yahoo.com");
-            return;
-        }
-        File csvFile = new File(System.getProperty("user.dir"), CSV_FILE);
-        if (!csvFile.exists()) {
-            showAlert(Alert.AlertType.ERROR, "No user data found. Please sign up first.");
-            return;
+            return false;
         }
 
-        boolean emailFound = false;
-        List<String[]> users = new ArrayList<>();
-
-        try (BufferedReader reader = new BufferedReader(new FileReader(csvFile))) {
-            String header = reader.readLine(); // skip header
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(",");
-                if (parts.length == 2) {
-                    String savedEmail = parts[0].trim().toLowerCase();
-                    String typed = email.trim().toLowerCase();
-                    if (savedEmail.equalsIgnoreCase(email)) {
-                        parts[1] = newPassword; // update password
-                        emailFound = true;
-                    }
-                    users.add(parts);
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-            showAlert(Alert.AlertType.ERROR, "Error reading user file.");
-            return;
-        }
-
-        if (!emailFound) {
-            showAlert(Alert.AlertType.ERROR, "Email not found. Please check again.");
-            return;
-        }
-
-        // Rewrite CSV file with updated data
-        try (PrintWriter writer = new PrintWriter(new FileWriter(csvFile))) {
-            writer.println("email,password");
-            for (String[] user : users) {
-                writer.println(user[0] + "," + user[1]);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-            showAlert(Alert.AlertType.ERROR, "Error saving updated password.");
-            return;
-        }
-
-        // Update stored Preferences so SignInController stays in sync
-        Preferences prefs = Preferences.userRoot().node("BiteWiseUser");
-        prefs.put("email", email);
-        prefs.put("password", newPassword);
-
-        showAlert(Alert.AlertType.INFORMATION, "Password reset successful!");
-        viewSwitcher.switchScene("sign-in.fxml");
+        return true;
     }
 
     private boolean isValidEmail(String email) {

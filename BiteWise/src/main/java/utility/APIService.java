@@ -77,4 +77,31 @@ public class APIService {
         }
     }
 
+    /**
+     * updates password with provided email and new password
+     * @param email user email address
+     * @param newPassword new user password
+     * @throws Exception if email is invalid, or there are issues with the server
+     */
+    public void changePassword(String email, String newPassword) throws Exception {
+        JSONObject json = new JSONObject();
+        json.put("email", email);
+        json.put("newPassword", newPassword);
+
+        // create and send request
+        HttpRequest request = HttpRequest.newBuilder().uri(URI.create("https://bitewise-api.onrender.com/api/change-password")).header("Content-Type", "application/json").PUT(HttpRequest.BodyPublishers.ofString(json.toString())).build();
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        // check response
+        if (response.statusCode() == 200) {
+            return;
+        }
+        else if (response.statusCode() == 404) {
+            throw new Exception("Invalid email");
+        }
+        else {
+            throw new Exception("Change password failed");
+        }
+    }
+
 }

@@ -41,7 +41,7 @@ package controller;
 
              viewSwitcher.switchScene("scan-screen.fxml");
          } catch (Exception e) {
-             if (e.getMessage().equals("Invalid email or password.")) {
+             if (e.getMessage().equals("Invalid email or password")) {
                  showAlert("Invalid email or password.");
              }
              else {

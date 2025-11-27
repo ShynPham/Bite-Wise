@@ -78,7 +78,7 @@ public class APIService {
     }
 
     /**
-     *
+     * updates password with provided email and new password
      * @param email user email address
      * @param newPassword new user password
      * @throws Exception if email is invalid, or there are issues with the server

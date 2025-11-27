@@ -66,7 +66,7 @@ public class BiteHistoryController {
 
     private void loadCalorieLimit() {
         currentCalorieLimit = prefs.getInt(CALORIE_LIMIT_KEY, DEFAULT_CALORIE_LIMIT);
-        calorieLimitLabel.setText(currentCalorieLimit + " kcal");
+        calorieLimitLabel.setText(currentCalorieLimit + " cal");
         // Re-calculate highlighting whenever limit changes
         calculateDailyCalories();
     }
@@ -101,7 +101,7 @@ public class BiteHistoryController {
                         // NOTE: Make sure your NutritionInfo class has this method!
                         int cals = entry.nutrition().getNutritionAsInt();
 
-                        System.out.println("Found entry for today: " + entry.foodName() + " (" + cals + " kcal)");
+                        System.out.println("Found entry for today: " + entry.foodName() + " (" + cals + " cal)");
                         todayCalories += cals;
                     } else {
                         System.out.println("Skipping entry: Wrong date (" + entryTime.toLocalDate() + ")");
@@ -118,7 +118,7 @@ public class BiteHistoryController {
         System.out.println("------------------------------------");
 
         // Update label
-        totalCaloriesLabel.setText(todayCalories + " kcal");
+        totalCaloriesLabel.setText(todayCalories + " cal");
         // update recommendation
         generateRecommendation(todayCalories);
         // Highlight if over limit
@@ -141,7 +141,7 @@ public class BiteHistoryController {
         TextInputDialog dialog = new TextInputDialog(String.valueOf(currentCalorieLimit));
         dialog.setTitle("Change Calorie Limit");
         dialog.setHeaderText("Set your daily goal.");
-        dialog.setContentText("Limit (kcal):");
+        dialog.setContentText("Limit (cal):");
 
         Optional<String> result = dialog.showAndWait();
 
@@ -171,10 +171,10 @@ public class BiteHistoryController {
 
             if (suggestion != null) {
                 recommendationLabel.setText("Try having: " + suggestion.name() +
-                        " (" + suggestion.getNutritionAsInt() + " kcal)");
+                        " (" + suggestion.getNutritionAsInt() + " cal)");
                 recommendationLabel.setStyle("-fx-text-fill: #6B8E4E;"); // Green color
             } else {
-                recommendationLabel.setText("You have " + remaining + " kcal left. Maybe a light snack?");
+                recommendationLabel.setText("You have " + remaining + " cal left. Maybe a light snack?");
             }
         }
     }

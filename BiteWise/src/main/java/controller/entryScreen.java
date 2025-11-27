@@ -3,7 +3,7 @@ package controller;
 import javafx.fxml.FXML;
 import utility.viewSwitcher;
 
-
+// dead stuff nobody use this lololol
 public class entryScreen {
 
 

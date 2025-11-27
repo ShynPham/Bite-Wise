@@ -7,6 +7,7 @@ module edu.utsa.cs.group.bitewise {
     requires java.prefs;
     requires org.json;
     requires java.net.http;
+    requires jdk.jshell;
     // requires edu.utsa.cs.group.bitewise;
 
 

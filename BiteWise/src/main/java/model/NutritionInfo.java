@@ -60,7 +60,7 @@ public record NutritionInfo(String name, String calories, String totalFat,
     public int getNutritionAsInt() {
         try {
             if (calories == null) return 0;
-            // Removes "kcal", spaces, and non-numbers
+            // Removes "cal", spaces, and non-numbers
             String cleanCalories = calories.replaceAll("[^\\d]", "");
             if (cleanCalories.isEmpty()) return 0;
             return Integer.parseInt(cleanCalories);

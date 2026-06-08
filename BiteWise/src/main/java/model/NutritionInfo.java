@@ -15,14 +15,18 @@ public record NutritionInfo(String name, String calories, String totalFat,
      */
     public NutritionInfo(JSONObject obj) {
         this(
-                obj.optString("name", "N/A"),
-                obj.optString("calories", "N/A"),
-                obj.optString("total_fat", "N/A"),
-                obj.optString("saturated_fat", "N/A"),
-                obj.optString("cholesterol", "N/A"),
-                obj.optString("sodium", "N/A"),
-                obj.optString("protein", "N/A")
+                opt(obj, "name"),
+                opt(obj, "calories"),
+                opt(obj, "total_fat"),
+                opt(obj, "saturated_fat"),
+                opt(obj, "cholesterol"),
+                opt(obj, "sodium"),
+                opt(obj, "protein")
         );
+    }
+
+    private static String opt(JSONObject obj, String key) {
+        return obj == null ? "N/A" : obj.optString(key, "N/A");
     }
 
     /**

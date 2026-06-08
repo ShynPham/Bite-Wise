@@ -2,8 +2,10 @@ package utility;
 
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -48,8 +50,13 @@ public class viewSwitcher {
      * @param fxmlFileName The simple name of the FXML file to load (e.g., "scan-screen.fxml").
      */
     @SuppressWarnings("CallToPrintStackTrace")
-    public static void switchScene(String fxmlFileName) {
+    public static boolean switchScene(String fxmlFileName) {
         try {
+            String fXMLPath = "/edu/utsa/cs3443/group7/bitewise/" + fxmlFileName;
+            if (viewSwitcher.class.getResource(fXMLPath) == null) {
+                System.err.println("FXML file not found: " + fxmlFileName);
+                return false;
+            }
             // --- FADE OUT THE OLD SCENE ---
 
             // Get the root node of the *current* scene
@@ -57,11 +64,13 @@ public class viewSwitcher {
 
             // Start the fade-out animation
             fadeOut.play();
+            return true;
 
         } catch (Exception e) { // Catch potential errors (e.g., mainStage not set)
             System.err.println("Error during scene switch (fade out): " + fxmlFileName);
             //old method for debugging
             e.printStackTrace();
+            return false;
         }
     }
 
@@ -95,11 +104,11 @@ public class viewSwitcher {
             // Load the FXML file. Objects.requireNonNull() ensures we get a NullPointerException
             // if the file path is wrong (which is caught below).
             Parent newRoot = FXMLLoader.load(Objects.requireNonNull(viewSwitcher.class.getResource(fXMLPath)));
+            newRoot.setStyle(newRoot.getStyle() + "; -fx-font-family: 'KG Red Hands';");
 
             // 2. Set the new scene on the main stage
             mainStage.setScene(new Scene(newRoot));
-            // Tell the stage to resize itself to fit the preferred size of the new scene
-            mainStage.sizeToScene();
+            applyStageMode(fxmlFileName);
 
             // 3. Make the new root transparent (FIXED: was 1.0)
             // It must start at 0.0 opacity to fade *in*.
@@ -118,9 +127,28 @@ public class viewSwitcher {
             // old method for debugging
             e.printStackTrace();
         }
-        // Check the file name
-        // If it's the scan screen, make the window RESIZABLE.
-        // For all other screens (login, signup, settings), lock the size.
-        mainStage.setResizable(fxmlFileName.equals("scan-screen.fxml"));
+    }
+
+    private static void applyStageMode(String fxmlFileName) {
+        boolean compactAuthScreen = fxmlFileName.equals("sign-in.fxml")
+                || fxmlFileName.equals("sign-up.fxml")
+                || fxmlFileName.equals("forgot-password.fxml");
+
+        mainStage.setFullScreen(false);
+        mainStage.setResizable(!compactAuthScreen);
+
+        if (compactAuthScreen) {
+            mainStage.setMaximized(false);
+            mainStage.sizeToScene();
+            mainStage.centerOnScreen();
+            return;
+        }
+
+        Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
+        mainStage.setX(bounds.getMinX());
+        mainStage.setY(bounds.getMinY());
+        mainStage.setWidth(bounds.getWidth());
+        mainStage.setHeight(bounds.getHeight());
+        mainStage.setMaximized(true);
     }
 }

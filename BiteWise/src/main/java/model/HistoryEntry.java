@@ -9,7 +9,12 @@ import java.time.format.DateTimeFormatter;
  *
  * @author Phu Pham
  */
-public record HistoryEntry(String foodName, String detectionTime, NutritionInfo nutrition) {
+public record HistoryEntry(String foodName, String detectionTime, NutritionInfo nutrition,
+                           String mealId, double servingMultiplier, double confidence, String source) {
+
+    public HistoryEntry(String foodName, String detectionTime, NutritionInfo nutrition) {
+        this(foodName, detectionTime, nutrition, "", 1.0, 0.0, "legacy");
+    }
 
     /**
      * Constructor to parse from a JSONObject when loading from a file.
@@ -18,7 +23,11 @@ public record HistoryEntry(String foodName, String detectionTime, NutritionInfo 
         this(
                 obj.optString("foodName", "Unknown"),
                 obj.optString("detectionTime", "Unknown Date"),
-                new NutritionInfo(obj.optJSONObject("nutrition")) // De-serialize NutritionInfo
+                new NutritionInfo(obj.optJSONObject("nutrition")),
+                obj.optString("mealId", ""),
+                obj.optDouble("servingMultiplier", 1.0),
+                obj.optDouble("confidence", 0.0),
+                obj.optString("source", "legacy")
         );
     }
 
@@ -30,6 +39,18 @@ public record HistoryEntry(String foodName, String detectionTime, NutritionInfo 
         obj.put("foodName", foodName);
         obj.put("detectionTime", detectionTime);
         obj.put("nutrition", nutrition.toJSONObject()); // Serialize NutritionInfo
+        if (mealId != null && !mealId.isBlank()) {
+            obj.put("mealId", mealId);
+        }
+        if (servingMultiplier != 1.0) {
+            obj.put("servingMultiplier", servingMultiplier);
+        }
+        if (confidence > 0.0) {
+            obj.put("confidence", confidence);
+        }
+        if (source != null && !source.isBlank() && !"legacy".equals(source)) {
+            obj.put("source", source);
+        }
         return obj;
     }
 

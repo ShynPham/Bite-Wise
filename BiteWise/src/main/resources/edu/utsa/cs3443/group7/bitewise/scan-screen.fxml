@@ -3,83 +3,100 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.canvas.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="798.0" prefWidth="1121.0" style="-fx-background-color: #eeffea;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InterferenceController">
+<BorderPane prefHeight="798.0" prefWidth="1121.0" style="-fx-font-family: 'KG Red Hands';" styleClass="screen-shell" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InterferenceController">
 
     <top>
-        <HBox alignment="CENTER_LEFT" prefHeight="99.0" prefWidth="1128.0" style="-fx-background-color: #a8c474; -fx-padding: 0 20 0 20;" BorderPane.alignment="CENTER">
-            <effect>
-                <DropShadow height="10.0" radius="4.5" width="10.0">
-                    <color>
-                        <Color opacity="0.2" />
-                    </color>
-                </DropShadow>
-            </effect>
-            <Label prefHeight="62.0" prefWidth="681.0" styleClass="str" text="BiteWise Food Scanner" textFill="#53382e">
-                <font>
-                    <Font name="KG Red Hands" size="44.0" />
-                </font>
-            </Label>
+        <HBox alignment="CENTER_LEFT" spacing="18.0" styleClass="hero-strip">
+            <padding>
+                <Insets bottom="14.0" left="24.0" right="24.0" top="14.0" />
+            </padding>
+            <VBox alignment="CENTER_LEFT" spacing="2.0">
+                <Label styleClass="hero-title" text="BiteWise Food Scanner" />
+                <Label styleClass="screen-kicker" text="Upload, detect locally, review, and save your bites." />
+            </VBox>
             <Region HBox.hgrow="ALWAYS" />
-            <Button fx:id="settingsButton" onAction="#handleSettingsButtonClick" prefHeight="57.0" prefWidth="200.0" style="-fx-background-color: #f3ac92; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 10;" text="Settings" />
+            <VBox alignment="CENTER_LEFT" maxWidth="360.0" prefWidth="360.0" spacing="5.0" styleClass="model-chip-card">
+                <Label fx:id="modelStatusLabel" styleClass="section-label" text="Loading best.onnx" />
+                <Label fx:id="modelShapeLabel" styleClass="card-detail" text="Private food detection runs on this device." wrapText="true" />
+            </VBox>
+            <Button onAction="#handleDashboardButtonClick" prefHeight="48.0" prefWidth="150.0" styleClass="primary-button" text="Dashboard" />
+            <Button fx:id="settingsButton" onAction="#handleSettingsButtonClick" prefHeight="48.0" prefWidth="150.0" styleClass="ghost-button" text="Settings" />
         </HBox>
     </top>
 
     <center>
-        <StackPane fx:id="imageContainer" prefWidth="367.0" style="-fx-background-color: green;" BorderPane.alignment="CENTER">
+        <StackPane fx:id="imageContainer" styleClass="scanner-stage">
             <BorderPane.margin>
-                <Insets bottom="20.0" left="20.0" top="20.0" />
+                <Insets bottom="24.0" left="24.0" right="20.0" top="24.0" />
             </BorderPane.margin>
-            <ImageView fx:id="imageView" fitHeight="367" fitWidth="${imageContainer.height}" preserveRatio="true" />
-            <Canvas fx:id="overlayCanvas" />
-            <ProgressIndicator fx:id="progressIndicator" maxHeight="100" maxWidth="100" visible="false" />
+            <ImageView fx:id="imageView" fitHeight="640.0" fitWidth="760.0" preserveRatio="true" smooth="true" StackPane.alignment="CENTER" />
+            <Canvas fx:id="overlayCanvas" mouseTransparent="true" StackPane.alignment="CENTER" />
+            <VBox fx:id="uploadEmptyState" alignment="CENTER" maxHeight="430.0" maxWidth="585.0" spacing="16.0" styleClass="upload-card">
+                <padding>
+                    <Insets bottom="38.0" left="46.0" right="46.0" top="38.0" />
+                </padding>
+                <ImageView fitHeight="112.0" fitWidth="160.0" preserveRatio="true">
+                    <Image url="@ui_icons/logo.png" />
+                </ImageView>
+                <Label styleClass="screen-title" text="Ready for a bite?" />
+                <Label alignment="CENTER" styleClass="screen-kicker" text="Use a bright, clear photo for best detection." textAlignment="CENTER" wrapText="true" />
+                <HBox alignment="CENTER" spacing="9.0">
+                    <Label styleClass="tip-chip" text="Top-down" />
+                    <Label styleClass="tip-chip" text="Good light" />
+                    <Label styleClass="tip-chip" text="One plate" />
+                    <Label styleClass="tip-chip" text="No blur" />
+                </HBox>
+                <Button fx:id="heroChooseImageButton" onAction="#onChooseImage" prefHeight="50.0" prefWidth="205.0" styleClass="primary-button" text="Upload Image" />
+            </VBox>
+            <ProgressIndicator fx:id="progressIndicator" maxHeight="96.0" maxWidth="96.0" visible="false" />
         </StackPane>
     </center>
 
     <right>
-        <VBox alignment="TOP_CENTER" prefWidth="250.0" spacing="15.0" style="-fx-background-color: #FAF0E6; -fx-border-color: #a8c474; -fx-border-width: 0 0 0 2;" BorderPane.alignment="CENTER">
+        <VBox alignment="TOP_CENTER" prefWidth="390.0" spacing="14.0" styleClass="side-panel">
             <padding>
-                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                <Insets bottom="20.0" left="18.0" right="18.0" top="22.0" />
             </padding>
-            <Label styleClass="text" text="Upload " textFill="#53382e">
-                <font>
-                    <Font name="KG Red Hands " size="22.0" />
-                </font>
-            </Label>
-            <Separator prefWidth="200.0" />
-            <Button fx:id="chooseImageButton" onAction="#onChooseImage" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #a8c474; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 20;" text="Upload Food Image">
-                <font>
-                    <Font name="KG Red Hands" size="16.0" />
-                </font>
-            </Button>
-            <Button fx:id="historyButton" onAction="#onHistoryClick" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #f3ac92; -fx-text-fill: #53382e; -fx-font-weight: bold; -fx-background-radius: 20;" text="View History">
-                <font>
-                    <Font name="KG Red Hands" size="16.0" />
-                </font>
-            </Button>
-            <Label styleClass="text" text="Detections:" textFill="#53382e">
-                <font>
-                    <Font name="KG Red Hands " size="22.0" />
-                </font>
-                <VBox.margin>
-                    <Insets top="15.0" />
-                </VBox.margin>
-            </Label>
-            <TextArea fx:id="detectionResults" editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-font-family: 'Arial';" wrapText="true" VBox.vgrow="ALWAYS" />
-            <Button fx:id="saveButton" disable="true" onAction="#onSaveDetections" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #f3ac92; -fx-background-radius: 20; -fx-text-fill: #53382e;" styleClass="slogan" text="Save Detections"> </Button>
-            <ImageView fitHeight="183.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@ui_icons/logo.png" />
-            </ImageView>
-            <Label fx:id="statusLabel" alignment="CENTER" style="-fx-text-fill: #53382e; -fx-font-style: italic;" text="Status: Ready" wrapText="true">
-                <font>
-                    <Font size="14.0" />
-                </font>
-            </Label>
+
+            <Label styleClass="screen-title" text="Scan Kit" />
+            <VBox prefWidth="330.0" spacing="10.0" styleClass="mini-card">
+                <padding>
+                    <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                </padding>
+                <Label styleClass="section-label" text="ACTIONS" />
+                <Button fx:id="chooseImageButton" onAction="#onChooseImage" prefHeight="52.0" prefWidth="298.0" styleClass="primary-button" text="Upload Food Image" />
+                <Button fx:id="saveButton" disable="true" onAction="#onSaveDetections" prefHeight="50.0" prefWidth="298.0" styleClass="secondary-button" text="Review Meal" />
+                <HBox spacing="10.0">
+                    <Button fx:id="clearButton" onAction="#onClearScan" prefHeight="44.0" prefWidth="144.0" styleClass="ghost-button" text="Clear" />
+                    <Button fx:id="historyButton" onAction="#onHistoryClick" prefHeight="44.0" prefWidth="144.0" styleClass="secondary-button" text="History" />
+                </HBox>
+            </VBox>
+
+            <VBox spacing="8.0" styleClass="result-card" VBox.vgrow="ALWAYS">
+                <padding>
+                    <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                </padding>
+                <HBox alignment="CENTER_LEFT" spacing="8.0">
+                    <Label styleClass="section-title" text="Detections" />
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Label fx:id="detectionCountLabel" styleClass="metric-number" text="0 found" />
+                </HBox>
+                <Label fx:id="mealSummaryLabel" styleClass="settings-note" text="Meal estimate: 0 cal" wrapText="true" />
+                <TextArea fx:id="detectionResults" editable="false" prefHeight="360.0" prefWidth="306.0" promptText="Detection details will appear here." styleClass="result-area" wrapText="true" VBox.vgrow="ALWAYS" />
+            </VBox>
         </VBox>
     </right>
+
+    <bottom>
+        <HBox alignment="CENTER_LEFT" spacing="14.0" styleClass="scan-status-bar">
+            <padding>
+                <Insets bottom="14.0" left="24.0" right="24.0" top="14.0" />
+            </padding>
+            <Label styleClass="section-label" text="STATUS" />
+            <Label fx:id="statusLabel" maxWidth="1.7976931348623157E308" styleClass="status-text-large" text="Ready for an image." wrapText="true" HBox.hgrow="ALWAYS" />
+        </HBox>
+    </bottom>
 </BorderPane>

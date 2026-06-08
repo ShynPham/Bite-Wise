@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="780.0" prefWidth="1180.0" style="-fx-font-family: 'KG Red Hands';" styleClass="screen-shell" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CoachDashboardController">
+    <top>
+        <VBox spacing="8" styleClass="hero-strip">
+            <padding>
+                <Insets bottom="20" left="34" right="34" top="24" />
+            </padding>
+            <Label styleClass="screen-title" text="BiteWise Coach" />
+            <Label styleClass="screen-kicker" text="Local smart nutrition hub, colorful meal tracking, and bite-sized coaching." />
+        </VBox>
+    </top>
+    <center>
+        <VBox spacing="22">
+            <padding>
+                <Insets bottom="28" left="34" right="34" top="28" />
+            </padding>
+            <HBox spacing="18">
+                <VBox HBox.hgrow="ALWAYS" spacing="10" styleClass="metric-card">
+                    <Label styleClass="section-label" text="TODAY" />
+                    <Label fx:id="todayCaloriesLabel" styleClass="jumbo-number" text="0 cal" />
+                    <ProgressBar fx:id="calorieProgressBar" maxWidth="1.7976931348623157E308" prefHeight="18" progress="0.0" />
+                </VBox>
+                <VBox HBox.hgrow="ALWAYS" spacing="10" styleClass="metric-card">
+                    <Label styleClass="section-label" text="DAILY GOAL" />
+                    <Label fx:id="goalLabel" styleClass="metric-number" text="2000 cal goal" />
+                    <Label fx:id="remainingLabel" styleClass="section-title" text="2000 cal left" />
+                </VBox>
+                <VBox HBox.hgrow="ALWAYS" spacing="10" styleClass="metric-card">
+                    <Label styleClass="section-label" text="LATEST SCAN" />
+                    <Label fx:id="latestScanLabel" maxWidth="330" styleClass="card-detail" text="No saved bites yet." wrapText="true" />
+                    <Button onAction="#handleClearDraftClick" styleClass="ghost-button" text="Clear Draft" />
+                </VBox>
+            </HBox>
+            <GridPane hgap="18" vgap="18">
+                <VBox spacing="8" styleClass="coach-card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <Label fx:id="insightOneTitle" styleClass="section-title" text="Insight" />
+                    <Label fx:id="insightOneDetail" styleClass="card-detail" text="Details" wrapText="true" />
+                </VBox>
+                <VBox spacing="8" styleClass="coach-card alt-card" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <Label fx:id="insightTwoTitle" styleClass="section-title" text="Insight" />
+                    <Label fx:id="insightTwoDetail" styleClass="card-detail" text="Details" wrapText="true" />
+                </VBox>
+                <VBox spacing="8" styleClass="coach-card warm-card" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <Label fx:id="insightThreeTitle" styleClass="section-title" text="Insight" />
+                    <Label fx:id="insightThreeDetail" styleClass="card-detail" text="Details" wrapText="true" />
+                </VBox>
+                <VBox spacing="8" styleClass="coach-card cool-card" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <Label fx:id="insightFourTitle" styleClass="section-title" text="Insight" />
+                    <Label fx:id="insightFourDetail" styleClass="card-detail" text="Details" wrapText="true" />
+                </VBox>
+            </GridPane>
+            <HBox spacing="12" styleClass="action-rail">
+                <Button onAction="#handleScanClick" styleClass="primary-button" text="Scan" />
+                <Button onAction="#handleMealReviewClick" styleClass="secondary-button" text="Meal Review" />
+                <Button onAction="#handleSmartCoachClick" styleClass="nav-pill-green" text="Smart Coach" />
+                <Button onAction="#handleTrendsClick" styleClass="nav-pill-peach" text="Trends" />
+                <Button onAction="#handleGoalsClick" styleClass="nav-pill-cream" text="Goals" />
+                <Button onAction="#handleHistoryClick" styleClass="nav-pill-pink" text="History" />
+                <Button onAction="#handleSettingsClick" styleClass="ghost-button" text="Settings" />
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

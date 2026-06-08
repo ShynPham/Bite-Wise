@@ -26,6 +26,8 @@ public class BiteHistoryController {
     @FXML private Label totalCaloriesLabel;
     @FXML private Label calorieLimitLabel;
     @FXML private Label recommendationLabel;
+    @FXML private Label progressPercentLabel;
+    @FXML private ProgressBar calorieProgressBar;
     @FXML private ListView<HistoryEntry> historyListView;
     @FXML private TextArea detailsTextArea;
 
@@ -54,7 +56,7 @@ public class BiteHistoryController {
 
         // 5. Setup Listener for Details
         historyListView.getSelectionModel().selectedItemProperty().addListener(
-                (_, _, newSelection) -> {
+                (observable, oldSelection, newSelection) -> {
                     if (newSelection != null) {
                         showDetails(newSelection);
                     } else {
@@ -119,6 +121,7 @@ public class BiteHistoryController {
 
         // Update label
         totalCaloriesLabel.setText(todayCalories + " cal");
+        updateProgress(todayCalories);
         // update recommendation
         generateRecommendation(todayCalories);
         // Highlight if over limit
@@ -126,6 +129,24 @@ public class BiteHistoryController {
             totalCaloriesLabel.setStyle("-fx-text-fill: red; -fx-font-weight: bold;");
         } else {
             totalCaloriesLabel.setStyle("-fx-text-fill: #6B8E4E; -fx-font-weight: bold;");
+        }
+    }
+
+    private void updateProgress(int todayCalories) {
+        double progress = currentCalorieLimit <= 0 ? 0 : (double) todayCalories / currentCalorieLimit;
+        calorieProgressBar.setProgress(Math.min(progress, 1.0));
+        progressPercentLabel.setText(Math.round(progress * 100) + "%");
+
+        if (progress >= 1.0) {
+            calorieProgressBar.getStyleClass().remove("calorie-progress");
+            if (!calorieProgressBar.getStyleClass().contains("calorie-progress-over")) {
+                calorieProgressBar.getStyleClass().add("calorie-progress-over");
+            }
+        } else {
+            calorieProgressBar.getStyleClass().remove("calorie-progress-over");
+            if (!calorieProgressBar.getStyleClass().contains("calorie-progress")) {
+                calorieProgressBar.getStyleClass().add("calorie-progress");
+            }
         }
     }
 
@@ -138,6 +159,10 @@ public class BiteHistoryController {
 
     @FXML
     private void onChangeLimitClick() {
+        viewSwitcher.switchScene("goals-screen.fxml");
+    }
+
+    private void openLegacyLimitDialog() {
         TextInputDialog dialog = new TextInputDialog(String.valueOf(currentCalorieLimit));
         dialog.setTitle("Change Calorie Limit");
         dialog.setHeaderText("Set your daily goal.");
@@ -163,7 +188,7 @@ public class BiteHistoryController {
         int remaining = currentCalorieLimit - currentCalories;
 
         if (remaining <= 0) {
-            recommendationLabel.setText("You've hit your limit! Stay hydrated 💧");
+            recommendationLabel.setText("You've hit your limit! Stay hydrated.");
             recommendationLabel.setStyle("-fx-text-fill: #d9534f;"); // Red color
         } else {
             // Ask our new Manager for a food that fits 'remaining'
@@ -182,9 +207,18 @@ public class BiteHistoryController {
     private void onDeleteClick() {
         HistoryEntry selected = historyListView.getSelectionModel().getSelectedItem();
         if (selected != null) {
-            historyList.remove(selected);
-            HistoryManager.saveHistory(new ArrayList<>(historyList));
-            calculateDailyCalories(); // Re-calculate totals after deletion
+            Alert confirm = new Alert(Alert.AlertType.CONFIRMATION);
+            confirm.setTitle("Delete Bite");
+            confirm.setHeaderText(null);
+            confirm.setContentText("Delete " + selected.foodName() + " from your history?");
+
+            Optional<ButtonType> result = confirm.showAndWait();
+            if (result.isPresent() && result.get() == ButtonType.OK) {
+                historyList.remove(selected);
+                detailsTextArea.clear();
+                HistoryManager.saveHistory(new ArrayList<>(historyList));
+                calculateDailyCalories(); // Re-calculate totals after deletion
+            }
         }
     }
 

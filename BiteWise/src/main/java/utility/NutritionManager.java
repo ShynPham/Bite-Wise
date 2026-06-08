@@ -5,7 +5,10 @@ import org.json.JSONArray;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 
 /**
@@ -57,6 +60,69 @@ public class NutritionManager {
         // Pick a random one from the candidates
         Random rand = new Random();
         return candidates.get(rand.nextInt(candidates.size()));
+    }
+
+    public static List<NutritionInfo> getAllFood() {
+        return Collections.unmodifiableList(allFood);
+    }
+
+    public static NutritionInfo findByName(String foodName) {
+        if (foodName == null || foodName.isBlank()) {
+            return null;
+        }
+
+        String target = foodName.toLowerCase(Locale.ROOT).trim();
+        for (NutritionInfo food : allFood) {
+            if (food.name().toLowerCase(Locale.ROOT).equals(target)) {
+                return food;
+            }
+        }
+        return null;
+    }
+
+    public static NutritionInfo findClosestByName(String foodName) {
+        NutritionInfo exact = findByName(foodName);
+        if (exact != null || foodName == null) {
+            return exact;
+        }
+
+        String target = foodName.toLowerCase(Locale.ROOT).trim();
+        for (NutritionInfo food : allFood) {
+            String name = food.name().toLowerCase(Locale.ROOT);
+            if (target.contains(name) || name.contains(target)) {
+                return food;
+            }
+        }
+        return null;
+    }
+
+    public static NutritionInfo getProteinPick(int maxCalories) {
+        return allFood.stream()
+                .filter(food -> food.getNutritionAsInt() > 0 && food.getNutritionAsInt() <= maxCalories)
+                .max(Comparator.comparingInt(food -> parseNumber(food.protein())))
+                .orElse(null);
+    }
+
+    public static NutritionInfo getLowestCalorieOption(int maxCalories) {
+        return allFood.stream()
+                .filter(food -> food.getNutritionAsInt() > 0 && food.getNutritionAsInt() <= maxCalories)
+                .min(Comparator.comparingInt(NutritionInfo::getNutritionAsInt))
+                .orElse(null);
+    }
+
+    public static int parseNumber(String value) {
+        if (value == null) {
+            return 0;
+        }
+        String clean = value.replaceAll("[^\\d]", "");
+        if (clean.isEmpty()) {
+            return 0;
+        }
+        try {
+            return Integer.parseInt(clean);
+        } catch (NumberFormatException e) {
+            return 0;
+        }
     }
 }
 

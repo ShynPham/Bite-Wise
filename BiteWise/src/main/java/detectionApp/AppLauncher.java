@@ -53,6 +53,7 @@ public class AppLauncher extends Application {
         }
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/utsa/cs3443/group7/bitewise/sign-in.fxml"));
         Parent root = loader.load();
+        root.setStyle(root.getStyle() + "; -fx-font-family: 'KG Red Hands';");
 
         // Get the controller instance from the loader
         controller = loader.getController();
@@ -62,6 +63,7 @@ public class AppLauncher extends Application {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
+        stage.centerOnScreen();
     }
 
     /**

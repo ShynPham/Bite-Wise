@@ -1,77 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="462.0" style="-fx-background-color: #FAF0E6; -fx-padding: 20;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BiteHistoryController">
+<BorderPane prefHeight="740.0" prefWidth="462.0" style="-fx-font-family: 'KG Red Hands';" styleClass="screen-shell" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BiteHistoryController">
 
-    <!-- Logo -->
-    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="133.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
-        <Image url="@ui_icons/logo.png" />
-    </ImageView>
+    <top>
+        <VBox alignment="CENTER" spacing="5.0">
+            <padding>
+                <Insets bottom="12.0" left="26.0" right="26.0" top="20.0" />
+            </padding>
+            <ImageView fitHeight="105.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@ui_icons/logo.png" />
+            </ImageView>
+            <Label styleClass="screen-title" text="Bite History" />
+            <Label styleClass="screen-kicker" text="Today's calories, saved bites, and snack ideas." />
+        </VBox>
+    </top>
 
-    <!-- BiteWise Title (outlined) -->
-    <Label layoutX="118.0" layoutY="125.0" styleClass="str" text="BiteWise">
-        <font>
-            <Font name="KG Red Hands" size="48.0" />
-        </font>
-    </Label>
+    <center>
+        <VBox spacing="10.0">
+            <padding>
+                <Insets bottom="8.0" left="26.0" right="26.0" top="0.0" />
+            </padding>
 
-    <!-- Subheading -->
-    <Label layoutX="133.0" layoutY="200.0" styleClass="slogan" text="Bite History" textFill="#53382E">
-        <font>
-            <Font name="KG Red Hands" size="30.0" />
-        </font>
-    </Label>
+            <HBox alignment="CENTER" spacing="9.0">
+                <VBox alignment="CENTER" prefHeight="60.0" prefWidth="126.0" spacing="2.0" styleClass="summary-chip">
+                    <Label styleClass="section-label" text="TODAY" />
+                    <Label fx:id="totalCaloriesLabel" styleClass="metric-number" text="0 kcal" />
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="60.0" prefWidth="126.0" spacing="2.0" styleClass="summary-chip">
+                    <Label styleClass="section-label" text="LIMIT" />
+                    <Label fx:id="calorieLimitLabel" styleClass="metric-number" text="2000 kcal" />
+                </VBox>
+                <Button fx:id="changeLimitButton" onAction="#onChangeLimitClick" prefHeight="60.0" prefWidth="116.0" styleClass="ghost-button" text="Change" />
+            </HBox>
 
-    <!-- Splitpanel Bite Entries -->
-    <SplitPane dividerPositions="0.6" layoutX="40.0" layoutY="272.0" orientation="VERTICAL" prefHeight="320.0" prefWidth="382.0" style="-fx-border-color: #a8c474; -fx-border-width: 2;">
-        <ListView fx:id="historyListView" prefHeight="200.0" prefWidth="200.0" />
+            <VBox spacing="7.0" styleClass="progress-card">
+                <padding>
+                    <Insets bottom="10.0" left="12.0" right="12.0" top="10.0" />
+                </padding>
+                <HBox alignment="CENTER_LEFT">
+                    <Label styleClass="section-label" text="DAILY PROGRESS" />
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Label fx:id="progressPercentLabel" styleClass="metric-number" text="0%" />
+                </HBox>
+                <ProgressBar fx:id="calorieProgressBar" prefHeight="18.0" prefWidth="382.0" progress="0.0" />
+            </VBox>
 
-        <TextArea fx:id="detailsTextArea" editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-font-family: 'Arial'; -fx-font-size: 14px;" wrapText="true" />
-    </SplitPane>
+            <SplitPane dividerPositions="0.58" orientation="VERTICAL" prefHeight="258.0" prefWidth="410.0" styleClass="big-card" VBox.vgrow="ALWAYS">
+                <ListView fx:id="historyListView" prefHeight="148.0" prefWidth="400.0" />
+                <TextArea fx:id="detailsTextArea" editable="false" prefHeight="110.0" prefWidth="400.0" promptText="Select a bite to see nutrition details." styleClass="details-area" wrapText="true" />
+            </SplitPane>
 
-    <!-- Back Button -->
-    <HBox alignment="CENTER" layoutX="40.0" layoutY="650.0" spacing="20.0">
-        <Button fx:id="backButton" onAction="#handleBackClick" prefHeight="70.0" prefWidth="80.0" text="←">
-         <styleClass>
-            <String fx:value="bite-history-element" />
-            <String fx:value="str" />
-         </styleClass></Button>
+            <VBox alignment="CENTER" spacing="4.0" styleClass="status-card">
+                <padding>
+                    <Insets bottom="10.0" left="12.0" right="12.0" top="10.0" />
+                </padding>
+                <Label styleClass="section-label" text="SUGGESTION" />
+                <Label fx:id="recommendationLabel" styleClass="metric-number" text="..." textAlignment="CENTER" wrapText="true" />
+            </VBox>
+        </VBox>
+    </center>
 
-        <Button fx:id="deleteButton" onAction="#onDeleteClick" prefHeight="70.0" prefWidth="200.0" text="Deleted">
-         <styleClass>
-            <String fx:value="bite-history-element-title" />
-            <String fx:value="bite-history-element" />
-         </styleClass></Button>
-    </HBox>
-
-    <HBox alignment="CENTER_LEFT" layoutX="49.0" layoutY="247.0" prefWidth="362.0" spacing="10.0">
-        <Label styleClass="slogan" text="Today's Total:" />
-        <Label fx:id="totalCaloriesLabel" styleClass="bite-history-info" text="0 kcal" />
-        <Region HBox.hgrow="ALWAYS" />
-        <Label styleClass="slogan" text="Limit:" />
-        <Label fx:id="calorieLimitLabel" styleClass="slogan" text="2000 kcal" />
-        <Button fx:id="changeLimitButton" onAction="#onChangeLimitClick" styleClass="settings-button-white" text="Change">
-        <font>
-            <Font name="Arial" size="12.0" />
-        </font>
-        </Button>
-    </HBox>
-
-    <VBox alignment="CENTER" layoutX="50.0" layoutY="591.0" prefWidth="362.0">
-        <Label style="-fx-font-size: 14px; -fx-text-fill: #53382E;" styleClass="slogan" text="Suggestion:" />
-        <Label fx:id="recommendationLabel" text="..." textAlignment="CENTER" wrapText="true">
-            <font>
-                <Font name="KG Red Hands" size="16.0" />
-            </font>
-            <styleClass>
-                <String fx:value="bite-history-info" />
-            </styleClass>
-        </Label>
-    </VBox>
-
-</AnchorPane>
+    <bottom>
+        <HBox alignment="CENTER" spacing="12.0">
+            <padding>
+                <Insets bottom="22.0" left="26.0" right="26.0" top="10.0" />
+            </padding>
+            <Button fx:id="backButton" onAction="#handleBackClick" prefHeight="50.0" prefWidth="96.0" styleClass="ghost-button" text="Back" />
+            <Button fx:id="deleteButton" onAction="#onDeleteClick" prefHeight="50.0" prefWidth="195.0" styleClass="danger-button" text="Delete Selected" />
+        </HBox>
+    </bottom>
+</BorderPane>

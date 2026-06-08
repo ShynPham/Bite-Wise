@@ -1,0 +1,13 @@
+[{
+    "foodName": "Pasta",
+    "nutrition": {
+        "sodium": "1mg",
+        "total_fat": "1.3g",
+        "protein": "8.1g",
+        "name": "Pasta",
+        "cholesterol": "0mg",
+        "calories": "221",
+        "saturated_fat": "0.3g"
+    },
+    "detectionTime": "2025-11-26T15:59:25.629398400"
+}]

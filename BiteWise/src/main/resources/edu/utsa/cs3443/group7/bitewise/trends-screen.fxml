@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="730.0" prefWidth="1080.0" style="-fx-font-family: 'KG Red Hands';" styleClass="screen-shell" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TrendsController">
+    <top>
+        <VBox spacing="8" styleClass="hero-strip">
+            <padding>
+                <Insets bottom="20" left="34" right="34" top="24" />
+            </padding>
+            <Label styleClass="screen-title" text="Bite Trends" />
+            <Label styleClass="screen-kicker" text="Seven-day calories, frequent foods, and simple local progress bars." />
+        </VBox>
+    </top>
+    <center>
+        <VBox spacing="22">
+            <padding>
+                <Insets bottom="28" left="34" right="34" top="28" />
+            </padding>
+            <HBox spacing="18">
+                <VBox HBox.hgrow="ALWAYS" spacing="10" styleClass="metric-card">
+                    <Label styleClass="section-label" text="7-DAY AVERAGE" />
+                    <Label fx:id="averageCaloriesLabel" styleClass="jumbo-number" text="0 cal avg" />
+                </VBox>
+                <VBox HBox.hgrow="ALWAYS" spacing="10" styleClass="metric-card">
+                    <Label styleClass="section-label" text="MOST FREQUENT" />
+                    <Label fx:id="frequentFoodsLabel" styleClass="card-detail" text="No foods saved yet." wrapText="true" />
+                </VBox>
+            </HBox>
+            <VBox spacing="12" styleClass="big-card">
+                <padding>
+                    <Insets bottom="20" left="20" right="20" top="20" />
+                </padding>
+                <Label styleClass="section-title" text="7-Day Calorie Summary" />
+                <VBox fx:id="weeklyBarsBox" spacing="10" />
+            </VBox>
+            <HBox spacing="12" styleClass="action-rail">
+                <Button onAction="#handleDashboardClick" styleClass="ghost-button" text="Dashboard" />
+                <Button onAction="#handleSmartCoachClick" styleClass="primary-button" text="Smart Coach" />
+                <Button onAction="#handleHistoryClick" styleClass="secondary-button" text="History" />
+                <Button onAction="#handleGoalsClick" styleClass="nav-pill-green" text="Goals" />
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

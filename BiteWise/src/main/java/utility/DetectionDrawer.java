@@ -136,7 +136,7 @@ public final class DetectionDrawer {
                 // Select a color based on the class ID
                 Color color = COLORS[d.classID() % COLORS.length];
                 gc.setStroke(color);
-                gc.setLineWidth(2.5);
+                gc.setLineWidth(5.0);
 
                 // Scale the detection coordinates from the original image to the canvas
                 double x = d.x1() * scaleX;
@@ -148,20 +148,20 @@ public final class DetectionDrawer {
                 gc.strokeRect(x, y, w, h);
 
                 // --- Draw Label ---
-                String label = classNames[d.classID()] + " " + String.format("%.2f", d.score());
+                String label = classNames[d.classID()] + " " + Math.round(d.score() * 100) + "%";
                 gc.setFill(color);
-                gc.setFont(Font.font("sans-serif", 14));
+                gc.setFont(Font.font("KG Red Hands", 20));
 
                 // Position the text box
-                double textX = x + 2;
+                double textX = x + 5;
                 // Position text above the box, but if it's at the top edge, move it inside
-                double textY = y > 15 ? y - 5 : y + 15;
+                double textY = y > 28 ? y - 8 : y + 26;
 
                 // Draw a semi-transparent black background for the text
-                gc.setGlobalAlpha(0.7);
+                gc.setGlobalAlpha(0.78);
                 gc.setFill(Color.BLACK);
                 // Estimate background width based on font size and label length
-                gc.fillRect(textX - 2, textY - 15, gc.getFont().getSize() * (label.length() * 0.6), 20);
+                gc.fillRoundRect(textX - 5, textY - 24, gc.getFont().getSize() * (label.length() * 0.62), 30, 10, 10);
                 gc.setGlobalAlpha(1.0); // Reset alpha
 
                 // Draw the text (label and score)

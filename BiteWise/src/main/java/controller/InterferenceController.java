@@ -9,15 +9,19 @@ import detectionApp.AppLauncher;
 import javafx.scene.control.*;
 import model.Detection;
 import model.HistoryEntry;
+import model.MealDraftItem;
 import utility.DetectionDrawer;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import utility.HistoryManager;
+import utility.MealDraftManager;
 import utility.viewSwitcher;
 
 import javax.imageio.ImageIO;
@@ -62,6 +66,8 @@ public class InterferenceController {
     @FXML
     private Button historyButton;
     @FXML
+    private Button clearButton;
+    @FXML
     public Button settingsButton;
 
     // --- FXML Bindings (UI Elements) ---
@@ -71,6 +77,8 @@ public class InterferenceController {
      */
     @FXML
     private Button chooseImageButton;
+    @FXML
+    private Button heroChooseImageButton;
     /**
      * FXML link to the status label at the bottom.
      */
@@ -101,6 +109,16 @@ public class InterferenceController {
      */
     @FXML
     private TextArea detectionResults;
+    @FXML
+    private Label detectionCountLabel;
+    @FXML
+    private Label mealSummaryLabel;
+    @FXML
+    private VBox uploadEmptyState;
+    @FXML
+    private Label modelStatusLabel;
+    @FXML
+    private Label modelShapeLabel;
     // --- ONNX Runtime Resources ---
 
     /**
@@ -146,7 +164,8 @@ public class InterferenceController {
     /**
      * Confidence threshold: Detections below this score will be ignored.
      */
-    private static final float CONF_THRESH = 0.1f;
+    private static final float DEFAULT_CONF_THRESH = 0.1f;
+    private float confidenceThreshold = DEFAULT_CONF_THRESH;
     /**
      * Non-Max Suppression (NMS) threshold: Boxes with IoU above this value will be merged.
      */
@@ -206,8 +225,17 @@ public class InterferenceController {
      */
     @FXML
     public void initialize() {
+        bindScannerStageSize();
+        detectionResults.setText("");
+        detectionCountLabel.setText("0 found");
+        mealSummaryLabel.setText("Meal estimate: 0 cal");
+        saveButton.setDisable(true);
+        clearButton.setDisable(true);
+        uploadEmptyState.setVisible(true);
+        modelStatusLabel.setText("Loading best.onnx");
+        modelShapeLabel.setText("Private food detection runs on this device.");
         updateUIForTask(true, "Loading model...");
-        chooseImageButton.setDisable(true); // Disable button until model is loaded
+        setUploadButtonsDisabled(false);
 
         // Run model loading in a background thread
         executor.submit(() -> {
@@ -239,15 +267,34 @@ public class InterferenceController {
 
                 // Update UI on the JavaFX Application Thread
                 Platform.runLater(() -> {
-                    statusLabel.setText("Model loaded: " + MODEL_RESOURCE_NAME);
-                    chooseImageButton.setDisable(false); // Enable image button
+                    statusLabel.setText("Model loaded: best.onnx");
+                    modelStatusLabel.setText("best.onnx ready");
+                    modelShapeLabel.setText(modelWidth + "x" + modelHeight + " input | " + numClasses + " food classes");
+                    setUploadButtonsDisabled(false); // Enable image buttons
                 });
             } catch (Exception e) {
-                Platform.runLater(() -> statusLabel.setText("Model load error: " + e.getMessage()));
+                Platform.runLater(() -> {
+                    statusLabel.setText("Model load error: " + e.getMessage());
+                    modelStatusLabel.setText("Model unavailable");
+                    modelShapeLabel.setText("Upload preview still works, but detection needs best.onnx.");
+                    setUploadButtonsDisabled(false);
+                });
             } finally {
                 Platform.runLater(() -> updateUIForTask(false, ""));
             }
         });
+    }
+
+    private void bindScannerStageSize() {
+        imageView.fitWidthProperty().bind(imageContainer.widthProperty().subtract(24));
+        imageView.fitHeightProperty().bind(imageContainer.heightProperty().subtract(24));
+        overlayCanvas.widthProperty().addListener((observable, oldValue, newValue) -> centerOverlayCanvas());
+        overlayCanvas.heightProperty().addListener((observable, oldValue, newValue) -> centerOverlayCanvas());
+    }
+
+    private void centerOverlayCanvas() {
+        overlayCanvas.setTranslateX(0);
+        overlayCanvas.setTranslateY(0);
     }
 
     /**
@@ -309,14 +356,6 @@ public class InterferenceController {
         // We subtract 4 (cx, cy, w, h) to get the number of classes
         numClasses = (int) outputTensorInfo.getShape()[1] - 4;
 
-        // Validation check
-        if (numClasses != CLASS_NAMES.length) {
-            Platform.runLater(() -> {
-                statusLabel.setText("Error: Model class count (" + numClasses +
-                        ") != Java class list (" + CLASS_NAMES.length + ")");
-                chooseImageButton.setDisable(true); // Disable if counts mismatch
-            });
-        }
     }
 
 
@@ -326,16 +365,16 @@ public class InterferenceController {
      */
     @FXML
     protected void onChooseImage() {
-        if (session == null) {
-            statusLabel.setText("Please load a model first.");
-            return;
-        }
-
         FileChooser fc = new FileChooser();
         fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Images", "*.png", "*.jpg", "*.jpeg", "*.bmp"));
-        Stage stage = (Stage) chooseImageButton.getScene().getWindow();
+        Stage stage = (Stage) imageContainer.getScene().getWindow();
         File file = fc.showOpenDialog(stage);
         if (file == null) return; // User cancelled
+
+        if (session == null) {
+            previewImageWithoutDetection(file);
+            return;
+        }
 
         updateUIForTask(true, "Processing image...");
 
@@ -360,7 +399,7 @@ public class InterferenceController {
 
                     // 5. Post-process (NMS, coordinate conversion)
                     List<Detection> dets = postprocess(transposedOutput, prep.scale, prep.dx, prep.dy, bimg.getWidth(), bimg.getHeight());
-                    this.currentDetections = postprocess(transposedOutput, prep.scale, prep.dx, prep.dy, bimg.getWidth(), bimg.getHeight());
+                    this.currentDetections = dets;
                     // 6. Logic that process the output into a textfield
 
 
@@ -370,6 +409,10 @@ public class InterferenceController {
                         // Use the DetectionDrawer utility to draw the boxes
                         DetectionDrawer.draw(imageView, overlayCanvas, imageContainer, bimg, dets, CLASS_NAMES);
                         detectionResults.setText(buildNutritionString(dets));
+                        detectionCountLabel.setText(dets.size() + (dets.size() == 1 ? " found" : " found"));
+                        mealSummaryLabel.setText(buildMealSummary(dets));
+                        uploadEmptyState.setVisible(false);
+                        clearButton.setDisable(false);
                         // Set the save button to enable is the current detection detect something
                         saveButton.setDisable(currentDetections.isEmpty());
                     });
@@ -436,6 +479,41 @@ public class InterferenceController {
         return sb.toString();
     }
 
+    private String buildMealSummary(List<Detection> dets) {
+        int calories = 0;
+        int withNutrition = 0;
+
+        for (Detection d : dets) {
+            NutritionInfo info = getNutritionForDetection(d);
+            if (info != null) {
+                int itemCalories = info.getNutritionAsInt();
+                if (itemCalories > 0) {
+                    calories += itemCalories;
+                    withNutrition++;
+                }
+            }
+        }
+
+        if (dets.isEmpty()) {
+            return "Meal estimate: 0 cal";
+        }
+        return "Meal estimate: " + calories + " cal from " + withNutrition + " item(s)";
+    }
+
+    private NutritionInfo getNutritionForDetection(Detection detection) {
+        if (detection.classID() < 0 || detection.classID() >= CLASS_NAMES.length) {
+            return null;
+        }
+
+        String foodName = CLASS_NAMES[detection.classID()];
+        NutritionInfo info = nutritionMap.get(foodName.toLowerCase());
+        if (info == null) {
+            String firstPart = foodName.split(" ")[0];
+            info = nutritionMap.get(firstPart.toLowerCase());
+        }
+        return info;
+    }
+
     /**
      * Transposes a 2D float array.
      * Assumes input is [channels][predictions] and outputs [predictions][channels].
@@ -463,16 +541,23 @@ public class InterferenceController {
      */
     private void updateUIForTask(boolean isRunning, String status) {
         progressIndicator.setVisible(isRunning);
-        chooseImageButton.setDisable(isRunning);
-
-        // If the model isn't loaded, the button should remain disabled
-        if (session == null) {
-            chooseImageButton.setDisable(true);
-        }
+        setUploadButtonsDisabled(isRunning);
 
         if (isRunning) {
             statusLabel.setText(status);
         }
+    }
+
+    private void previewImageWithoutDetection(File file) {
+        imageView.setImage(new Image(file.toURI().toString()));
+        overlayCanvas.getGraphicsContext2D().clearRect(0, 0, overlayCanvas.getWidth(), overlayCanvas.getHeight());
+        uploadEmptyState.setVisible(false);
+        clearButton.setDisable(false);
+        saveButton.setDisable(true);
+        detectionResults.setText("Image uploaded. Food detection will be available after the model finishes loading.");
+        detectionCountLabel.setText("0 found");
+        mealSummaryLabel.setText("Meal estimate: 0 cal");
+        statusLabel.setText("Image uploaded. Model is still loading or unavailable.");
     }
 
     /**
@@ -563,7 +648,7 @@ public class InterferenceController {
             }
 
             // Apply confidence threshold
-            if (bestScore >= CONF_THRESH) {
+            if (bestScore >= confidenceThreshold) {
                 float cx = p[0];
                 float cy = p[1];
                 float w = p[2];
@@ -678,10 +763,44 @@ public class InterferenceController {
         viewSwitcher.switchScene("settings-screen.fxml");
     }
 
+    private void setUploadButtonsDisabled(boolean disabled) {
+        chooseImageButton.setDisable(disabled);
+        if (heroChooseImageButton != null) {
+            heroChooseImageButton.setDisable(disabled);
+        }
+    }
+
+    @FXML
+    private void handleDashboardButtonClick() {
+        viewSwitcher.switchScene("coach-dashboard.fxml");
+    }
+
     @FXML
     private void onSaveDetections() {
         if (currentDetections == null || currentDetections.isEmpty()) {
             showAlert(Alert.AlertType.ERROR, "Save Error", "No detections to save.");
+            return;
+        }
+
+        List<MealDraftItem> draftItems = new ArrayList<>();
+        for (Detection detection : currentDetections) {
+            String foodName = getFoodName(detection);
+            NutritionInfo info = getNutritionForDetection(detection);
+            if (info == null) {
+                info = new NutritionInfo("N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A");
+            }
+            draftItems.add(new MealDraftItem(foodName, info, detection.score(), 1.0));
+        }
+
+        MealDraftManager.setDraft(draftItems);
+        boolean openedReview = viewSwitcher.switchScene("meal-review.fxml");
+        if (!openedReview) {
+            saveDetectionsDirectly();
+        }
+    }
+
+    private void saveDetectionsDirectly() {
+        if (currentDetections == null || currentDetections.isEmpty()) {
             return;
         }
 
@@ -716,6 +835,27 @@ public class InterferenceController {
         // 4. Notify user
         showAlert(Alert.AlertType.INFORMATION, "Success", "Detections have been saved to your history.");
         saveButton.setDisable(true); // Disable button after saving
+    }
+
+    private String getFoodName(Detection detection) {
+        if (detection.classID() >= 0 && detection.classID() < CLASS_NAMES.length) {
+            return CLASS_NAMES[detection.classID()];
+        }
+        return "Unknown";
+    }
+
+    @FXML
+    private void onClearScan() {
+        currentDetections = new ArrayList<>();
+        imageView.setImage(null);
+        overlayCanvas.getGraphicsContext2D().clearRect(0, 0, overlayCanvas.getWidth(), overlayCanvas.getHeight());
+        detectionResults.clear();
+        detectionCountLabel.setText("0 found");
+        mealSummaryLabel.setText("Meal estimate: 0 cal");
+        statusLabel.setText("Ready for a new image.");
+        saveButton.setDisable(true);
+        clearButton.setDisable(true);
+        uploadEmptyState.setVisible(true);
     }
 
     @FXML

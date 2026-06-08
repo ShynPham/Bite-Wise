@@ -33,18 +33,25 @@ public class APIService {
 
         // create and send request
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(API_URL)).header("Content-Type", "application/json").POST(HttpRequest.BodyPublishers.ofString(json.toString())).build();
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response;
+        try {
+            response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        } catch (Exception e) {
+            return LocalAuthManager.signUp(email, password);
+        }
 
         // check response
         if (response.statusCode() == 201) {
             JSONObject obj = new JSONObject(response.body());
-            return obj.getJSONObject("user").getInt("id");
+            int userId = obj.getJSONObject("user").getInt("id");
+            mirrorLocalAccount(email, password);
+            return userId;
         }
         else if (response.statusCode() == 409) {
             throw new Exception("User already exists");
         }
         else {
-            throw new Exception("Sign up failed");
+            return LocalAuthManager.signUp(email, password);
         }
     }
 
@@ -62,7 +69,12 @@ public class APIService {
 
         // create and send request
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create("https://bitewise-api.onrender.com/api/login")).header("Content-Type", "application/json").POST(HttpRequest.BodyPublishers.ofString(json.toString())).build();
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response;
+        try {
+            response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        } catch (Exception e) {
+            return LocalAuthManager.signIn(email, password);
+        }
 
         // check response
         if (response.statusCode() == 200) {
@@ -73,7 +85,14 @@ public class APIService {
             throw new Exception("Invalid email or password");
         }
         else {
-            throw new Exception("Sign in failed");
+            return LocalAuthManager.signIn(email, password);
+        }
+    }
+
+    private void mirrorLocalAccount(String email, String password) {
+        try {
+            LocalAuthManager.signUp(email, password);
+        } catch (Exception ignored) {
         }
     }
 

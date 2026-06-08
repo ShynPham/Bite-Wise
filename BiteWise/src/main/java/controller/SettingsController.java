@@ -1,6 +1,5 @@
 package controller;
 
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
@@ -28,15 +27,35 @@ public  class SettingsController {
     @FXML
     private void handleAboutBiteWiseClick() { viewSwitcher.switchScene("about-screen.fxml");}
 
+    @FXML
+    private void handleDashboardClick(){viewSwitcher.switchScene("coach-dashboard.fxml");}
+
+    @FXML
+    private void handleSmartCoachClick(){viewSwitcher.switchScene("smart-coach.fxml");}
+
+    @FXML
+    private void handleTrendsClick(){viewSwitcher.switchScene("trends-screen.fxml");}
+
+    @FXML
+    private void handleGoalsClick(){viewSwitcher.switchScene("goals-screen.fxml");}
+
+    @FXML
+    private void handleMealReviewClick(){viewSwitcher.switchScene("meal-review.fxml");}
+
 
 
     @FXML
     private void handleRecentBite(){viewSwitcher.switchScene("bite-history.fxml");}
 
-    private static final String CALORIES_LIMIT = "dailyCaloriesLimit";
+    private static final String PREF_NODE = "BiteWiseUsers";
+    private static final String CALORIES_LIMIT = "dailyCalorieLimit";
 
     @FXML
     private void handleCalculationCLick(){
+        viewSwitcher.switchScene("goals-screen.fxml");
+    }
+
+    private void openLegacyBmrDialog(){
         // 1. Create a custom dialog box
         Dialog<ButtonType> dialog = new Dialog<>();
         dialog.setTitle("BiteWise Calculation");
@@ -126,7 +145,7 @@ public  class SettingsController {
             int dailyLimit = (int) (bmr * 1.2);
 
             // Save to preferences
-            Preferences prefs = Preferences.userRoot().node("BiteWiseUser");
+            Preferences prefs = Preferences.userRoot().node(PREF_NODE);
             prefs.putInt(CALORIES_LIMIT, dailyLimit);
 
             showAlert(Alert.AlertType.INFORMATION, "Goal Updated", "Your new daily limit is: " + dailyLimit + " cal");

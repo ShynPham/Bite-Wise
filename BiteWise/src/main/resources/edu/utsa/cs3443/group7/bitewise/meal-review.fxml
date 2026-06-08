@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="760.0" prefWidth="1120.0" style="-fx-font-family: 'KG Red Hands';" styleClass="screen-shell" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MealReviewController">
+    <top>
+        <VBox spacing="8" styleClass="hero-strip">
+            <padding>
+                <Insets bottom="20" left="34" right="34" top="24" />
+            </padding>
+            <Label styleClass="screen-title" text="Meal Review" />
+            <Label fx:id="draftStatusLabel" styleClass="screen-kicker" text="Review detected foods before saving." />
+        </VBox>
+    </top>
+    <center>
+        <HBox spacing="22">
+            <padding>
+                <Insets bottom="28" left="34" right="34" top="28" />
+            </padding>
+            <VBox prefWidth="470" spacing="14" styleClass="big-card">
+                <padding>
+                    <Insets bottom="18" left="18" right="18" top="18" />
+                </padding>
+                <HBox alignment="CENTER_LEFT" spacing="12">
+                    <Label styleClass="section-title" text="Latest Meal" />
+                    <Label fx:id="totalCaloriesLabel" styleClass="tip-chip" text="0 cal" />
+                </HBox>
+                <ListView fx:id="mealListView" prefHeight="430" />
+                <HBox spacing="10">
+                    <Button onAction="#handleRemoveClick" styleClass="danger-button" text="Remove" />
+                    <Button onAction="#handleSaveMealClick" styleClass="primary-button" text="Save Meal" />
+                </HBox>
+            </VBox>
+            <VBox HBox.hgrow="ALWAYS" spacing="16" styleClass="settings-panel">
+                <padding>
+                    <Insets bottom="18" left="18" right="18" top="18" />
+                </padding>
+                <Label fx:id="selectedFoodLabel" styleClass="section-title" text="Select a food to edit" />
+                <VBox spacing="8" styleClass="mini-card">
+                    <padding>
+                        <Insets bottom="14" left="14" right="14" top="14" />
+                    </padding>
+                    <Label styleClass="section-label" text="RENAME FROM KNOWN NUTRITION" />
+                    <HBox spacing="10">
+                        <ComboBox fx:id="foodComboBox" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" prefWidth="360" />
+                        <Button onAction="#handleApplyFoodClick" styleClass="secondary-button" text="Apply" />
+                    </HBox>
+                </VBox>
+                <VBox spacing="8" styleClass="mini-card">
+                    <padding>
+                        <Insets bottom="14" left="14" right="14" top="14" />
+                    </padding>
+                    <Label styleClass="section-label" text="SERVING MULTIPLIER" />
+                    <HBox spacing="10">
+                        <ComboBox fx:id="servingComboBox" prefWidth="180" />
+                        <Button onAction="#handleApplyServingClick" styleClass="primary-button" text="Update Serving" />
+                    </HBox>
+                </VBox>
+                <TextArea fx:id="nutritionTextArea" editable="false" prefHeight="250" styleClass="details-area" wrapText="true" />
+                <HBox spacing="10">
+                    <Button onAction="#handleDashboardClick" styleClass="ghost-button" text="Dashboard" />
+                    <Button onAction="#handleScanClick" styleClass="secondary-button" text="Scan Again" />
+                    <Button onAction="#handleHistoryClick" styleClass="nav-pill-pink" text="History" />
+                </HBox>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>

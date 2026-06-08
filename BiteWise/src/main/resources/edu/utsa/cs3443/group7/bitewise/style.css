@@ -1,86 +1,466 @@
 @font-face {
-    /* This is the name you will use in your CSS */
     font-family: 'KG Red Hands';
-
-    /* This is the path from style.css to your font file */
     src: url('fonts/KGRedHands.ttf');
 }
 
-.str {
-    /* opacity */
-    -fx-opacity: 0.79;
-    -fx-font-family:"KG Red Hands";
+.root {
+    -bite-brown: #53382E;
+    -bite-ink: #3D2A25;
+    -bite-cream: #FFF4E7;
+    -bite-vanilla: #FFF7BD;
+    -bite-mint: #E9FFBC;
+    -bite-green: #A8D95F;
+    -bite-green-dark: #5F8E3E;
+    -bite-peach: #FFA98F;
+    -bite-coral: #FF7867;
+    -bite-pink: #FFD3E2;
+    -bite-sky: #BCEAFF;
+    -bite-purple: #DCC7FF;
+    -fx-font-family: "KG Red Hands";
+    -fx-text-fill: -bite-brown;
+    -fx-background-color: linear-gradient(to bottom right, #FFF7BD, #FFF4E7 52%, #FFD3E2);
 }
 
-.str .text {
-    -fx-fill: #bde070;
-    -fx-opacity: 100%;
-    -fx-stroke: #53382E;
-    -fx-stroke-width: 3px;
-    -fx-stroke-opacity: 100%;
-    -fx-font-family:"KG Red Hands";
-
-}
-.slogan {
-    -fx-font-family:"KG Red Hands";
-}
-.slogan .text {
-    -fx-fill: #53382E;
-    -fx-font-family:"KG Red Hands";
+.label,
+.button,
+.text-field,
+.password-field,
+.text-area,
+.list-view,
+.list-cell,
+.hyperlink,
+.dialog-pane,
+.radio-button,
+.slider {
+    -fx-font-family: "KG Red Hands";
 }
 
-.textbox{
-    -fx-background-radius: 10px;
-    -fx-border-radius: 10px;
-
-    -fx-border-color: #FFF0EA;
-    -fx-border-width: 1px;
-    -fx-prompt-text-fill: #a9a08d;
-    -fx-font-family:"KG Red Hands";
+.combo-box,
+.combo-box .list-cell {
+    -fx-font-family: "KG Red Hands";
 }
 
-.textbox:focused {
-    -fx-border-color: #039ED3;
+.screen-shell {
+    -fx-background-color: linear-gradient(to bottom right, #FFF7BD, #FFF4E7 48%, #FFD3E2);
+    -fx-font-family: "KG Red Hands";
+}
+
+.hero-strip {
+    -fx-background-color: linear-gradient(to right, #94D957, #FFF06D 48%, #FF9D84);
+    -fx-border-color: -bite-brown;
+    -fx-border-width: 0 0 4 0;
+    -fx-effect: dropshadow(gaussian, rgba(83,56,46,0.25), 14, 0, 0, 5);
+}
+
+.hero-title {
+    -fx-font-family: "KG Red Hands";
+    -fx-font-size: 46px;
+    -fx-text-fill: #DFFF6F;
+    -fx-effect: dropshadow(gaussian, rgba(83,56,46,0.35), 7, 0, 0, 3);
+}
+
+.hero-title .text,
+.screen-title .text {
+    -fx-fill: #DFFF6F;
+    -fx-stroke: -bite-brown;
+    -fx-stroke-width: 2.5px;
+}
+
+.screen-title {
+    -fx-font-family: "KG Red Hands";
+    -fx-font-size: 48px;
+    -fx-text-fill: #DFFF6F;
+    -fx-effect: dropshadow(gaussian, rgba(83,56,46,0.35), 7, 0, 0, 3);
+}
+
+.screen-kicker {
+    -fx-font-size: 17px;
+    -fx-text-fill: #6E493E;
+}
+
+.big-card {
+    -fx-background-color: linear-gradient(to bottom right, #FFFFFF, #FFF2C8);
+    -fx-background-radius: 22px;
+    -fx-border-color: -bite-brown;
+    -fx-border-width: 4px;
+    -fx-border-radius: 22px;
+    -fx-effect: dropshadow(gaussian, rgba(83,56,46,0.25), 20, 0, 0, 8);
+}
+
+.scanner-stage {
+    -fx-background-color: linear-gradient(to bottom right, #FFFFFF, #E9FFBC);
+    -fx-background-radius: 24px;
+    -fx-border-color: -bite-brown;
+    -fx-border-width: 4px;
+    -fx-border-radius: 24px;
+    -fx-effect: dropshadow(gaussian, rgba(83,56,46,0.28), 20, 0, 0, 8);
+}
+
+.upload-card {
+    -fx-background-color: linear-gradient(to bottom right, #FFFFFF, #FFF7BD 52%, #FFD3E2);
+    -fx-background-radius: 20px;
+    -fx-border-color: #5F8E3E;
+    -fx-border-width: 3px;
+    -fx-border-style: segments(13, 8);
+    -fx-border-radius: 20px;
+}
+
+.side-panel {
+    -fx-background-color: linear-gradient(to bottom, #FFF0DF, #FFE0D1 48%, #FFF7BD);
+    -fx-border-color: -bite-brown;
+    -fx-border-width: 0 0 0 4px;
+}
+
+.section-title {
+    -fx-font-size: 26px;
+    -fx-text-fill: -bite-brown;
+}
+
+.section-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #805B4D;
+}
+
+.mini-card,
+.result-card,
+.status-card,
+.progress-card,
+.summary-chip {
+    -fx-background-radius: 14px;
+    -fx-border-radius: 14px;
+    -fx-border-width: 3px;
+    -fx-effect: dropshadow(gaussian, rgba(83,56,46,0.14), 9, 0, 0, 3);
+}
+
+.mini-card {
+    -fx-background-color: linear-gradient(to bottom right, #FFFFFF, #FFF7BD);
+    -fx-border-color: #6FA14A;
+}
+
+.result-card {
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #FFF0DF);
+    -fx-border-color: #E37C62;
+}
+
+.status-card {
+    -fx-background-color: linear-gradient(to right, #E9FFBC, #FFF7BD);
+    -fx-border-color: #6FA14A;
+}
+
+.model-chip-card {
+    -fx-background-color: linear-gradient(to right, #FFFFFF, #BCEAFF);
+    -fx-background-radius: 14px;
+    -fx-border-color: -bite-brown;
+    -fx-border-radius: 14px;
+    -fx-border-width: 3px;
+    -fx-padding: 8px 12px 8px 12px;
+    -fx-effect: dropshadow(gaussian, rgba(83,56,46,0.18), 10, 0, 0, 3);
+}
+
+.scan-status-bar {
+    -fx-background-color: linear-gradient(to right, #E9FFBC, #FFF7BD 45%, #FFD3E2);
+    -fx-border-color: -bite-brown;
+    -fx-border-width: 4px 0 0 0;
+    -fx-effect: dropshadow(gaussian, rgba(83,56,46,0.20), 12, 0, 0, -4);
+}
+
+.progress-card {
+    -fx-background-color: linear-gradient(to right, #FFFFFF, #E9FFBC);
+    -fx-border-color: #E37C62;
+}
+
+.summary-chip {
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #FFF0C7);
+    -fx-border-color: #E37C62;
+}
+
+.metric-card,
+.coach-card,
+.action-rail {
+    -fx-background-radius: 18px;
+    -fx-border-radius: 18px;
+    -fx-border-width: 3px;
+    -fx-effect: dropshadow(gaussian, rgba(83,56,46,0.18), 12, 0, 0, 4);
+}
+
+.metric-card {
+    -fx-background-color: linear-gradient(to bottom right, #FFFFFF, #E9FFBC 48%, #FFF7BD);
+    -fx-border-color: -bite-brown;
+    -fx-padding: 18px;
+    -fx-min-height: 138px;
+}
+
+.coach-card {
+    -fx-background-color: linear-gradient(to bottom right, #FFFFFF, #E9FFBC);
+    -fx-border-color: #5F8E3E;
+    -fx-padding: 18px;
+    -fx-min-width: 450px;
+    -fx-min-height: 130px;
+}
+
+.alt-card {
+    -fx-background-color: linear-gradient(to bottom right, #FFFFFF, #BCEAFF);
+    -fx-border-color: #3B86A7;
+}
+
+.warm-card {
+    -fx-background-color: linear-gradient(to bottom right, #FFFFFF, #FFD1BD);
+    -fx-border-color: #E37C62;
+}
+
+.cool-card {
+    -fx-background-color: linear-gradient(to bottom right, #FFFFFF, #DCC7FF);
+    -fx-border-color: #8063B0;
+}
+
+.pink-card {
+    -fx-background-color: linear-gradient(to bottom right, #FFFFFF, #FFD3E2);
+    -fx-border-color: #C85E82;
+}
+
+.action-rail {
+    -fx-background-color: linear-gradient(to right, #FFFFFF, #FFF7BD, #E9FFBC);
+    -fx-border-color: -bite-brown;
+    -fx-padding: 12px;
+}
+
+.jumbo-number {
+    -fx-font-size: 36px;
+    -fx-text-fill: #5F8E3E;
+}
+
+.card-detail {
+    -fx-font-size: 16px;
+    -fx-text-fill: #68483F;
+}
+
+.bar-row {
+    -fx-alignment: center-left;
+    -fx-padding: 8px 10px 8px 10px;
+    -fx-background-color: linear-gradient(to right, #FFFDF7, #FFF2C8);
+    -fx-background-radius: 12px;
+    -fx-border-color: #FFD1BD;
+    -fx-border-radius: 12px;
     -fx-border-width: 2px;
+}
+
+.bar-day-label,
+.bar-value-label {
+    -fx-font-size: 15px;
+    -fx-text-fill: -bite-brown;
+}
+
+.settings-panel {
+    -fx-background-color: linear-gradient(to bottom right, #FFFFFF, #FFF7BD);
+    -fx-background-radius: 24px;
+    -fx-border-color: -bite-brown;
+    -fx-border-width: 4px;
+    -fx-border-radius: 24px;
+    -fx-effect: dropshadow(gaussian, rgba(83,56,46,0.25), 18, 0, 0, 7);
+}
+
+.settings-note {
+    -fx-background-color: linear-gradient(to right, #E9FFBC, #FFF06D);
+    -fx-background-radius: 14px;
+    -fx-border-color: -bite-brown;
+    -fx-border-width: 2px;
+    -fx-border-radius: 14px;
+    -fx-padding: 8 14 8 14;
+    -fx-font-size: 15px;
+}
+
+.tip-chip {
+    -fx-background-color: linear-gradient(to bottom, #E9FFBC, #A8D95F);
+    -fx-background-radius: 999px;
+    -fx-border-color: -bite-brown;
+    -fx-border-radius: 999px;
+    -fx-border-width: 2px;
+    -fx-padding: 6 10 6 10;
+    -fx-font-size: 13px;
+    -fx-text-fill: -bite-brown;
+}
+
+.metric-number {
+    -fx-font-size: 20px;
+    -fx-text-fill: #5F8E3E;
+}
+
+.status-text {
+    -fx-font-size: 13px;
+    -fx-text-fill: -bite-brown;
+}
+
+.status-text-large {
+    -fx-font-size: 19px;
+    -fx-text-fill: -bite-brown;
+}
+
+.button,
+.primary-button,
+.secondary-button,
+.ghost-button,
+.danger-button,
+.nav-pill-green,
+.nav-pill-peach,
+.nav-pill-cream,
+.nav-pill-pink,
+.circle-button {
+    -fx-font-family: "KG Red Hands";
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -bite-brown;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-border-color: -bite-brown;
+    -fx-border-width: 3px;
+    -fx-cursor: hand;
+}
+
+.primary-button,
+.nav-pill-green {
+    -fx-background-color: linear-gradient(to bottom, #E9FFBC, #91CF55);
+}
+
+.secondary-button,
+.nav-pill-peach {
+    -fx-background-color: linear-gradient(to bottom, #FFD1BD, #FF9276);
+}
+
+.ghost-button,
+.nav-pill-cream {
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #FFF2B9);
+}
+
+.danger-button,
+.nav-pill-pink {
+    -fx-background-color: linear-gradient(to bottom, #FFE1EC, #FFABC4);
+}
+
+.button:hover {
+    -fx-translate-y: -2px;
+    -fx-effect: dropshadow(gaussian, rgba(83,56,46,0.30), 10, 0, 0, 4);
+}
+
+.button:pressed {
+    -fx-translate-y: 1px;
+}
+
+.button:disabled {
+    -fx-opacity: 0.52;
+}
+
+.textbox,
+.text-field,
+.password-field,
+.text-area,
+.result-area,
+.details-area {
+    -fx-font-family: "KG Red Hands";
+    -fx-font-size: 14px;
+    -fx-text-fill: -bite-brown;
+    -fx-prompt-text-fill: #A77A68;
+    -fx-background-color: #FFFDF7;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-color: #D9876C;
+    -fx-border-width: 2px;
+}
+
+.text-area .content {
+    -fx-background-color: #FFFDF7;
+    -fx-background-radius: 10px;
+}
+
+.text-field:focused,
+.password-field:focused,
+.text-area:focused {
+    -fx-border-color: -bite-green-dark;
+    -fx-border-width: 3px;
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
-    -fx-font-family:"KG Red Hands";
 }
 
-.circle-button{
-    -fx-background-color: #c6eaaf; /* Light green background */
-    -fx-background-radius: 50%;   /* Makes it perfectly circular */
-    -fx-border-radius: 50%;       /* Ensures the border is also circular */
-    -fx-border-color: #8c7e6c;     /* Brown border color */
-    -fx-border-width: 2px;        /* Border thickness */
-    -fx-padding: 0;
+.slider .track {
+    -fx-background-color: linear-gradient(to right, #91CF55, #FFF06D, #FF9276);
+    -fx-background-radius: 999px;
+    -fx-pref-height: 7px;
 }
 
-.circle-button .svg-path{
-    -fx-fill: white;              /* White color for the arrow */
-    -fx-scale-x: 2;             /* Adjust arrow size horizontally */
-    -fx-scale-y: 2;             /* Adjust arrow size vertically */
+.slider .thumb {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 999px;
+    -fx-border-color: -bite-brown;
+    -fx-border-radius: 999px;
+    -fx-border-width: 2px;
+    -fx-pref-width: 18px;
+    -fx-pref-height: 18px;
 }
 
-.bite-history-element{
-    -fx-background-color: white;
-    -fx-background-radius: 15;
-    -fx-border-color: #6B8E4E;
-    -fx-border-width: 2;
-    -fx-border-radius: 15;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 3, 0, 1, 2);
+.slider-shell {
+    -fx-background-color: #FFFDF7;
+    -fx-background-radius: 999px;
+    -fx-border-color: #D9876C;
+    -fx-border-radius: 999px;
+    -fx-border-width: 2px;
 }
 
-.bite-history-element-title {
-    -fx-text-fill: #4A4A4A;
-    -fx-font-weight: bold;
+.calorie-progress .track,
+.calorie-progress-over .track {
+    -fx-background-color: #FFE2C8;
+    -fx-background-radius: 999px;
 }
 
-.bite-history-element .text {
-    -fx-text-fill: #666666;
+.calorie-progress .bar {
+    -fx-background-color: linear-gradient(to right, #91CF55, #DFFF6F);
+    -fx-background-radius: 999px;
+    -fx-background-insets: 0;
 }
 
-.bite-history-info {
-    -fx-text-fill: #6B8E4E;
-    -fx-font-weight: bold;
+.calorie-progress-over .bar {
+    -fx-background-color: linear-gradient(to right, #FF9276, #FF5C54);
+    -fx-background-radius: 999px;
+    -fx-background-insets: 0;
+}
+
+.list-view {
+    -fx-background-color: transparent;
+}
+
+.list-cell {
+    -fx-font-family: "KG Red Hands";
+    -fx-font-size: 14px;
+    -fx-text-fill: -bite-brown;
+    -fx-background-color: #FFFDF7;
+    -fx-padding: 10 12 10 12;
+    -fx-border-color: transparent transparent #FFE2C8 transparent;
+}
+
+.list-cell:odd {
+    -fx-background-color: #FFF3E8;
+}
+
+.list-cell:selected {
+    -fx-background-color: linear-gradient(to right, #E9FFBC, #FFD3E2);
+}
+
+.circle-button {
+    -fx-background-color: linear-gradient(to bottom, #E9FFBC, #91CF55);
+    -fx-background-radius: 999px;
+    -fx-border-radius: 999px;
+}
+
+.circle-button .svg-path {
+    -fx-fill: #FFFDF7;
+    -fx-scale-x: 2;
+    -fx-scale-y: 2;
+}
+
+.hyperlink {
+    -fx-text-fill: #A7473D;
+    -fx-border-color: transparent;
+}
+
+.dialog-pane {
+    -fx-font-family: "KG Red Hands";
+    -fx-background-color: linear-gradient(to bottom right, #FFF7BD, #FFE0D1);
 }

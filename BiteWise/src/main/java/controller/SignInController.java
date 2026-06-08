@@ -39,7 +39,7 @@ package controller;
              prefs.put("userId", String.valueOf(userId));
              prefs.put("email", inputEmail);
 
-             viewSwitcher.switchScene("scan-screen.fxml");
+             viewSwitcher.switchScene("coach-dashboard.fxml");
          } catch (Exception e) {
              if (e.getMessage().equals("Invalid email or password")) {
                  showAlert("Invalid email or password.");

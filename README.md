@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align ="center">
     <img src="https://github.com/UTSA-CS-3443-Fall25/7.IdeaForgers/blob/main/BiteWise/src/main/resources/edu/utsa/cs3443/group7/bitewise/ui_icons/logo.png" alt="logo.png" />
 </p>
@@ -161,3 +162,8 @@ Before you begin, ensure you have the following installed on your system:
 * Yuki Richardson
 * Soleil Nunez
 * Max Howard
+=======
+# Re-upload school project
+
+A JavaFX-based desktop application that utilizes a trained YOLOv8 model (via ONNX) to perform real-time food object detection and automated nutritional tracking
+>>>>>>> e33153e3f9c890c899c1255920e800dfb0b36121

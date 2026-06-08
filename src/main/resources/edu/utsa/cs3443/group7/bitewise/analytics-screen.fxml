@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AnalyticsController">
+   <children>
+      <HBox fx:id="dailyCalBox" layoutX="46.0" layoutY="62.0" prefHeight="64.0" prefWidth="165.0" style="-fx-background-color: #eeffea;" />
+      <Label layoutX="69.0" layoutY="32.0" prefHeight="18.0" prefWidth="80.0" text="Daily Calories " />
+      <BarChart fx:id="barChart" layoutX="234.0" layoutY="137.0" prefHeight="238.0" prefWidth="299.0" style="-fx-background-color: #eeffea;" title="Weekly Calorie Intake " AnchorPane.bottomAnchor="24.599999999999994">
+        <xAxis>
+          <CategoryAxis label="Day" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Calories" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Button fx:id="refreshButton" layoutX="69.0" layoutY="308.0" mnemonicParsing="false" onAction="#handleRefresh" text="Refresh" />
+   </children>
+</AnchorPane>
